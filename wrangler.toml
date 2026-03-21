@@ -1,0 +1,16 @@
+name = "pakistan-campaign-dashboard"
+type = "javascript"
+account_id = "your-account-id"
+project_name = "pakistan-campaign-dashboard"
+main_branch = "main"
+
+[build]
+command = "npm run build"
+cwd = "./frontend"
+root_dir = "build"
+
+[env.production]
+vars = { REACT_APP_API_URL = "https://api-pakistan-campaign.onrender.com" }
+
+[env.staging]
+vars = { REACT_APP_API_URL = "https://api-pakistan-campaign-staging.onrender.com" }

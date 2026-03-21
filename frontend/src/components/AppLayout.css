@@ -1,0 +1,105 @@
+.app-layout {
+  min-height: 100vh;
+  background-color: #0f1115;
+  color: #e2e8f0;
+}
+
+.app-layout-header {
+  height: 64px;
+  padding: 0 24px;
+  border-bottom: 1px solid #2d3748;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0f1115;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.app-layout-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.app-layout-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #6b46c1, #805ad5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-layout-logo-ai {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.app-layout-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #f7fafc;
+  letter-spacing: -0.02em;
+}
+
+.app-layout-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-layout-link {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #a0aec0;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: color 0.15s, background 0.15s;
+}
+
+.app-layout-link:hover {
+  color: #e2e8f0;
+  background-color: #1a202c;
+}
+
+.app-layout-link--active {
+  color: #4299e1;
+  border-bottom: 2px solid #4299e1;
+  border-radius: 0;
+  padding-bottom: 6px;
+}
+
+.app-layout-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-layout-icon-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: #a0aec0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s, background 0.15s;
+}
+
+.app-layout-icon-btn:hover {
+  color: #e2e8f0;
+  background-color: #1a202c;
+}
+
+.app-layout-main {
+  flex: 1;
+}

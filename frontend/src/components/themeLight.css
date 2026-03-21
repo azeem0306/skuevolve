@@ -1,0 +1,268 @@
+/* Light mode overrides when .app-layout has .theme-light */
+
+.app-layout.theme-light {
+  background-color: #f7fafc;
+  color: #1a202c;
+}
+
+.app-layout.theme-light .app-layout-header {
+  background-color: #fff;
+  border-bottom-color: #e2e8f0;
+}
+
+.app-layout.theme-light .app-layout-title {
+  color: #1a202c;
+}
+
+.app-layout.theme-light .app-layout-link {
+  color: #4a5568;
+}
+
+.app-layout.theme-light .app-layout-link:hover {
+  color: #1a202c;
+  background-color: #edf2f7;
+}
+
+.app-layout.theme-light .app-layout-link--active {
+  color: #2b6cb0;
+  border-bottom-color: #2b6cb0;
+}
+
+.app-layout.theme-light .app-layout-icon-btn {
+  color: #4a5568;
+}
+
+.app-layout.theme-light .app-layout-icon-btn:hover {
+  color: #1a202c;
+  background-color: #edf2f7;
+}
+
+/* Dashboard */
+.app-layout.theme-light .dashboard-root {
+  background-color: #f7fafc;
+  color: #1a202c;
+}
+
+.app-layout.theme-light .dashboard-loading-text {
+  color: #718096;
+}
+
+.app-layout.theme-light .dashboard-header {
+  background-color: #fff;
+  border-bottom-color: #e2e8f0;
+}
+
+.app-layout.theme-light .dashboard-title {
+  color: #1a202c;
+}
+
+.app-layout.theme-light .dashboard-title-accent {
+  color: #718096;
+}
+
+.app-layout.theme-light .dashboard-subtitle {
+  color: #718096;
+}
+
+.app-layout.theme-light .dashboard-selector-label {
+  color: #718096;
+}
+
+.app-layout.theme-light .dashboard-selector-input {
+  background-color: #fff;
+  border-color: #cbd5e0;
+  color: #1a202c;
+}
+
+.app-layout.theme-light .dashboard-card {
+  background-color: #fff;
+  border-color: #e2e8f0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.app-layout.theme-light .dashboard-card--primary {
+  background: linear-gradient(135deg, #edf2f7 0, #fff 50%, #f7fafc 100%);
+}
+
+.app-layout.theme-light .dashboard-card-label {
+  color: #718096;
+}
+
+.app-layout.theme-light .dashboard-card-value {
+  color: #1a202c;
+}
+
+.app-layout.theme-light .dashboard-card-pill {
+  background-color: rgba(247, 250, 252, 0.9);
+}
+
+.app-layout.theme-light .dashboard-card-bg-icon {
+  color: #1a202c;
+  opacity: 0.06;
+}
+
+.app-layout.theme-light .dashboard-progress {
+  background-color: #e2e8f0;
+}
+
+.app-layout.theme-light .dashboard-card-footnote {
+  color: #718096;
+}
+
+.app-layout.theme-light .dashboard-panel {
+  background-color: #fff;
+  border-color: #e2e8f0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.app-layout.theme-light .dashboard-panel-title {
+  color: #1a202c;
+}
+
+.app-layout.theme-light .dashboard-panel-title-icon {
+  background-color: #edf2f7;
+}
+
+.app-layout.theme-light .dashboard-legend {
+  color: #718096;
+}
+
+.app-layout.theme-light .dashboard-legend-dot--muted {
+  background-color: #a0aec0;
+}
+
+.app-layout.theme-light .dashboard-side-copy {
+  color: #718096;
+}
+
+.app-layout.theme-light .dashboard-product-row {
+  background-color: #f7fafc;
+  border-color: #e2e8f0;
+}
+
+.app-layout.theme-light .dashboard-product-row:hover {
+  background-color: #edf2f7;
+  border-color: #cbd5e0;
+}
+
+.app-layout.theme-light .dashboard-product-name {
+  color: #1a202c;
+}
+
+.app-layout.theme-light .dashboard-product-meta,
+.app-layout.theme-light .dashboard-product-rank {
+  color: #718096;
+}
+
+.app-layout.theme-light .dashboard-empty-state {
+  color: #718096;
+}
+
+/* Campaign Planner */
+.app-layout.theme-light .cp-loading {
+  color: #718096;
+}
+
+.app-layout.theme-light .cp-setup-card {
+  background-color: #fff;
+  border-color: #e2e8f0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.app-layout.theme-light .cp-setup-title {
+  color: #1a202c;
+}
+
+.app-layout.theme-light .cp-field-label {
+  color: #718096;
+}
+
+.app-layout.theme-light .cp-field-input {
+  background-color: #f7fafc;
+  border-color: #e2e8f0;
+  color: #1a202c;
+}
+
+.app-layout.theme-light .cp-field-input--readonly {
+  color: #718096;
+}
+
+.app-layout.theme-light .cp-download-btn {
+  background-color: #e2e8f0;
+  color: #2d3748;
+}
+
+.app-layout.theme-light .cp-download-btn:hover {
+  background-color: #4299e1;
+  color: #fff;
+}
+
+.app-layout.theme-light .cp-tab {
+  color: #718096;
+}
+
+.app-layout.theme-light .cp-tab:hover {
+  color: #1a202c;
+}
+
+.app-layout.theme-light .cp-tab--active {
+  color: #2b6cb0;
+  border-bottom-color: #2b6cb0;
+}
+
+.app-layout.theme-light .cp-table-wrap {
+  background-color: #fff;
+  border-color: #e2e8f0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.app-layout.theme-light .cp-table th {
+  background-color: #f7fafc;
+  color: #718096;
+  border-bottom-color: #e2e8f0;
+}
+
+.app-layout.theme-light .cp-table td {
+  color: #1a202c;
+  border-bottom-color: #e2e8f0;
+}
+
+.app-layout.theme-light .cp-table tbody tr:hover {
+  background-color: #f7fafc;
+}
+
+.app-layout.theme-light .cp-cell-product-img {
+  background-color: #e2e8f0;
+}
+
+.app-layout.theme-light .cp-cell-product-name {
+  color: #1a202c;
+}
+
+.app-layout.theme-light .cp-cell-product-sku,
+.app-layout.theme-light .cp-cell-forecast {
+  color: #718096;
+}
+
+.app-layout.theme-light .cp-tool-btn {
+  color: #718096;
+}
+
+.app-layout.theme-light .cp-tool-btn:hover {
+  color: #2b6cb0;
+  background-color: #ebf8ff;
+}
+
+/* War Room placeholder */
+.war-room-placeholder {
+  padding: 24px;
+  text-align: center;
+}
+
+.app-layout.theme-light .war-room-placeholder {
+  color: #718096;
+}
+
+.app-layout:not(.theme-light) .war-room-placeholder {
+  color: #a0aec0;
+}
