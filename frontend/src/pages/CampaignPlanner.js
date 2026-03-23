@@ -6,7 +6,7 @@ import {
   Snowflake,
   Check,
   Share2,
-  AlertTriangle,
+  Bell,
 } from 'lucide-react';
 import dashboardData from '../dashboard_data.json';
 import inventoryData from '../inventory_data.json';
@@ -328,7 +328,7 @@ const CampaignPlanner = () => {
                           setPushNotificationOpen(true);
                         }}
                       >
-                        <AlertTriangle size={16} />
+                        <Bell size={16} />
                       </button>
                     </div>
                   </td>

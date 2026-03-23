@@ -2,6 +2,8 @@
 
 Production-ready React dashboard for campaign planning.
 
+> Local-only development path (recommended): run locally with `REACT_APP_API_URL=http://localhost:5000`.
+
 ## 📦 Stack
 - **Framework**: React 18.2
 - **Build Tool**: Create React App

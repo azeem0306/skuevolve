@@ -2,6 +2,8 @@
 
 Production-ready Flask API for campaign planning and inventory management.
 
+> Local-only development path (recommended): run all services locally, no Render hosting required.
+
 ## 📦 Stack
 - **Framework**: Flask 3.0
 - **Database**: PostgreSQL + SQLAlchemy ORM

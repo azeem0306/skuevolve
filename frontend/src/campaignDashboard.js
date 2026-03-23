@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar, TrendingUp, ShoppingBag, Share2, AlertTriangle } from 'lucide-react';
+import { Calendar, TrendingUp, ShoppingBag, Share2, AlertTriangle, Bell } from 'lucide-react';
 
 import dashboardData from './dashboard_data.json';
 import inventoryData from './inventory_data.json';
@@ -178,7 +178,7 @@ const CampaignDashboard = () => {
                           setPushNotificationOpen(true);
                         }}
                       >
-                        <AlertTriangle size={14} />
+                        <Bell size={14} />
                       </button>
                     </div>
                   </div>
