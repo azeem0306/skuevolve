@@ -10,19 +10,11 @@ import {
 } from 'lucide-react';
 import dashboardData from '../dashboard_data.json';
 import inventoryData from '../inventory_data.json';
+import ScenarioSimulator from '../components/ScenarioSimulator';
+import PushNotificationOverlay from '../components/PushNotificationOverlay';
 import './CampaignPlanner.css';
 
-const AI_SIGNALS = [
-  { icon: Flame, label: 'High Search Vol', color: '#ED8936' },
-  { icon: Leaf, label: 'Organic Demand', color: '#48BB78' },
-  { icon: Snowflake, label: 'Aging Stock', color: '#4299E1' },
-];
 
-const STRATEGIES = [
-  { label: 'Light Discount', color: '#4299E1' },
-  { label: 'Protect Margin', color: '#48BB78' },
-  { label: 'Clearance', color: '#E53E3E' },
-];
 
 const formatDateRange = (peakDate) => {
   if (!peakDate || peakDate === 'N/A') return '—';
@@ -55,6 +47,9 @@ const CampaignPlanner = () => {
   const [simulatorOpen, setSimulatorOpen] = useState(false);
   const [simulatorSku, setSimulatorSku] = useState(null);
   const [discountPct, setDiscountPct] = useState(15);
+
+  const [pushNotificationOpen, setPushNotificationOpen] = useState(false);
+  const [pushNotificationSku, setPushNotificationSku] = useState(null);
 
   useEffect(() => {
     if (!dashboardData?.Campaigns) return;
@@ -122,69 +117,52 @@ const CampaignPlanner = () => {
     const sku = String(item?.sku ?? '');
     const name = sku.replace(/_/g, ' ').replace(/\s*-\s*[A-Z0-9-]+$/i, '') || sku;
     const count = Math.max(1, skuList.length);
+    
+    // Use new realistic forecast calculation with metrics
+    const campaignLift = campaignData.campaign_lift_multiplier || 2.5;
+    const baselineUnits = campaignData.avg_units_per_product_baseline || 100;
+    const demandVelocity = item?.metrics?.demand_velocity || 0.5;
+    const discountBoost = 1.15; // 15% discount increases demand ~15%
+    
+    const forecast = Math.round(
+      baselineUnits * campaignLift * discountBoost * (0.85 + Math.random() * 0.3)
+    );
+    
+    // Get AI Signal from data
+    const aiSignalLabel = item?.ai_signal || 'Organic Demand';
+    const signalColorMap = {
+      'High Search Vol': '#ED8936',
+      'Aging Stock': '#4299E1',
+      'Organic Demand': '#48BB78'
+    };
+    const signalIconMap = {
+      'High Search Vol': Flame,
+      'Aging Stock': Snowflake,
+      'Organic Demand': Leaf
+    };
+
+    const signalStrategyMap = {
+      'High Search Vol': { label: 'Light Discount', color: '#4299E1' },
+      'Aging Stock':     { label: 'Clearance',      color: '#E53E3E' },
+      'Organic Demand':  { label: 'Protect Margin',  color: '#48BB78' },
+    };
+
+    
     return {
       sku,
       name,
       skuId: sku,
       category: item?.category || 'Unknown',
-      forecast: Math.round(
-        (campaignData.projected_volume / count / 1000) * (0.8 + Math.random() * 0.4)
-      ),
-      aiSignal: AI_SIGNALS[index % AI_SIGNALS.length],
-      strategy: STRATEGIES[index % STRATEGIES.length],
+      forecast,
+      aiSignal: {
+        icon: signalIconMap[aiSignalLabel] || Flame,
+        label: aiSignalLabel,
+        color: signalColorMap[aiSignalLabel] || '#ED8936'
+      },
+      strategy: signalStrategyMap[aiSignalLabel] ?? signalStrategyMap['Organic Demand'],
+      metrics: item?.metrics || {}
     };
   });
-
-  const getSimulatorMetrics = (sku, discountPercent) => {
-    const product = products.find((p) => p.skuId === sku);
-    if (!product) return null;
-
-    const inventoryItem = inventoryData.find((item) => item.sku === sku);
-    const inventoryValue = inventoryItem
-      ? Number(inventoryItem.qty_on_hand || 0) * Number(inventoryItem.cost_price || 0)
-      : 0;
-
-    // Treat forecast as thousands of units; convert into rough expected revenue.
-    const baseRevenue = (product.forecast || 0) * 1000;
-    const daysWindow = 30;
-    const demandMultiplier = 1 + (discountPercent / 100) * 0.5; // up to +50% demand at 100% discount
-
-    const adjustedRevenue = baseRevenue * (1 - discountPercent / 100) * demandMultiplier;
-    const dailyRevenue = (adjustedRevenue / daysWindow) || 0;
-    const stockoutDays = dailyRevenue > 0 ? inventoryValue / dailyRevenue : Infinity;
-
-    const riskLabel = stockoutDays <= 2 ? 'High' : stockoutDays <= 7 ? 'Medium' : 'Low';
-    const recommendation = stockoutDays <= 2
-      ? 'Reduce discount to preserve stock for later days.'
-      : 'Stock levels look healthy for this campaign window.';
-
-    return {
-      inventoryValue,
-      adjustedRevenue,
-      stockoutDays,
-      riskLabel,
-      recommendation,
-    };
-  };
-
-  const simulatorMetrics = simulatorSku
-    ? getSimulatorMetrics(simulatorSku, discountPct)
-    : null;
-
-  const formatMoney = (value) =>
-    value == null || Number.isNaN(value)
-      ? '—'
-      : `PKR ${Number(value).toLocaleString('en-US', { maximumFractionDigits: 0 })}`;
-
-  const formatDays = (value) =>
-    value === Infinity || Number.isNaN(value)
-      ? '—'
-      : `${Math.max(0, Math.round(value))}`;
-
-  const stockoutLabel = (days) => {
-    const formatted = formatDays(days);
-    return formatted === '—' ? '—' : `Day ${formatted}`;
-  };
 
   return (
     <div className="cp-root">
@@ -341,7 +319,15 @@ const CampaignPlanner = () => {
                       >
                         <Share2 size={16} />
                       </button>
-                      <button type="button" className="cp-tool-btn" aria-label="Alert">
+                      <button
+                        type="button"
+                        className="cp-tool-btn"
+                        aria-label="Create push notification"
+                        onClick={() => {
+                          setPushNotificationSku(row.skuId);
+                          setPushNotificationOpen(true);
+                        }}
+                      >
                         <AlertTriangle size={16} />
                       </button>
                     </div>
@@ -353,93 +339,27 @@ const CampaignPlanner = () => {
         </table>
       </div>
 
-      {simulatorOpen && simulatorSku && simulatorMetrics && (
-        <div
-          className="cp-simulator-overlay"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Scenario Simulator"
-          onClick={() => setSimulatorOpen(false)}
-        >
-          <div className="cp-simulator-modal" onClick={(e) => e.stopPropagation()}>
-            <header className="cp-simulator-header">
-              <div>
-                <h3 className="cp-simulator-title">Strategy Simulator</h3>
-                <p className="cp-simulator-subtitle">
-                  Adjust the discount slider to see impact on projected revenue and stockout risk.
-                </p>
-              </div>
-              <button
-                className="cp-simulator-close"
-                aria-label="Close simulator"
-                onClick={() => setSimulatorOpen(false)}
-              >
-                ✕
-              </button>
-            </header>
+      <ScenarioSimulator
+        isOpen={simulatorOpen}
+        selectedSku={simulatorSku}
+        discountPct={discountPct}
+        products={products}
+        inventoryData={inventoryData}
+        onClose={() => setSimulatorOpen(false)}
+        onDiscountChange={setDiscountPct}
+        onApply={() => setSimulatorOpen(false)}
+        onReset={() => setDiscountPct(15)}
+      />
 
-            <div className="cp-simulator-body">
-              <div className="cp-simulator-control">
-                <label className="cp-simulator-label" htmlFor="discount-range">
-                  Discount depth
-                </label>
-                <div className="cp-simulator-slider-row">
-                  <input
-                    id="discount-range"
-                    type="range"
-                    min={0}
-                    max={30}
-                    step={1}
-                    value={discountPct}
-                    onChange={(e) => setDiscountPct(Number(e.target.value))}
-                  />
-                  <span className="cp-simulator-slider-value">{discountPct}%</span>
-                </div>
-              </div>
-
-              <div className="cp-simulator-metrics">
-                <div className="cp-simulator-metric-card">
-                  <div className="cp-simulator-metric-label">Projected revenue</div>
-                  <div className="cp-simulator-metric-value">
-                    {formatMoney(simulatorMetrics.adjustedRevenue)}
-                  </div>
-                </div>
-                <div className="cp-simulator-metric-card">
-                  <div className="cp-simulator-metric-label">Stockout risk</div>
-                  <div className="cp-simulator-metric-value">
-                    {stockoutLabel(simulatorMetrics.stockoutDays)}
-                  </div>
-                  <div className="cp-simulator-metric-subtext">
-                    Risk: {simulatorMetrics.riskLabel}
-                  </div>
-                </div>
-              </div>
-
-              <div className="cp-simulator-recommendation">
-                <strong>AI Recommendation</strong>
-                <p>{simulatorMetrics.recommendation}</p>
-              </div>
-
-              <div className="cp-simulator-actions">
-                <button
-                  type="button"
-                  className="cp-btn cp-btn--primary"
-                  onClick={() => setSimulatorOpen(false)}
-                >
-                  Apply Strategy
-                </button>
-                <button
-                  type="button"
-                  className="cp-btn cp-btn--secondary"
-                  onClick={() => setDiscountPct(15)}
-                >
-                  Reset
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      <PushNotificationOverlay
+        isOpen={pushNotificationOpen}
+        onClose={() => {
+          setPushNotificationOpen(false);
+          setPushNotificationSku(null);
+        }}
+        selectedSku={pushNotificationSku}
+        products={products}
+      />
     </div>
   );
 };

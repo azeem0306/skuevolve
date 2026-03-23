@@ -22,19 +22,6 @@ def get_campaigns():
             for cp in campaign.hero_products
         ]
         
-        # Get forecast data
-        forecasts = CampaignForecast.query.filter_by(campaign_id=campaign.id).all()
-        graph_data = [
-            {
-                'date': f.date.isoformat(),
-                'historical': f.historical_gmv,
-                'forecasted': f.forecasted_gmv,
-                'upper': f.upper_bound,
-                'lower': f.lower_bound
-            }
-            for f in sorted(forecasts, key=lambda x: x.date)
-        ]
-        
         result[campaign.name] = {
             'id': campaign.id,
             'peak_date': campaign.peak_date.isoformat() if campaign.peak_date else None,
@@ -42,13 +29,11 @@ def get_campaigns():
             'strategy': campaign.strategy,
             'action_item': campaign.action_items,
             'status_color': 'green' if campaign.status == 'active' else 'gray',
-            'hero_products': hero_products,
-            'graph_data': graph_data
+            'hero_products': hero_products
         }
     
     return jsonify({
-        'Campaigns': result,
-        'graph_data': _get_combined_graph_data()
+        'Campaigns': result
     }), 200
 
 @bp.route('/<int:campaign_id>', methods=['GET'])
@@ -64,18 +49,6 @@ def get_campaign(campaign_id):
         for cp in campaign.hero_products
     ]
     
-    forecasts = CampaignForecast.query.filter_by(campaign_id=campaign_id).all()
-    graph_data = [
-        {
-            'date': f.date.isoformat(),
-            'historical': f.historical_gmv,
-            'forecasted': f.forecasted_gmv,
-            'upper': f.upper_bound,
-            'lower': f.lower_bound
-        }
-        for f in sorted(forecasts, key=lambda x: x.date)
-    ]
-    
     return jsonify({
         'id': campaign.id,
         'name': campaign.name,
@@ -85,8 +58,7 @@ def get_campaign(campaign_id):
         'projected_volume': campaign.projected_volume,
         'strategy': campaign.strategy,
         'action_items': campaign.action_items,
-        'hero_products': hero_products,
-        'graph_data': graph_data
+        'hero_products': hero_products
     }), 200
 
 @bp.route('/<int:campaign_id>/hero-products', methods=['GET'])
@@ -107,25 +79,4 @@ def get_hero_products(campaign_id):
         ]
     }), 200
 
-def _get_combined_graph_data():
-    """Get combined graph data from all campaigns (last 730 days)"""
-    forecasts = CampaignForecast.query.all()
-    
-    data_dict = {}
-    for f in forecasts:
-        date_str = f.date.isoformat()
-        if date_str not in data_dict:
-            data_dict[date_str] = {
-                'date': date_str,
-                'historical': 0,
-                'forecasted': 0,
-                'upper': 0,
-                'lower': 0
-            }
-        
-        data_dict[date_str]['historical'] += f.historical_gmv or 0
-        data_dict[date_str]['forecasted'] += f.forecasted_gmv or 0
-        data_dict[date_str]['upper'] += f.upper_bound or 0
-        data_dict[date_str]['lower'] += f.lower_bound or 0
-    
-    return sorted(data_dict.values(), key=lambda x: x['date'])
+

@@ -37,7 +37,9 @@ pakistan-campaign-planner/
 └── README.md
 ```
 
-## 🚀 Quick Start
+## 🚀 Local development setup (no hosting platforms)
+
+This section explains how to run everything locally only (no Render/Cloudflare deployment).
 
 ### Prerequisites
 - Node.js 18+
@@ -48,57 +50,84 @@ pakistan-campaign-planner/
 ### 1. Backend Setup (Flask + PostgreSQL)
 
 ```bash
-# Navigate to backend
 cd backend
 
 # Create virtual environment
-python -m venv venv
-source venv/Scripts/activate  # Windows: venv\Scripts\activate
+python -m venv .venv
+.venv\Scripts\activate  # Windows
+# or: source .venv/bin/activate  # macOS/Linux
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Create .env file
-cp .env.example .env
-# Edit .env with your DATABASE_URL and SECRET_KEY
+# Prepare env
+copy .env.example .env
+# Edit .env:
+# DATABASE_URL=postgresql://<user>:<pass>@localhost/<db_name>
+# SECRET_KEY=your-secret-key
+# CORS_ORIGINS=http://localhost:3000
 
-# Initialize database
+# Initialize DB schema (one-time)
 psql -U postgres -d pakistan_campaign -f ../database/schema/init.sql
 
-# Seed campaigns and forecasts
+# Seed campaign data
 python seed_campaigns.py
 
-# Run locally (development)
-flask run
-
-# API should be available at http://localhost:5000
+# Start backend
+python wsgi.py
+# or: flask run (app defaults to localhost:5000)
 ```
 
 ### 2. Frontend Setup (React)
 
 ```bash
-# Navigate to frontend
 cd frontend
 
-# Install dependencies
 npm install
 
-# Create .env file
-cp .env.example .env.local
-# Set REACT_APP_API_URL to http://localhost:5000
+copy .env.example .env.local
+# In .env.local:
+# REACT_APP_API_URL=http://localhost:5000
 
-# Start development server
 npm start
-
-# App should be available at http://localhost:3000
 ```
 
-### 3. Verify Integration
+### 3. Verify locally
 
-1. Open http://localhost:3000 in browser
-2. Navigate to Campaign Planner
-3. Select a campaign - should load hero products from API
-4. Click "Generate SKU Mix" - should display filtered SKUs from database
+1. Open http://localhost:3000
+2. Go to Campaign Planner
+3. Select a campaign
+4. Click `Generate New` in the push notification overlay
+5. Confirm callouts are generated and selectable
+
+### 4. Ollama local LLM (optional for generated callouts)
+
+If you want AI callout generation via local model:
+
+```bash
+# Install ollama (https://ollama.com/docs/installation)
+ollama pull mistral
+ollama serve
+```
+
+`push_notification_routes.py` uses `http://127.0.0.1:11434/api/chat` by default.
+
+If Ollama is down, the backend falls back to mock callouts.
+
+---
+
+### (No cloud hosting in this workflow)
+
+- Skip all Render/Cloudflare deployment instructions when running locally.
+- Keep triggers and dev config in the local environment only.
+
+### 5. Troubleshooting
+
+- No backend response: verify backend console and that Flask is running.
+- CORS errors: confirm `CORS_ORIGINS=http://localhost:3000` in backend `.env`.
+- Database errors: confirm `DATABASE_URL` and that PostgreSQL service is running.
+- Ollama timeout: restart `ollama serve` and increase timeout in `push_notification_routes.py` if needed.
+
 
 ## 📡 API Endpoints
 

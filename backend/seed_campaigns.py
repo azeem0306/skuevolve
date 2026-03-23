@@ -39,7 +39,6 @@ def seed_campaigns():
             data = json.load(f)
         
         campaigns_data = data.get('Campaigns', {})
-        graph_data = data.get('graph_data', [])
         
         print(f"📊 Found {len(campaigns_data)} campaigns to seed")
         
@@ -76,37 +75,6 @@ def seed_campaigns():
                 db.session.add(hero_product)
             
             print(f"✅ Created campaign: {campaign_name}")
-        
-        # Seed forecast data
-        print(f"📈 Seeding {len(graph_data)} forecast records...")
-        for idx, point in enumerate(graph_data):
-            # Distribute forecast data across campaigns equally
-            campaign = Campaign.query.first()  # For now, use first campaign
-            if not campaign:
-                continue
-            
-            date_str = point.get('date')
-            if not date_str:
-                continue
-            
-            try:
-                date = datetime.strptime(date_str, '%Y-%m-%d').date()
-                
-                forecast = CampaignForecast(
-                    campaign_id=campaign.id,
-                    date=date,
-                    historical_gmv=point.get('historical'),
-                    forecasted_gmv=point.get('forecasted'),
-                    upper_bound=point.get('upper'),
-                    lower_bound=point.get('lower')
-                )
-                db.session.add(forecast)
-                
-                if idx % 100 == 0:
-                    db.session.commit()
-            except Exception as e:
-                print(f"⚠️  Skipped forecast point: {e}")
-                continue
         
         db.session.commit()
         print("✅ Campaign seeding completed successfully!")

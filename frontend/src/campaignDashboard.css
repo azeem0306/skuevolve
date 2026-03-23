@@ -311,11 +311,6 @@
   background-color: #4a5568;
 }
 
-.dashboard-chart-wrapper {
-  width: 100%;
-  height: 320px;
-}
-
 /* Side panel */
 .dashboard-side-copy {
   margin-top: 4px;
@@ -333,19 +328,103 @@
   padding-right: 4px;
 }
 
-.dashboard-product-row {
+.dashboard-product-row-extended {
   display: flex;
   align-items: center;
-  padding: 8px 10px;
+  padding: 10px 12px;
   border-radius: 10px;
   border: 1px solid #2d3748;
   background-color: #171923;
   transition: background-color 0.15s ease-out, border-color 0.15s ease-out;
+  gap: 10px;
 }
 
-.dashboard-product-row:hover {
+.dashboard-product-row-extended:hover {
   background-color: #1f2937;
   border-color: #4a5568;
+}
+
+.dashboard-product-tools {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.dashboard-tool-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #a0aec0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s, background 0.15s;
+}
+
+.dashboard-tool-btn:hover {
+  color: #4299e1;
+  background-color: #2d3748;
+}
+
+.dashboard-campaigns-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.dashboard-campaign-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #2d3748;
+  background-color: #171923;
+  transition: background-color 0.15s ease-out, border-color 0.15s ease-out;
+  gap: 10px;
+}
+
+.dashboard-campaign-item:hover {
+  background-color: #1f2937;
+  border-color: #4a5568;
+}
+
+.dashboard-campaign-rank {
+  width: 26px;
+  font-family: 'SF Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+  font-size: 11px;
+  color: #718096;
+  flex-shrink: 0;
+}
+
+.dashboard-campaign-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.dashboard-campaign-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: #e2e8f0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.dashboard-campaign-date {
+  margin: 2px 0 0;
+  font-size: 11px;
+  color: #718096;
+  font-family: 'SF Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
 }
 
 .dashboard-product-rank {

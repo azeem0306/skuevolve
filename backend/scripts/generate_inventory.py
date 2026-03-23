@@ -35,8 +35,13 @@ def build_inventory(sales_csv='../../daraz_pak_data.csv', out_csv='../../invento
     suppliers = ['Alif Traders', 'Bazaar Supply Co.', 'Nexa Imports', 'Pioneer Wholesale']
 
     rows = []
-    for sku in top_skus:
-        base_stock = random.randint(2000, 12000)  # Increased from 50-800 for realistic stockout days
+    for idx, sku in enumerate(top_skus):
+        # 50% of items have qty < 100, 50% have qty between 100-1000
+        if idx % 2 == 0:
+            base_stock = random.randint(1, 99)  # Low stock items
+        else:
+            base_stock = random.randint(100, 1000)  # Normal stock items (capped at 1000)
+        
         rows.append(
             {
                 'sku': sku,
@@ -45,12 +50,12 @@ def build_inventory(sales_csv='../../daraz_pak_data.csv', out_csv='../../invento
                 'cost_price': round(random.uniform(500, 7500), 2),
                 'msrp': round(random.uniform(1000, 12500), 2),
                 'qty_on_hand': base_stock,
-                'qty_reserved': random.randint(0, min(100, base_stock // 10)),
-                'reorder_point': random.randint(500, 1500),  # Increased proportionally
+                'qty_reserved': random.randint(0, min(50, base_stock // 5)),
+                'reorder_point': random.randint(50, 500),  # Adjusted for smaller stock levels
                 'last_restock_date': (
                     datetime.now() - timedelta(days=random.randint(5, 45))
                 ).strftime('%Y-%m-%d'),
-                'lead_time_days': random.randint(7, 21),
+                'lead_time_days': random.randint(3, 14),
             }
         )
 
