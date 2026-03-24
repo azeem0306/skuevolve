@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useCallback } from 'react';
 
 const ScenarioSimulator = ({
   isOpen,
@@ -11,23 +11,26 @@ const ScenarioSimulator = ({
   onApply,
   onReset,
 }) => {
-  const getSimulatorMetrics = (sku, discountPercent) => {
+  const getSimulatorMetrics = useCallback((sku, discountPercent) => {
     const product = products.find((p) => p.skuId === sku);
     if (!product) return null;
 
     const inventoryItem = inventoryData.find((item) => item.sku === sku);
-    const inventoryValue = inventoryItem
-      ? Number(inventoryItem.qty_on_hand || 0) * Number(inventoryItem.cost_price || 0)
-      : 0;
+    const inventoryQty = inventoryItem ? Number(inventoryItem.qty_on_hand || 0) : 0;
 
-    // Treat forecast as thousands of units; convert into rough expected revenue.
-    const baseRevenue = (product.forecast || 0) * 1000;
+    // Use forecast units for demand; discount increases demand.
+    const baseDemandUnits = product.forecast || 0;
+    const demandMultiplier = 1 + (discountPercent / 100) * 0.5; // up to +50% demand at 30% discount
+    const adjustedDemandUnits = baseDemandUnits * demandMultiplier;
+
     const daysWindow = 30;
-    const demandMultiplier = 1 + (discountPercent / 100) * 0.5; // up to +50% demand at 100% discount
+    const dailyDemandUnits = adjustedDemandUnits / daysWindow;
 
-    const adjustedRevenue = baseRevenue * (1 - discountPercent / 100) * demandMultiplier;
-    const dailyRevenue = (adjustedRevenue / daysWindow) || 0;
-    const stockoutDays = dailyRevenue > 0 ? inventoryValue / dailyRevenue : Infinity;
+    const stockoutDays = dailyDemandUnits > 0 ? inventoryQty / dailyDemandUnits : Infinity;
+
+    // Calculate projected revenue using selling price (msrp)
+    const avgSellingPrice = inventoryItem ? Number(inventoryItem.msrp || 0) : 0;
+    const projectedRevenue = adjustedDemandUnits * avgSellingPrice;
 
     const riskLabel = stockoutDays <= 2 ? 'High' : stockoutDays <= 7 ? 'Medium' : 'Low';
     const recommendation = stockoutDays <= 2
@@ -35,17 +38,16 @@ const ScenarioSimulator = ({
       : 'Stock levels look healthy for this campaign window.';
 
     return {
-      inventoryValue,
-      adjustedRevenue,
+      projectedRevenue,
       stockoutDays,
       riskLabel,
       recommendation,
     };
-  };
+  }, [products, inventoryData]);
 
   const simulatorMetrics = useMemo(
     () => selectedSku ? getSimulatorMetrics(selectedSku, discountPct) : null,
-    [selectedSku, discountPct, products, inventoryData]
+    [selectedSku, discountPct, getSimulatorMetrics]
   );
 
   if (!isOpen || !selectedSku || !simulatorMetrics) {
@@ -55,7 +57,7 @@ const ScenarioSimulator = ({
   const formatMoney = (value) =>
     value == null || Number.isNaN(value)
       ? '—'
-      : `PKR ${Number(value).toLocaleString('en-US', { maximumFractionDigits: 0 })}`;
+      : `PKR ${Number(value).toLocaleString('en-US', { maximumFractionDigits: 0 })}` ;
 
   const formatDays = (value) =>
     value === Infinity || Number.isNaN(value)
@@ -119,7 +121,7 @@ const ScenarioSimulator = ({
             <div className="cp-simulator-metric-card">
               <div className="cp-simulator-metric-label">Projected revenue</div>
               <div className="cp-simulator-metric-value">
-                {formatMoney(simulatorMetrics.adjustedRevenue)}
+                {formatMoney(simulatorMetrics.projectedRevenue)}
               </div>
             </div>
             <div className="cp-simulator-metric-card">

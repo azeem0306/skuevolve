@@ -53,12 +53,7 @@ Campaigns = {
 
 # Loading & Cleaning raw dataset
 def load_and_clean_data():
-    file_path = "../../daraz_pak_data.csv"
     try:
-        """df = kagglehub.dataset_load(
-            KaggleDatasetAdapter.PANDAS,
-            "zusmani/pakistans-largest-ecommerce-dataset",
-            file_path)"""
         # 1. Download the dataset folder (this caches it on your system)
         dataset_path = kagglehub.dataset_download("zusmani/pakistans-largest-ecommerce-dataset")
         

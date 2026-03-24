@@ -116,16 +116,14 @@ const CampaignPlanner = () => {
   const products = skuList.map((item, index) => {
     const sku = String(item?.sku ?? '');
     const name = sku.replace(/_/g, ' ').replace(/\s*-\s*[A-Z0-9-]+$/i, '') || sku;
-    const count = Math.max(1, skuList.length);
-    
-    // Use new realistic forecast calculation with metrics
-    const campaignLift = campaignData.campaign_lift_multiplier || 2.5;
+    const campaignLift = campaignData.campaign_lift_multiplier || 2.8;
     const baselineUnits = campaignData.avg_units_per_product_baseline || 100;
-    const demandVelocity = item?.metrics?.demand_velocity || 0.5;
-    const discountBoost = 1.15; // 15% discount increases demand ~15%
+    const demandVelocity = item?.metrics?.demand_velocity || 0.75;
+    const discountBoost = 1.2; // 15% discount increases demand ~20%
     
+    // Base boost adjusted by demand, with variance
     const forecast = Math.round(
-      baselineUnits * campaignLift * discountBoost * (0.85 + Math.random() * 0.3)
+      baselineUnits * campaignLift * discountBoost * (0.8 + demandVelocity * 0.4)
     );
     
     // Get AI Signal from data

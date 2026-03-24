@@ -98,7 +98,21 @@ backend/
 - `sku`, `date`, `category_name_1/2/3`
 - `sales_quantity`, `gmv`
 
-## 🔌 API Endpoints
+## � Demand Forecasting Calculation
+- `forecast` in UI is based on campaign-level and product-level inputs:
+  - `baselineUnits` from `campaignData.avg_units_per_product_baseline` (e.g. 120)
+  - `campaignLift` from `campaignData.campaign_lift_multiplier` (e.g. 2.8)
+  - `discountBoost` fixed at `1.2` (for campaign promotions)
+  - `demandVelocity` from `product.metrics.demand_velocity` (0.04-1.0)
+  - derived demand factor `(0.8 + demandVelocity * 0.4)` to keep low-demand SKUs moderate
+- Effective forecast units:
+  - `forecast = round(baselineUnits * campaignLift * discountBoost * (0.8 + demandVelocity * 0.4))`
+- Scenario simulator uses units-based stockout calculation:
+  - `adjustedDemandUnits = forecast * (1 + discount% / 100 * 0.5)`
+  - `dailyDemandUnits = adjustedDemandUnits / 30`
+  - `stockoutDays = inventoryQty / dailyDemandUnits`
+
+## �🔌 API Endpoints
 
 ### GET /api/campaigns
 Returns all campaigns with hero products and forecast data.
