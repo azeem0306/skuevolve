@@ -2,7 +2,7 @@
   "Campaigns": {
     "11-11": {
       "peak_date": "2018-11-14",
-      "projected_volume": 7987424,
+      "projected_volume": 8000823,
       "campaign_lift_multiplier": 2.8,
       "avg_units_per_product_baseline": 120,
       "hero_products": [
@@ -11,7 +11,7 @@
           "category": "Mobiles & Tablets",
           "metrics": {
             "search_volume_trend": 0.0,
-            "inventory_age_days": 22,
+            "inventory_age_days": 23,
             "demand_velocity": 0.66,
             "stock_pressure": 0.57
           },
@@ -22,7 +22,7 @@
           "category": "Mobiles & Tablets",
           "metrics": {
             "search_volume_trend": 0.0,
-            "inventory_age_days": 67,
+            "inventory_age_days": 68,
             "demand_velocity": 0.25,
             "stock_pressure": 1.0
           },
@@ -33,7 +33,7 @@
           "category": "Mobiles & Tablets",
           "metrics": {
             "search_volume_trend": 0.0,
-            "inventory_age_days": 28,
+            "inventory_age_days": 29,
             "demand_velocity": 0.04,
             "stock_pressure": 0.44
           },
@@ -44,7 +44,7 @@
           "category": "Mobiles & Tablets",
           "metrics": {
             "search_volume_trend": 0.0,
-            "inventory_age_days": 18,
+            "inventory_age_days": 19,
             "demand_velocity": 0.43,
             "stock_pressure": 1.0
           },
@@ -55,18 +55,18 @@
           "category": "Mobiles & Tablets",
           "metrics": {
             "search_volume_trend": 0.0,
-            "inventory_age_days": 60,
+            "inventory_age_days": 61,
             "demand_velocity": 1.0,
             "stock_pressure": 1.0
           },
-          "ai_signal": "Organic Demand"
+          "ai_signal": "Aging Stock"
         },
         {
           "sku": "MATSAM59DB7583ED7C0",
           "category": "Mobiles & Tablets",
           "metrics": {
             "search_volume_trend": 0.0,
-            "inventory_age_days": 22,
+            "inventory_age_days": 23,
             "demand_velocity": 0.23,
             "stock_pressure": 0.18
           },
@@ -77,7 +77,7 @@
           "category": "Mobiles & Tablets",
           "metrics": {
             "search_volume_trend": 0.0,
-            "inventory_age_days": 40,
+            "inventory_age_days": 41,
             "demand_velocity": 0.98,
             "stock_pressure": 0.12
           },
@@ -88,7 +88,7 @@
           "category": "Mobiles & Tablets",
           "metrics": {
             "search_volume_trend": 0.0,
-            "inventory_age_days": 10,
+            "inventory_age_days": 11,
             "demand_velocity": 0.15,
             "stock_pressure": 1.0
           },
@@ -99,7 +99,7 @@
           "category": "Mobiles & Tablets",
           "metrics": {
             "search_volume_trend": 0.0,
-            "inventory_age_days": 86,
+            "inventory_age_days": 87,
             "demand_velocity": 0.02,
             "stock_pressure": 0.22
           },
@@ -110,7 +110,7 @@
           "category": "Mobiles & Tablets",
           "metrics": {
             "search_volume_trend": 0.0,
-            "inventory_age_days": 75,
+            "inventory_age_days": 76,
             "demand_velocity": 0.07,
             "stock_pressure": 1.0
           },
@@ -123,7 +123,7 @@
     },
     "Black Friday": {
       "peak_date": "2018-11-23",
-      "projected_volume": 13627292,
+      "projected_volume": 13639630,
       "campaign_lift_multiplier": 3.2,
       "avg_units_per_product_baseline": 95,
       "hero_products": [
@@ -244,7 +244,7 @@
     },
     "Eid/Ramadan": {
       "peak_date": "2019-06-07",
-      "projected_volume": 2782751,
+      "projected_volume": 2811221,
       "campaign_lift_multiplier": 2.5,
       "avg_units_per_product_baseline": 110,
       "hero_products": [
@@ -286,7 +286,7 @@
           "category": "Mobiles & Tablets",
           "metrics": {
             "search_volume_trend": 0.0,
-            "inventory_age_days": 9,
+            "inventory_age_days": 10,
             "demand_velocity": 0.04,
             "stock_pressure": 0.2
           },
@@ -297,7 +297,7 @@
           "category": "Mobiles & Tablets",
           "metrics": {
             "search_volume_trend": 0.0,
-            "inventory_age_days": 24,
+            "inventory_age_days": 25,
             "demand_velocity": 0.03,
             "stock_pressure": 1.0
           },
@@ -308,7 +308,7 @@
           "category": "Mobiles & Tablets",
           "metrics": {
             "search_volume_trend": 0.0,
-            "inventory_age_days": 48,
+            "inventory_age_days": 49,
             "demand_velocity": 0.02,
             "stock_pressure": 0.32
           },
@@ -319,7 +319,7 @@
           "category": "Mobiles & Tablets",
           "metrics": {
             "search_volume_trend": 0.0,
-            "inventory_age_days": 83,
+            "inventory_age_days": 84,
             "demand_velocity": 0.01,
             "stock_pressure": 0.22
           },
@@ -330,7 +330,7 @@
           "category": "Mobiles & Tablets",
           "metrics": {
             "search_volume_trend": 0.0,
-            "inventory_age_days": 22,
+            "inventory_age_days": 23,
             "demand_velocity": 0.01,
             "stock_pressure": 1.0
           },
@@ -341,7 +341,7 @@
           "category": "Mobiles & Tablets",
           "metrics": {
             "search_volume_trend": 0.0,
-            "inventory_age_days": 30,
+            "inventory_age_days": 31,
             "demand_velocity": 0.02,
             "stock_pressure": 1.0
           },
@@ -352,7 +352,7 @@
           "category": "Mobiles & Tablets",
           "metrics": {
             "search_volume_trend": 0.0,
-            "inventory_age_days": 82,
+            "inventory_age_days": 83,
             "demand_velocity": 0.01,
             "stock_pressure": 0.78
           },
