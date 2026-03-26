@@ -57,7 +57,7 @@ const ScenarioSimulator = ({
   const formatMoney = (value) =>
     value == null || Number.isNaN(value)
       ? '—'
-      : `PKR ${Number(value).toLocaleString('en-US', { maximumFractionDigits: 0 })}` ;
+      : `USD ${Number(value).toLocaleString('en-US', { maximumFractionDigits: 0 })}` ;
 
   const formatDays = (value) =>
     value === Infinity || Number.isNaN(value)

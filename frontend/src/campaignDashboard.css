@@ -427,6 +427,27 @@
     'Liberation Mono', 'Courier New', monospace;
 }
 
+.dashboard-campaign-delete-btn {
+  width: 28px;
+  height: 28px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: #5f6b7f;
+  border-radius: 8px;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s ease-out, border-color 0.15s ease-out, color 0.15s ease-out;
+}
+
+.dashboard-campaign-delete-btn:hover {
+  background-color: rgba(74, 85, 104, 0.2);
+  border-color: #3a4558;
+  color: #9aa5b7;
+}
+
 .dashboard-product-rank {
   width: 26px;
   font-family: 'SF Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,

@@ -1,362 +1,687 @@
 {
   "Campaigns": {
-    "11-11": {
-      "peak_date": "2018-11-14",
-      "projected_volume": 8000823,
-      "campaign_lift_multiplier": 2.8,
-      "avg_units_per_product_baseline": 120,
+    "New Year": {
+      "peak_date": "2015-01-02",
+      "projected_volume": 16728,
+      "campaign_lift_multiplier": 2.54,
+      "observed_lift_multiplier": 1.88,
+      "avg_units_per_product_baseline": 100,
       "hero_products": [
         {
-          "sku": "MATSAM59DB75ADB2F80",
-          "category": "Mobiles & Tablets",
+          "sku": "OFF-AP-10002330",
+          "name": "Hamilton Beach Stove, Silver",
+          "category": "Office Supplies",
           "metrics": {
-            "search_volume_trend": 0.0,
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 10,
+            "demand_velocity": 0.0,
+            "stock_pressure": 1.0,
+            "stockout_days": 775.0,
+            "lead_time_days": 4,
+            "gross_margin_pct": 0.67
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.755
+        },
+        {
+          "sku": "FUR-CH-10000027",
+          "name": "SAFCO Executive Leather Armchair, Black",
+          "category": "Furniture",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 15,
+            "demand_velocity": 0.0,
+            "stock_pressure": 0.02,
+            "stockout_days": 15.0,
+            "lead_time_days": 8,
+            "gross_margin_pct": 0.63
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.688
+        },
+        {
+          "sku": "TEC-PH-10000419",
+          "name": "Apple Smart Phone, Full Size",
+          "category": "Technology",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 22,
+            "demand_velocity": 0.0,
+            "stock_pressure": 1.0,
+            "stockout_days": 538.0,
+            "lead_time_days": 14,
+            "gross_margin_pct": 0.48
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.659
+        },
+        {
+          "sku": "OFF-AP-10003963",
+          "name": "Breville Microwave, Silver",
+          "category": "Office Supplies",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 22,
+            "demand_velocity": 0.0,
+            "stock_pressure": 0.15,
+            "stockout_days": 363.0,
+            "lead_time_days": 9,
+            "gross_margin_pct": 0.49
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.638
+        },
+        {
+          "sku": "TEC-PH-10001459",
+          "name": "Samsung Galaxy Mega 6.3",
+          "category": "Technology",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 16,
+            "demand_velocity": 0.0,
+            "stock_pressure": 1.0,
+            "stockout_days": 4120.0,
+            "lead_time_days": 11,
+            "gross_margin_pct": 0.84
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.638
+        },
+        {
+          "sku": "FUR-CH-10002024",
+          "name": "HON 5400 Series Task Chairs for Big and Tall",
+          "category": "Furniture",
+          "metrics": {
+            "search_volume_trend": 1.0,
             "inventory_age_days": 23,
-            "demand_velocity": 0.66,
-            "stock_pressure": 0.57
+            "demand_velocity": 0.0,
+            "stock_pressure": 1.0,
+            "stockout_days": 766.0,
+            "lead_time_days": 8,
+            "gross_margin_pct": 0.84
           },
-          "ai_signal": "Organic Demand"
+          "ai_signal": "Trending",
+          "priority_score": 0.632
         },
         {
-          "sku": "MATSAM59DB757FB47A2",
-          "category": "Mobiles & Tablets",
+          "sku": "FUR-BO-10003282",
+          "name": "Ikea Classic Bookcase, Mobile",
+          "category": "Furniture",
           "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 68,
-            "demand_velocity": 0.25,
-            "stock_pressure": 1.0
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 8,
+            "demand_velocity": 0.0,
+            "stock_pressure": 1.0,
+            "stockout_days": 1832.0,
+            "lead_time_days": 6,
+            "gross_margin_pct": 0.12
           },
-          "ai_signal": "Aging Stock"
+          "ai_signal": "Trending",
+          "priority_score": 0.611
         },
         {
-          "sku": "MATSAM59D74470AD085",
-          "category": "Mobiles & Tablets",
+          "sku": "FUR-IKE-10001539",
+          "name": "Ikea Classic Bookcase, Pine",
+          "category": "Furniture",
           "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 29,
-            "demand_velocity": 0.04,
-            "stock_pressure": 0.44
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 33,
+            "demand_velocity": 0.0,
+            "stock_pressure": 0.9,
+            "stockout_days": 76.0,
+            "lead_time_days": 9,
+            "gross_margin_pct": 0.43
           },
-          "ai_signal": "Organic Demand"
+          "ai_signal": "Trending",
+          "priority_score": 0.608
         },
         {
-          "sku": "MATSAM5A0BFFF19C40A",
-          "category": "Mobiles & Tablets",
+          "sku": "FUR-CH-10000602",
+          "name": "Novimex Executive Leather Armchair, Red",
+          "category": "Furniture",
           "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 19,
-            "demand_velocity": 0.43,
-            "stock_pressure": 1.0
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 44,
+            "demand_velocity": 0.0,
+            "stock_pressure": 1.0,
+            "stockout_days": 7270.0,
+            "lead_time_days": 7,
+            "gross_margin_pct": 0.48
           },
-          "ai_signal": "Organic Demand"
+          "ai_signal": "Trending",
+          "priority_score": 0.608
         },
         {
-          "sku": "MATSAM5A0BFFEF4DA20",
-          "category": "Mobiles & Tablets",
+          "sku": "FUR-BO-10004999",
+          "name": "Safco Classic Bookcase, Metal",
+          "category": "Furniture",
           "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 61,
-            "demand_velocity": 1.0,
-            "stock_pressure": 1.0
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 39,
+            "demand_velocity": 0.0,
+            "stock_pressure": 1.0,
+            "stockout_days": 421.0,
+            "lead_time_days": 6,
+            "gross_margin_pct": 0.33
           },
-          "ai_signal": "Aging Stock"
-        },
-        {
-          "sku": "MATSAM59DB7583ED7C0",
-          "category": "Mobiles & Tablets",
-          "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 23,
-            "demand_velocity": 0.23,
-            "stock_pressure": 0.18
-          },
-          "ai_signal": "Organic Demand"
-        },
-        {
-          "sku": "MATSAM5A0BFFEEED718",
-          "category": "Mobiles & Tablets",
-          "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 41,
-            "demand_velocity": 0.98,
-            "stock_pressure": 0.12
-          },
-          "ai_signal": "Organic Demand"
-        },
-        {
-          "sku": "MATSAM59DB75A984259",
-          "category": "Mobiles & Tablets",
-          "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 11,
-            "demand_velocity": 0.15,
-            "stock_pressure": 1.0
-          },
-          "ai_signal": "Organic Demand"
-        },
-        {
-          "sku": "MATSAM59DB758C26262",
-          "category": "Mobiles & Tablets",
-          "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 87,
-            "demand_velocity": 0.02,
-            "stock_pressure": 0.22
-          },
-          "ai_signal": "Aging Stock"
-        },
-        {
-          "sku": "MATINF59C9002A3CDEC",
-          "category": "Mobiles & Tablets",
-          "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 76,
-            "demand_velocity": 0.07,
-            "stock_pressure": 1.0
-          },
-          "ai_signal": "Aging Stock"
+          "ai_signal": "Trending",
+          "priority_score": 0.607
         }
       ],
       "strategy": "Maximize GMV",
       "action_item": "Increase Stock Levels",
       "status_color": "green"
     },
-    "Black Friday": {
-      "peak_date": "2018-11-23",
-      "projected_volume": 13639630,
-      "campaign_lift_multiplier": 3.2,
-      "avg_units_per_product_baseline": 95,
-      "hero_products": [
-        {
-          "sku": "Rubian_U8 Smart Watch",
-          "category": "Mobiles & Tablets",
-          "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 30,
-            "demand_velocity": 0.03,
-            "stock_pressure": 0.5
-          },
-          "ai_signal": "Organic Demand"
-        },
-        {
-          "sku": "MEFBNB59FC74FFCBC1B-L",
-          "category": "Men's Fashion",
-          "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 30,
-            "demand_velocity": 0.08,
-            "stock_pressure": 0.5
-          },
-          "ai_signal": "Organic Demand"
-        },
-        {
-          "sku": "TTmachine_CurrenPackof2",
-          "category": "Men's Fashion",
-          "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 30,
-            "demand_velocity": 0.08,
-            "stock_pressure": 0.5
-          },
-          "ai_signal": "Organic Demand"
-        },
-        {
-          "sku": "adolph_WD-1-L",
-          "category": "Men's Fashion",
-          "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 30,
-            "demand_velocity": 1.0,
-            "stock_pressure": 0.5
-          },
-          "ai_signal": "Organic Demand"
-        },
-        {
-          "sku": "adolph_WD-1-M",
-          "category": "Men's Fashion",
-          "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 30,
-            "demand_velocity": 0.14,
-            "stock_pressure": 0.5
-          },
-          "ai_signal": "Organic Demand"
-        },
-        {
-          "sku": "MEFBNB59FC74FFCBC1B-M",
-          "category": "Men's Fashion",
-          "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 30,
-            "demand_velocity": 0.07,
-            "stock_pressure": 0.5
-          },
-          "ai_signal": "Organic Demand"
-        },
-        {
-          "sku": "MEFAYB59F7656AAA3A4",
-          "category": "Men's Fashion",
-          "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 30,
-            "demand_velocity": 0.05,
-            "stock_pressure": 0.5
-          },
-          "ai_signal": "Organic Demand"
-        },
-        {
-          "sku": "MEFBNB59FC74FDBC09F-L",
-          "category": "Men's Fashion",
-          "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 30,
-            "demand_velocity": 0.06,
-            "stock_pressure": 0.5
-          },
-          "ai_signal": "Organic Demand"
-        },
-        {
-          "sku": "MEFBNB59FC7507001A7-L",
-          "category": "Men's Fashion",
-          "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 30,
-            "demand_velocity": 0.06,
-            "stock_pressure": 0.5
-          },
-          "ai_signal": "Organic Demand"
-        },
-        {
-          "sku": "MEFBNB59FC7506034B7-M",
-          "category": "Men's Fashion",
-          "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 30,
-            "demand_velocity": 0.04,
-            "stock_pressure": 0.5
-          },
-          "ai_signal": "Organic Demand"
-        }
-      ],
-      "strategy": "Maximize GMV",
-      "action_item": "Increase Stock Levels",
-      "status_color": "green"
-    },
-    "Eid/Ramadan": {
-      "peak_date": "2019-06-07",
-      "projected_volume": 2811221,
-      "campaign_lift_multiplier": 2.5,
+    "Valentine's Day": {
+      "peak_date": "2015-02-10",
+      "projected_volume": 13753,
+      "campaign_lift_multiplier": 2.0,
+      "observed_lift_multiplier": 1.1,
       "avg_units_per_product_baseline": 110,
       "hero_products": [
         {
-          "sku": "ncollection_KurtaCoffee",
-          "category": "Men's Fashion",
+          "sku": "OFF-AP-10003590",
+          "name": "Hoover WindTunnel Plus Canister Vacuum",
+          "category": "Office Supplies",
           "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 30,
-            "demand_velocity": 0.01,
-            "stock_pressure": 0.5
-          },
-          "ai_signal": "Organic Demand"
-        },
-        {
-          "sku": "ncollection_KurtaGrey",
-          "category": "Men's Fashion",
-          "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 30,
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 11,
             "demand_velocity": 0.0,
-            "stock_pressure": 0.5
+            "stock_pressure": 1.0,
+            "stockout_days": 3861.0,
+            "lead_time_days": 11,
+            "gross_margin_pct": 0.86
           },
-          "ai_signal": "Organic Demand"
+          "ai_signal": "Trending",
+          "priority_score": 0.711
         },
         {
-          "sku": "ncollection_KurtaGreen",
-          "category": "Men's Fashion",
+          "sku": "FUR-CH-10002203",
+          "name": "SAFCO Executive Leather Armchair, Black",
+          "category": "Furniture",
           "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 30,
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 44,
             "demand_velocity": 0.0,
-            "stock_pressure": 0.5
+            "stock_pressure": 0.46,
+            "stockout_days": 163.0,
+            "lead_time_days": 12,
+            "gross_margin_pct": 0.45
           },
-          "ai_signal": "Organic Demand"
+          "ai_signal": "Trending",
+          "priority_score": 0.659
         },
         {
-          "sku": "IDROID_BALRX7-Gold",
-          "category": "Mobiles & Tablets",
+          "sku": "OFF-SME-10000746",
+          "name": "Smead Lockers, Industrial",
+          "category": "Office Supplies",
           "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 10,
-            "demand_velocity": 0.04,
-            "stock_pressure": 0.2
-          },
-          "ai_signal": "Organic Demand"
-        },
-        {
-          "sku": "IDROID_BALRX7-Jet black",
-          "category": "Mobiles & Tablets",
-          "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 25,
-            "demand_velocity": 0.03,
-            "stock_pressure": 1.0
-          },
-          "ai_signal": "Organic Demand"
-        },
-        {
-          "sku": "MATSAM5B10F7E2AC8C1",
-          "category": "Mobiles & Tablets",
-          "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 49,
-            "demand_velocity": 0.02,
-            "stock_pressure": 0.32
-          },
-          "ai_signal": "Organic Demand"
-        },
-        {
-          "sku": "MATSAM5B1509B4696EA",
-          "category": "Mobiles & Tablets",
-          "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 84,
-            "demand_velocity": 0.01,
-            "stock_pressure": 0.22
-          },
-          "ai_signal": "Aging Stock"
-        },
-        {
-          "sku": "MATSAM5B10F2272EBD9",
-          "category": "Mobiles & Tablets",
-          "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 23,
-            "demand_velocity": 0.01,
-            "stock_pressure": 1.0
-          },
-          "ai_signal": "Organic Demand"
-        },
-        {
-          "sku": "MATSAM5B10F552B5411",
-          "category": "Mobiles & Tablets",
-          "metrics": {
-            "search_volume_trend": 0.0,
+            "search_volume_trend": 1.0,
             "inventory_age_days": 31,
-            "demand_velocity": 0.02,
-            "stock_pressure": 1.0
+            "demand_velocity": 0.0,
+            "stock_pressure": 1.0,
+            "stockout_days": 7260.0,
+            "lead_time_days": 14,
+            "gross_margin_pct": 0.77
           },
-          "ai_signal": "Organic Demand"
+          "ai_signal": "Trending",
+          "priority_score": 0.619
         },
         {
-          "sku": "MATSAM5B10F91A9B6AB",
-          "category": "Mobiles & Tablets",
+          "sku": "TEC-PH-10002774",
+          "name": "Nokia Smart Phone, with Caller ID",
+          "category": "Technology",
           "metrics": {
-            "search_volume_trend": 0.0,
-            "inventory_age_days": 83,
-            "demand_velocity": 0.01,
-            "stock_pressure": 0.78
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 21,
+            "demand_velocity": 0.0,
+            "stock_pressure": 1.0,
+            "stockout_days": 6900.0,
+            "lead_time_days": 14,
+            "gross_margin_pct": 0.43
           },
-          "ai_signal": "Aging Stock"
+          "ai_signal": "Trending",
+          "priority_score": 0.619
+        },
+        {
+          "sku": "FUR-TA-10001116",
+          "name": "Barricks Conference Table, Fully Assembled",
+          "category": "Furniture",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 0,
+            "demand_velocity": 0.1,
+            "stock_pressure": 0.5,
+            "stockout_days": null,
+            "lead_time_days": null,
+            "gross_margin_pct": 0.25
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.6
+        },
+        {
+          "sku": "OFF-BI-10003527",
+          "name": "Fellowes PB500 Electric Punch Plastic Comb Binding Machine with Manual Bind",
+          "category": "Office Supplies",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 43,
+            "demand_velocity": 0.0,
+            "stock_pressure": 0.63,
+            "stockout_days": 650.0,
+            "lead_time_days": 10,
+            "gross_margin_pct": 0.82
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.541
+        },
+        {
+          "sku": "TEC-CO-10002962",
+          "name": "Sharp Wireless Fax, Color",
+          "category": "Technology",
+          "metrics": {
+            "search_volume_trend": 0.49,
+            "inventory_age_days": 16,
+            "demand_velocity": 0.0,
+            "stock_pressure": 0.81,
+            "stockout_days": 79.0,
+            "lead_time_days": 13,
+            "gross_margin_pct": 0.5
+          },
+          "ai_signal": "Organic Demand",
+          "priority_score": 0.54
+        },
+        {
+          "sku": "FUR-CHR-10002165",
+          "name": "Chromcraft Wood Table, Adjustable Height",
+          "category": "Furniture",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 0,
+            "demand_velocity": 0.1,
+            "stock_pressure": 0.5,
+            "stockout_days": null,
+            "lead_time_days": null,
+            "gross_margin_pct": 0.25
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.537
+        },
+        {
+          "sku": "TEC-MA-10001127",
+          "name": "HP Designjet T520 Inkjet Large Format Printer - 24\" Color",
+          "category": "Technology",
+          "metrics": {
+            "search_volume_trend": 0.09,
+            "inventory_age_days": 16,
+            "demand_velocity": 0.0,
+            "stock_pressure": 0.2,
+            "stockout_days": 77.0,
+            "lead_time_days": 8,
+            "gross_margin_pct": 0.45
+          },
+          "ai_signal": "Organic Demand",
+          "priority_score": 0.535
+        },
+        {
+          "sku": "FUR-CH-10001415",
+          "name": "Office Star Executive Leather Armchair, Red",
+          "category": "Furniture",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 6,
+            "demand_velocity": 0.0,
+            "stock_pressure": 0.76,
+            "stockout_days": 530.0,
+            "lead_time_days": 10,
+            "gross_margin_pct": 0.75
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.535
+        }
+      ],
+      "strategy": "Maximize GMV",
+      "action_item": "Increase Stock Levels",
+      "status_color": "green"
+    },
+    "Halloween": {
+      "peak_date": "2015-10-30",
+      "projected_volume": 20840,
+      "campaign_lift_multiplier": 2.0,
+      "observed_lift_multiplier": 1.01,
+      "avg_units_per_product_baseline": 105,
+      "hero_products": [
+        {
+          "sku": "TEC-CO-10004722",
+          "name": "Canon imageCLASS 2200 Advanced Copier",
+          "category": "Technology",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 10,
+            "demand_velocity": 0.0,
+            "stock_pressure": 0.08,
+            "stockout_days": 240.0,
+            "lead_time_days": 7,
+            "gross_margin_pct": 0.76
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.699
+        },
+        {
+          "sku": "TEC-PH-10004664",
+          "name": "Nokia Smart Phone, with Caller ID",
+          "category": "Technology",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 29,
+            "demand_velocity": 0.0,
+            "stock_pressure": 0.51,
+            "stockout_days": 91.0,
+            "lead_time_days": 12,
+            "gross_margin_pct": 0.48
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.572
+        },
+        {
+          "sku": "TEC-CAN-10001437",
+          "name": "Canon Wireless Fax, Laser",
+          "category": "Technology",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 28,
+            "demand_velocity": 0.0,
+            "stock_pressure": 1.0,
+            "stockout_days": 4660.0,
+            "lead_time_days": 4,
+            "gross_margin_pct": 0.56
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.565
+        },
+        {
+          "sku": "TEC-PH-10000419",
+          "name": "Apple Smart Phone, Full Size",
+          "category": "Technology",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 22,
+            "demand_velocity": 0.0,
+            "stock_pressure": 1.0,
+            "stockout_days": 538.0,
+            "lead_time_days": 14,
+            "gross_margin_pct": 0.48
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.562
+        },
+        {
+          "sku": "TEC-CO-10002035",
+          "name": "Canon Wireless Fax, High-Speed",
+          "category": "Technology",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 35,
+            "demand_velocity": 0.0,
+            "stock_pressure": 1.0,
+            "stockout_days": 233.0,
+            "lead_time_days": 7,
+            "gross_margin_pct": 0.66
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.562
+        },
+        {
+          "sku": "FUR-TA-10001786",
+          "name": "Chromcraft Computer Table, with Bottom Storage",
+          "category": "Furniture",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 6,
+            "demand_velocity": 0.0,
+            "stock_pressure": 1.0,
+            "stockout_days": 969.0,
+            "lead_time_days": 10,
+            "gross_margin_pct": 0.39
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.56
+        },
+        {
+          "sku": "FUR-BO-10004665",
+          "name": "Bush Classic Bookcase, Mobile",
+          "category": "Furniture",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 13,
+            "demand_velocity": 0.0,
+            "stock_pressure": 1.0,
+            "stockout_days": 2828.0,
+            "lead_time_days": 14,
+            "gross_margin_pct": 0.91
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.559
+        },
+        {
+          "sku": "TEC-PH-10004196",
+          "name": "Samsung Smart Phone, Cordless",
+          "category": "Technology",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 14,
+            "demand_velocity": 0.0,
+            "stock_pressure": 1.0,
+            "stockout_days": 2997.0,
+            "lead_time_days": 6,
+            "gross_margin_pct": 0.74
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.556
+        },
+        {
+          "sku": "FUR-CH-10000932",
+          "name": "Harbour Creations Executive Leather Armchair, Red",
+          "category": "Furniture",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 44,
+            "demand_velocity": 0.0,
+            "stock_pressure": 1.0,
+            "stockout_days": 1520.0,
+            "lead_time_days": 13,
+            "gross_margin_pct": 0.39
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.547
+        },
+        {
+          "sku": "FUR-BO-10004771",
+          "name": "Ikea Classic Bookcase, Traditional",
+          "category": "Furniture",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 28,
+            "demand_velocity": 0.0,
+            "stock_pressure": 1.0,
+            "stockout_days": 530.0,
+            "lead_time_days": 9,
+            "gross_margin_pct": 0.67
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.544
+        }
+      ],
+      "strategy": "Maximize GMV",
+      "action_item": "Increase Stock Levels",
+      "status_color": "green"
+    },
+    "Christmas": {
+      "peak_date": "2015-12-18",
+      "projected_volume": 23702,
+      "campaign_lift_multiplier": 2.0,
+      "observed_lift_multiplier": 1.16,
+      "avg_units_per_product_baseline": 130,
+      "hero_products": [
+        {
+          "sku": "TEC-MOT-10000554",
+          "name": "Motorola Smart Phone, Full Size",
+          "category": "Technology",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 22,
+            "demand_velocity": 0.0,
+            "stock_pressure": 1.0,
+            "stockout_days": 4400.0,
+            "lead_time_days": 11,
+            "gross_margin_pct": 0.78
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.696
+        },
+        {
+          "sku": "FUR-CH-10000660",
+          "name": "Novimex Executive Leather Armchair, Adjustable",
+          "category": "Furniture",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 24,
+            "demand_velocity": 0.0,
+            "stock_pressure": 1.0,
+            "stockout_days": 800.0,
+            "lead_time_days": 9,
+            "gross_margin_pct": 0.45
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.694
+        },
+        {
+          "sku": "TEC-AC-10002049",
+          "name": "Plantronics Savi W720 Multi-Device Wireless Headset System",
+          "category": "Technology",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 19,
+            "demand_velocity": 0.0,
+            "stock_pressure": 1.0,
+            "stockout_days": 2590.0,
+            "lead_time_days": 12,
+            "gross_margin_pct": 0.55
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.677
+        },
+        {
+          "sku": "OFF-BI-10000545",
+          "name": "GBC Ibimaster 500 Manual ProClick Binding System",
+          "category": "Office Supplies",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 17,
+            "demand_velocity": 0.0,
+            "stock_pressure": 0.92,
+            "stockout_days": 1260.0,
+            "lead_time_days": 13,
+            "gross_margin_pct": -0.66
+          },
+          "ai_signal": "Margin Watch",
+          "priority_score": 0.656
+        },
+        {
+          "sku": "FUR-CH-10001854",
+          "name": "Office Star - Professional Matrix Back Chair with 2-to-1 Synchro Tilt and Mesh Fabric Seat",
+          "category": "Furniture",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 40,
+            "demand_velocity": 0.0,
+            "stock_pressure": 1.0,
+            "stockout_days": 2261.0,
+            "lead_time_days": 9,
+            "gross_margin_pct": 0.88
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.65
+        },
+        {
+          "sku": "TEC-CO-10004078",
+          "name": "Sharp Fax Machine, Laser",
+          "category": "Technology",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 39,
+            "demand_velocity": 0.0,
+            "stock_pressure": 1.0,
+            "stockout_days": 3790.0,
+            "lead_time_days": 14,
+            "gross_margin_pct": 0.88
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.629
+        },
+        {
+          "sku": "TEC-APP-10002966",
+          "name": "Apple Smart Phone, Full Size",
+          "category": "Technology",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 23,
+            "demand_velocity": 0.0,
+            "stock_pressure": 1.0,
+            "stockout_days": 3192.0,
+            "lead_time_days": 13,
+            "gross_margin_pct": 0.49
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.617
+        },
+        {
+          "sku": "OFF-ST-10002292",
+          "name": "Sauder Facets Collection Locker/File Cabinet, Sky Alder Finish",
+          "category": "Office Supplies",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 18,
+            "demand_velocity": 0.0,
+            "stock_pressure": 0.96,
+            "stockout_days": 4420.0,
+            "lead_time_days": 10,
+            "gross_margin_pct": 0.41
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.61
+        },
+        {
+          "sku": "TEC-PH-10002672",
+          "name": "Cisco Smart Phone, Full Size",
+          "category": "Technology",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 40,
+            "demand_velocity": 0.0,
+            "stock_pressure": 1.0,
+            "stockout_days": 90.0,
+            "lead_time_days": 14,
+            "gross_margin_pct": 0.48
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.606
+        },
+        {
+          "sku": "FUR-TA-10001786",
+          "name": "Chromcraft Computer Table, with Bottom Storage",
+          "category": "Furniture",
+          "metrics": {
+            "search_volume_trend": 1.0,
+            "inventory_age_days": 6,
+            "demand_velocity": 0.0,
+            "stock_pressure": 1.0,
+            "stockout_days": 969.0,
+            "lead_time_days": 10,
+            "gross_margin_pct": 0.39
+          },
+          "ai_signal": "Trending",
+          "priority_score": 0.604
         }
       ],
       "strategy": "Maximize GMV",

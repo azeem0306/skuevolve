@@ -4,12 +4,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import AppLayout from './components/AppLayout';
 import CampaignDashboard from './campaignDashboard';
 import CampaignPlanner from './pages/CampaignPlanner';
-
-const WarRoom = () => (
-  <div className="war-room-placeholder">
-    <p>War Room — coming soon</p>
-  </div>
-);
+import WarRoom from './pages/WarRoom';
 
 function App() {
   return (

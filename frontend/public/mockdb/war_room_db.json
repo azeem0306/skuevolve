@@ -1,0 +1,75 @@
+{
+  "liveOpsLabel": "LIVE OPS: NEW YEAR SALE",
+  "onlineUsers": 12404,
+  "gmv": {
+    "current": 342000,
+    "target": 500000,
+    "projectionPct": 68
+  },
+  "velocity": {
+    "currentOrdersPerMin": 142,
+    "deltaPct": 15
+  },
+  "criticalInterventions": [
+    {
+      "sku": "TEC-PH-10001459",
+      "reason": "Demand > Supply",
+      "etaOosMins": 12
+    },
+    {
+      "sku": "TEC-PH-10004664",
+      "reason": "Pacing 20% behind target",
+      "etaOosMins": 19
+    },
+    {
+      "sku": "OFF-AP-10002330",
+      "reason": "High conversion spike",
+      "etaOosMins": 17
+    },
+    {
+      "sku": "FUR-CH-10000027",
+      "reason": "Low stock pressure",
+      "etaOosMins": 18
+    }
+  ],
+  "oosWatchlist": [
+    {
+      "sku": "TEC-PH-10001459",
+      "name": "iPhone 15 Pro Max",
+      "oosMins": 12,
+      "diagnosis": "Demand > Supply. Margin loss risk.",
+      "action": "Raise Price 5%"
+    },
+    {
+      "sku": "TEC-PH-10004664",
+      "name": "Samsung S24 Ultra",
+      "oosMins": 390,
+      "diagnosis": "Pacing 20% behind target.",
+      "action": "Trigger Flash Push"
+    },
+    {
+      "sku": "TEC-CO-10003236",
+      "name": "Sony WH-1000XM5",
+      "oosMins": 195,
+      "diagnosis": "On track.",
+      "action": "Monitor"
+    }
+  ],
+  "liveSalesHistory": [
+    {
+      "name": "iPhone 15 Pro Max",
+      "etaMins": 12,
+      "time": "2026-03-26T17:50:00Z"
+    },
+    {
+      "name": "Samsung S24 Ultra",
+      "etaMins": 22,
+      "time": "2026-03-26T17:55:00Z"
+    },
+    {
+      "name": "Sony WH-1000XM5",
+      "etaMins": 42,
+      "time": "2026-03-26T17:58:00Z"
+    }
+  ]
+}

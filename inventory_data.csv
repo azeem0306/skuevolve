@@ -1,201 +1,301 @@
-sku,warehouse,supplier,cost_price,msrp,qty_on_hand,qty_reserved,reorder_point,last_restock_date,lead_time_days
-MATSAM5B10F7E2AC8C1,Karachi,Bazaar Supply Co.,3067.16,7400.64,99,15,312,2026-02-03,5
-MATSAM59DB757FB47A2,Karachi,Pioneer Wholesale,6304.61,5842.08,592,25,338,2026-01-15,3
-IDROID_BALRX7-Gold,Islamabad,Nexa Imports,7462.12,11295.58,48,0,242,2026-03-14,10
-IDROID_BALRX7-Jet black,Islamabad,Alif Traders,929.3,6038.95,920,31,378,2026-02-27,4
-infinix_Zero 4-Grey,Lahore,Nexa Imports,2555.34,3829.35,22,1,154,2026-01-30,3
-MATSAM59DB75ADB2F80,Lahore,Alif Traders,3249.42,1029.61,209,2,368,2026-03-01,8
-MATSAM5B1509B4696EA,Lahore,Pioneer Wholesale,1668.25,5553.87,87,5,394,2025-12-30,10
-MATSAM5B10F91A9B6AB,Islamabad,Pioneer Wholesale,5467.73,10888.65,370,44,473,2025-12-31,13
-iphone-7-32gb-wof-Matt Black,Islamabad,Pioneer Wholesale,4927.08,4923.39,41,3,409,2026-01-14,6
-MATSAM5B10F2272EBD9,Karachi,Alif Traders,1638.41,1030.29,438,19,337,2026-03-01,7
-MATSAM59D74470AD085,Lahore,Alif Traders,6898.58,4404.02,75,6,169,2026-02-23,3
-MATSAM5A7463EE3C1A5,Islamabad,Nexa Imports,3186.39,6251.17,664,40,179,2025-12-24,12
-MATSAM5A9F892ECDF73,Lahore,Bazaar Supply Co.,2479.04,2383.37,35,5,215,2026-01-13,14
-MATSAM5A0BFFF19C40A,Lahore,Pioneer Wholesale,5049.79,12343.8,543,11,465,2026-03-05,10
-ENTECO5A7FE80D6C830,Karachi,Alif Traders,5419.25,4444.03,98,15,260,2026-01-22,3
-MATSAM5A7DBC6689BE5,Islamabad,Bazaar Supply Co.,3120.28,10097.98,733,39,325,2026-03-16,5
-MATAPP59D4D1F18B52D,Lahore,Alif Traders,856.04,9626.04,37,0,423,2026-02-12,12
-MATSAM5AE2B9EB35E5D,Islamabad,Alif Traders,1924.53,2873.34,832,29,403,2026-03-08,6
-samsungGALAXY S-7 EDGE 32GB LTE,Islamabad,Pioneer Wholesale,3901.99,12392.93,49,2,404,2026-01-03,8
-ENTSAM5A7BE6883BCB7,Karachi,Pioneer Wholesale,2916.32,3718.48,151,5,446,2026-02-16,6
-Infinix Note 3-2GB-Nationwide-Grey,Karachi,Nexa Imports,6366.26,1374.3,30,2,99,2026-02-02,11
-MATSAM5B2B5523158F1,Lahore,Pioneer Wholesale,1741.27,2951.76,338,18,260,2026-02-09,11
-MATSAM59DB758C26262,Karachi,Bazaar Supply Co.,2593.18,12077.09,89,14,406,2025-12-27,4
-MATAPP5A7AAB93089A0,Karachi,Pioneer Wholesale,4542.25,7476.39,460,14,405,2025-12-31,14
-APPGRE5A81C19C14F44,Islamabad,Pioneer Wholesale,1187.97,3456.75,9,0,88,2026-02-12,13
-Infinix Hot 4-Gold,Karachi,Bazaar Supply Co.,885.54,11890.59,477,35,476,2026-02-11,6
-OTHPCB5A7D8A12DF5B2,Karachi,Nexa Imports,6430.21,7951.32,35,6,193,2026-01-26,12
-ENTNOB5A4633C950FAD,Islamabad,Pioneer Wholesale,3800.63,1444.9,640,37,182,2026-01-27,12
-OTHPCB5A7D8A0DA56C6,Islamabad,Bazaar Supply Co.,6524.6,9115.28,78,13,240,2026-01-08,14
-ENTNOB5A14947A21475,Karachi,Nexa Imports,1026.4,1644.05,833,44,151,2026-03-02,7
-MATSAM5A9F81654656B,Lahore,Alif Traders,838.32,7753.85,58,10,370,2026-01-06,11
-Infinix Hot 4-Black,Islamabad,Pioneer Wholesale,3518.1,8779.83,980,35,412,2026-02-19,7
-MATSAM59DB7583ED7C0,Islamabad,Alif Traders,3128.1,2693.12,85,17,463,2026-03-01,14
-ENTECO5A0C1CCF5C177,Karachi,Pioneer Wholesale,2868.86,3578.2,588,26,480,2026-02-16,10
-ENTECO5A0C00E345122,Lahore,Nexa Imports,7433.85,11523.91,58,9,500,2026-01-14,9
-MATSAM5A61D01925383,Lahore,Nexa Imports,1537.58,11863.68,611,48,474,2026-03-17,8
-AYS_32B8500-32-Inches,Lahore,Pioneer Wholesale,2782.75,12132.71,29,2,54,2026-01-13,13
-MATSAM5AAB5AEE5DBA7,Lahore,Alif Traders,4937.71,1365.05,884,39,221,2026-01-31,4
-APPKEN5A7C191D84D3C,Karachi,Pioneer Wholesale,4317.81,10645.27,68,0,230,2026-03-21,4
-ENTSAM5A5466EB3D72E,Karachi,Bazaar Supply Co.,904.93,3621.59,653,50,473,2026-02-26,6
-MATSAM5A7AF87C6A511,Karachi,Nexa Imports,6953.62,10258.02,3,0,478,2026-01-04,6
-MATSAM5A7DBD43A7652,Lahore,Nexa Imports,2828.94,3025.25,887,47,329,2025-12-26,3
-OTHPCB5A7D8A1240398,Lahore,Bazaar Supply Co.,3405.09,5503.71,76,4,229,2026-03-05,4
-MATSAM5A7055694B277,Karachi,Bazaar Supply Co.,1265.58,1236.11,206,7,113,2026-03-06,9
-MATSAM5B2A5A0F10047,Lahore,Alif Traders,4797.71,7424.73,44,0,160,2026-01-19,7
-MATAPP5A7AAB91AD66F,Lahore,Pioneer Wholesale,1901.12,5270.41,919,16,267,2026-02-07,8
-PS4_Slim-500GB,Lahore,Alif Traders,4480.37,6188.86,12,1,374,2026-01-12,13
-IDROID_BALRX7-Jet black ,Lahore,Nexa Imports,1306.84,6013.91,873,50,455,2026-02-12,7
-MATSAM5A7D904F75A49,Karachi,Pioneer Wholesale,4541.8,7091.9,53,5,345,2026-02-10,6
-ENTTCL5A7FEF9523346,Lahore,Alif Traders,842.01,2709.8,153,13,121,2026-02-05,7
-iphone_7-128GB-wof-Jet Black,Islamabad,Alif Traders,2307.32,3482.65,23,4,304,2025-12-26,12
-MATHUA5A7463F0743AA,Islamabad,Pioneer Wholesale,3463.27,11298.09,166,32,55,2025-12-26,12
-Infinix Note 3-2GB-Nationwide-Gold,Islamabad,Alif Traders,5604.79,4892.91,66,13,185,2026-02-02,9
-MATINF5AE310D2D7A1A,Lahore,Alif Traders,6316.58,12490.77,335,7,70,2026-02-04,8
-iphone_7-128GB-wof-Matt Black,Islamabad,Nexa Imports,7469.61,6754.53,87,16,271,2026-02-27,13
-Haier_HSU-18-HNF,Islamabad,Nexa Imports,5881.69,10141.76,509,3,373,2026-02-19,13
-APPORI5AE98573655FB,Karachi,Nexa Imports,4623.03,4312.47,90,0,361,2026-02-11,12
-MATHUA5A7D90515BDC2,Islamabad,Bazaar Supply Co.,6150.01,3367.18,876,43,355,2026-02-10,12
-MATHUA5A7D77457B338,Islamabad,Alif Traders,5684.58,11727.95,60,6,200,2026-01-15,11
-MATINF5A61FBB8820B3,Islamabad,Alif Traders,6264.35,8043.48,885,38,267,2025-12-31,13
-MATINF59C9002EA6AF0,Lahore,Bazaar Supply Co.,2208.94,9654.19,59,6,115,2025-12-29,3
-AYS_32-32u561,Lahore,Nexa Imports,1872.43,1083.42,637,24,277,2026-02-12,10
-MATSAM5A7D8FDDB6530,Islamabad,Bazaar Supply Co.,2358.33,2125.11,79,3,473,2026-03-12,7
-MATSAM5A0BFFEF4DA20,Lahore,Alif Traders,3502.02,12271.91,560,9,120,2026-01-22,8
-MATAPP5A7AAB986EF55,Islamabad,Pioneer Wholesale,2244.28,1231.61,55,5,301,2026-01-16,5
-ENTSAM5A0BF25AA030B,Islamabad,Bazaar Supply Co.,6188.56,8307.49,416,15,415,2026-01-26,7
-qmobile_Noir Z14,Lahore,Alif Traders,2040.23,10819.89,60,9,250,2026-01-31,9
-ENTORI5A829F3B38644,Lahore,Pioneer Wholesale,5413.54,5621.98,898,16,375,2026-01-17,9
-MATSAM5A731DD9475D3,Islamabad,Pioneer Wholesale,719.16,9124.9,4,0,101,2026-02-18,12
-MATHUA5A7D7744AB08C,Karachi,Nexa Imports,3310.61,3742.95,306,6,303,2026-03-06,8
-APPHAI59BFB2E94E951,Karachi,Pioneer Wholesale,1784.82,2843.15,26,5,407,2026-01-04,12
-MATHUA5AE2C69026776,Lahore,Nexa Imports,6325.99,4940.76,128,7,205,2026-01-04,14
-MATSAM59DB75A984259,Islamabad,Pioneer Wholesale,7132.3,8592.88,94,6,94,2026-03-13,5
-AYS_Gree-18cith2,Karachi,Bazaar Supply Co.,7029.29,8551.17,847,8,195,2026-03-07,4
-MATSAM5A7DBC5FB549C,Islamabad,Alif Traders,5890.48,8728.1,91,8,322,2025-12-25,14
-MATINF59C9002A3CDEC,Islamabad,Nexa Imports,6840.61,7260.46,975,19,229,2026-01-07,10
-Apple iPhone 6S Plus 16GB Silver,Islamabad,Alif Traders,6072.23,4524.88,37,0,276,2026-01-31,12
-MATSAM5A9F8391D6301,Islamabad,Nexa Imports,7448.59,6080.0,736,10,298,2026-02-02,4
-MATSAM5AD846A87CCCF,Karachi,Nexa Imports,4473.36,4606.61,91,3,252,2026-01-22,11
-ENTORI5A8D3C794E5AC,Islamabad,Pioneer Wholesale,4601.29,10901.59,516,22,214,2026-01-05,5
-Infinix Note 3-3 GB-Gold,Karachi,Alif Traders,1578.69,3747.84,40,7,179,2025-12-25,8
-ENTSAM5A5466EA71960,Lahore,Nexa Imports,2984.34,5152.71,349,44,257,2026-03-08,6
-MATSAM5A0BFFEEED718,Islamabad,Nexa Imports,6571.5,3659.39,55,7,445,2026-02-11,10
-Haier_HSU-12-HNF,Lahore,Nexa Imports,2615.6,10957.71,169,17,119,2026-03-19,3
-MATONE5A85202539E41,Lahore,Alif Traders,1438.93,10176.53,91,13,183,2026-01-21,3
-MATHUA5A7D7743BFA86,Karachi,Pioneer Wholesale,1347.55,5186.67,926,25,261,2026-03-14,3
-OTHPCB5A7D845FA58AB,Lahore,Bazaar Supply Co.,2811.23,9461.42,97,9,426,2026-01-06,7
-Infinix Hot 4 Nationwide-Gold,Lahore,Nexa Imports,2049.34,3281.2,565,10,153,2026-02-18,12
-MATSAM5B10EFA29A771,Islamabad,Bazaar Supply Co.,7301.8,7102.32,72,9,384,2026-02-27,4
-MATSAM5A7D77487B6EF,Karachi,Bazaar Supply Co.,2473.83,1488.88,849,16,354,2026-03-03,14
-MATAPP5A7AAB94B72A9,Lahore,Nexa Imports,2926.86,7720.95,40,6,228,2026-01-10,5
-Xiaomi-Redmi-4x-BLACK,Karachi,Nexa Imports,4837.38,11275.47,208,34,291,2026-03-15,11
-MATAPP5A7AAB97B74E2,Karachi,Pioneer Wholesale,1908.52,2600.04,69,12,379,2026-01-01,12
-closecomfort_PC8,Islamabad,Nexa Imports,7055.7,11491.72,217,0,401,2025-12-31,6
-MATAPP5A7AAB9691F48,Lahore,Nexa Imports,5930.33,7120.93,64,4,299,2026-02-21,10
-cc_Samsung_Galaxy_S8_Plus_Black,Lahore,Nexa Imports,3570.58,10563.31,605,47,374,2025-12-23,12
-MATSAM5AC16223F4158,Islamabad,Bazaar Supply Co.,5321.47,8883.85,96,15,242,2025-12-23,8
-samsung_galaxy-s7-edge-pearl-black,Lahore,Nexa Imports,6561.57,12216.04,970,41,62,2026-01-12,6
-Haier_LE 42B8000,Islamabad,Pioneer Wholesale,2397.62,1077.42,18,2,218,2026-03-15,13
-GMZV_PlayStation 4 - 500GB - Region 2 - UK PAL - Black,Karachi,Nexa Imports,4839.32,9379.24,358,40,152,2026-03-06,6
-MATSAM5A7DBD430F4FE,Islamabad,Pioneer Wholesale,4097.02,11463.69,46,4,297,2026-03-22,7
-ENTVIZ59BF507F7422C,Islamabad,Pioneer Wholesale,2391.62,5631.92,511,14,212,2026-03-06,10
-MATSAM5A7DBC627D4BD,Islamabad,Bazaar Supply Co.,2084.82,10812.18,69,3,285,2026-01-08,9
-OTHPCB5A7D846C5089A,Karachi,Alif Traders,1650.18,7798.33,415,44,416,2026-01-06,6
-APPKEN5A7C22929B6DE,Islamabad,Alif Traders,7186.4,3434.04,43,8,458,2026-01-03,13
-MATIDR59BA510306FBE,Lahore,Nexa Imports,4218.66,3062.59,499,5,367,2026-03-17,3
-MATSAM5B10F09E45760,Karachi,Pioneer Wholesale,1438.4,12091.26,53,4,58,2026-01-26,4
-ENTNOB59F98B192A8C4,Lahore,Bazaar Supply Co.,5457.6,1245.95,671,35,59,2026-01-15,8
-MATINF5A7D8FD8D4881,Lahore,Pioneer Wholesale,4343.78,6260.04,23,1,223,2026-02-12,6
-COMHP5AD867ABCC7BF,Lahore,Nexa Imports,1180.5,12357.1,214,0,342,2026-03-18,6
-INFIINIX_HOT S X521,Islamabad,Bazaar Supply Co.,2796.52,1469.44,29,3,255,2026-01-30,5
-MATSAM5A7D774BB50D6,Islamabad,Bazaar Supply Co.,2908.48,10258.24,331,16,365,2026-02-06,7
-MATSAM5A7DBD32D0BFC,Lahore,Pioneer Wholesale,5148.74,5450.87,86,12,157,2026-03-15,11
-GMZV_PS4 Pro 1TB - Region 2,Lahore,Alif Traders,1459.47,4133.03,444,7,133,2026-02-15,6
-MATINF5A0ADCBFAC096,Lahore,Pioneer Wholesale,4338.56,10403.21,32,4,248,2026-01-20,13
-MATSAM5A7D774B346DF,Lahore,Bazaar Supply Co.,3631.07,2654.7,277,39,167,2026-02-22,14
-APPHAI5B14CF6B2EDCF,Lahore,Alif Traders,527.24,12038.71,20,4,343,2026-03-19,12
-samsung_G935F-Black,Lahore,Alif Traders,5170.74,8191.83,698,1,384,2026-02-09,13
-MATHUA5A0C4EEAC839A,Karachi,Alif Traders,5963.16,9728.69,42,1,380,2026-02-13,7
-cc_Samsung_Galaxy_S8_Plus_Gray,Lahore,Alif Traders,6520.51,10747.32,809,6,83,2026-02-07,14
-MATSAM5B10E73CC6A74,Lahore,Bazaar Supply Co.,7129.43,7527.72,98,2,84,2026-01-12,10
-dawlance_LVS 30 18000BTU,Islamabad,Alif Traders,2527.42,5114.43,572,21,151,2026-01-23,4
-samsungGALAXY J710F-2016 DS LTE,Lahore,Alif Traders,4442.1,1792.6,35,0,153,2026-01-19,9
-MATSAM5A7D8FE0C0250,Lahore,Bazaar Supply Co.,4707.13,10645.1,411,45,65,2026-02-28,4
-MATSAM59DB75904E09D,Lahore,Bazaar Supply Co.,4568.04,9394.2,69,8,446,2026-03-08,9
-MATAPP5A7AAB944563E,Lahore,Bazaar Supply Co.,6470.12,7843.98,964,35,286,2026-01-27,4
-APPDAW5AAA440CD4969,Karachi,Alif Traders,2765.46,1735.06,41,5,182,2026-01-21,7
-ENTORI5A00C8379F59E,Islamabad,Nexa Imports,3971.45,9044.71,906,40,123,2026-02-18,10
-Sony_DZ 950,Karachi,Bazaar Supply Co.,3515.86,3567.18,82,7,345,2026-02-20,12
-MACBOOK PRO 15-INCH 2.2GHZ QuadCore i7,Lahore,Alif Traders,6633.85,5028.87,632,44,191,2026-01-07,11
-MATSAM59DB75B63DDEF,Karachi,Nexa Imports,2608.99,8126.3,17,1,334,2026-03-20,3
-Samsung-Galaxy-S8-G950-Grey,Karachi,Alif Traders,5284.21,10910.65,420,2,142,2026-03-13,12
-MATSAM5ACB155509805,Islamabad,Nexa Imports,3870.36,1682.25,65,2,50,2026-02-26,13
-MATIDR59BA5107902DF,Lahore,Alif Traders,962.42,6768.03,731,33,403,2025-12-24,10
-samsung_G935F-Blue,Karachi,Bazaar Supply Co.,2765.38,10730.61,29,5,190,2026-02-27,4
-MATSAM5AE97AA4635AA,Islamabad,Alif Traders,5964.43,10305.57,726,39,276,2026-02-12,11
-MATSAM5AD8455CCA3D4,Karachi,Bazaar Supply Co.,3017.85,8553.33,12,2,348,2026-01-31,13
-cc_Samsung_Galaxy_S8_black,Karachi,Bazaar Supply Co.,3662.51,9019.16,446,47,385,2026-03-05,6
-MATHUA5A731DFD4BAC3,Lahore,Bazaar Supply Co.,3531.94,4233.3,72,8,291,2026-01-23,9
-MATSAM5A7D8FE18BDAD,Islamabad,Pioneer Wholesale,3847.79,1551.29,989,7,121,2026-02-18,3
-Infinix Hot 4 Nationwide-Black,Islamabad,Alif Traders,720.67,5047.37,10,2,458,2026-02-08,4
-MATSAM5A706D43B8F93,Lahore,Bazaar Supply Co.,6809.94,9037.82,287,7,223,2026-01-19,3
-MATHUA5AF70A7D1E50A,Islamabad,Alif Traders,3095.31,6693.85,55,3,436,2025-12-26,8
-ENTTCL5AAF5A35A222C,Karachi,Alif Traders,7021.5,2480.67,896,47,490,2026-03-02,4
-MATAPP5A7AAB9B689E1,Islamabad,Alif Traders,6324.14,10788.1,13,1,307,2026-03-20,4
-COMLEN5AD47E9034327,Karachi,Bazaar Supply Co.,1354.29,3418.4,961,12,102,2026-02-22,4
-ENTPAN59C11BE48FD71,Karachi,Bazaar Supply Co.,7371.56,7159.7,94,18,291,2026-01-14,5
-Apple iPhone 5S (16 GB) Space Gray,Islamabad,Nexa Imports,6806.04,7423.9,414,19,57,2025-12-28,3
-Xiaomi_MI-C6-Black,Lahore,Nexa Imports,2308.56,8653.6,97,12,258,2026-03-13,6
-cc_samsung_G935F-Blue,Islamabad,Pioneer Wholesale,6855.85,3245.2,410,44,87,2026-03-05,4
-MATTEL5A462528E403F,Lahore,Nexa Imports,6971.06,10604.28,32,3,275,2026-02-25,11
-MATSAM59F18431AD09B,Lahore,Alif Traders,1558.87,7201.34,729,21,105,2026-01-25,8
-OTHPCB5A7D8A0D18BC9,Lahore,Alif Traders,5023.27,7944.17,29,0,188,2026-01-30,10
-ENTTCL5AE55B8CED79D,Islamabad,Nexa Imports,5292.05,8163.14,427,40,130,2026-02-13,6
-MATSAM5B6D7208C6D30,Karachi,Pioneer Wholesale,2122.76,8931.74,95,15,314,2026-02-22,14
-samsung_Grand Prime Plus-Black,Karachi,Nexa Imports,2801.86,10096.47,655,40,154,2026-01-02,10
-Infinix Hot 4-Gold-1,Lahore,Alif Traders,7204.07,5405.96,92,16,224,2026-03-09,8
-MATSAM59DB75B22199F,Karachi,Alif Traders,4453.18,7352.13,407,32,254,2026-03-05,14
-iphone-7-32gb-wof-Gold,Karachi,Pioneer Wholesale,1762.78,9760.42,6,1,87,2026-01-27,4
-APPKEN59F6F07C6DBBD,Lahore,Pioneer Wholesale,6119.74,1199.78,513,0,445,2026-02-17,6
-ENTPAN5A0970BBBD183,Islamabad,Pioneer Wholesale,6396.92,2759.04,18,3,486,2026-01-24,13
-cc_Samsung_Galaxy_S8_Plus_Gold,Karachi,Bazaar Supply Co.,1933.48,12129.48,147,29,63,2026-03-04,4
-OTHPCB5A7D8A0FCB23D,Karachi,Pioneer Wholesale,1004.53,10246.76,66,4,148,2026-02-24,11
-samsung_Samsung Galaxy J7 PRIME 2016-Gold,Islamabad,Bazaar Supply Co.,7490.16,6727.41,807,24,194,2026-03-06,6
-samsungGALAXY J510F-2016 DS LTE,Lahore,Nexa Imports,5944.37,5120.21,31,5,251,2026-01-18,3
-lenovo_80HR00AKUE,Karachi,Bazaar Supply Co.,791.83,5625.86,949,41,100,2026-02-26,5
-MATHUA5A0C4F9F219A6,Lahore,Nexa Imports,3697.36,11318.42,95,10,350,2026-03-03,6
-MATHUA5A0C4EEB83E12,Lahore,Pioneer Wholesale,2756.88,6106.99,682,11,437,2026-01-25,10
-Apple iPhone 6 (64GB) Silver,Karachi,Alif Traders,5600.5,10754.28,49,2,169,2026-01-19,10
-MATHUA5A0C4EF0631F0,Lahore,Pioneer Wholesale,2711.06,9259.32,187,24,149,2026-03-21,10
-lenovo_80J2021CUE,Islamabad,Pioneer Wholesale,6756.23,5917.82,87,11,52,2026-03-08,5
-MATAPP5A7AAB925E1B7,Islamabad,Alif Traders,6448.61,1053.57,206,23,227,2026-01-22,10
-infinix_S2-Black,Karachi,Bazaar Supply Co.,997.9,9698.18,77,3,161,2026-02-07,7
-ENTVIZ59FAC395E979F,Islamabad,Bazaar Supply Co.,1950.36,5463.48,810,24,81,2026-03-21,9
-OTHPCB5A7D8475EFE59,Karachi,Nexa Imports,4807.55,6434.33,65,0,183,2026-03-20,6
-ENTORI5A0A085683980,Karachi,Nexa Imports,2498.19,4804.62,266,4,499,2025-12-27,4
-ENTORI5A149478A8FF1,Islamabad,Alif Traders,6143.64,10768.06,4,0,183,2026-03-06,13
-APPORI5A05B1DB80969,Lahore,Bazaar Supply Co.,1675.48,11303.85,863,22,420,2026-03-05,14
-ENTSAM5A0BF25B28618,Islamabad,Alif Traders,5324.8,3305.62,75,8,130,2026-01-21,12
-MATSAM59B7EB2FE9885,Islamabad,Nexa Imports,1265.7,1986.63,469,22,444,2026-03-16,12
-MATHUA5A0C4EEFA7A5B,Islamabad,Nexa Imports,7272.01,3502.05,79,9,199,2026-02-26,5
-samsung_K6000 49'',Karachi,Pioneer Wholesale,2267.89,2665.39,497,46,171,2026-03-18,14
-ENTECO5A7FECFAE81FB,Islamabad,Nexa Imports,960.15,12167.66,89,11,162,2026-01-03,11
-ENTVIZ59FAAC68364C2,Islamabad,Pioneer Wholesale,4596.59,11170.3,993,21,178,2025-12-24,7
-MATHUA59B7EAFF9A395,Islamabad,Alif Traders,6110.5,6744.84,33,5,420,2026-01-18,14
-cc_Samsung_Galaxy_S8_Gray,Karachi,Nexa Imports,6575.03,2498.2,908,48,253,2026-03-11,7
-ENTSON59FABFAA3E9F9,Karachi,Pioneer Wholesale,2379.75,2086.92,25,2,63,2025-12-29,14
-MATOPP5B150DB8ED23D,Karachi,Alif Traders,4123.42,8015.18,250,49,199,2026-01-10,3
-Samsung_S7 Edge-Gold,Islamabad,Bazaar Supply Co.,1250.32,9146.92,23,0,99,2026-01-04,10
-MATMOT59FC5E2260053,Islamabad,Alif Traders,5061.88,8660.89,389,43,110,2025-12-27,10
-cc_Samsung_Galaxy_S8_gold,Islamabad,Bazaar Supply Co.,1346.37,2048.29,80,10,266,2026-01-14,11
-MATSAM5B10F552B5411,Islamabad,Pioneer Wholesale,5111.47,4479.05,333,5,236,2026-02-21,14
-PTCL_Charji EVO TAB,Islamabad,Nexa Imports,5152.93,9412.85,26,4,429,2026-01-02,14
-MATSAM59DB759CA2898,Lahore,Bazaar Supply Co.,4457.01,9277.46,422,21,125,2026-02-05,13
-MATAPP5A153A5EB5456,Karachi,Nexa Imports,5108.76,5600.63,14,2,198,2026-01-30,14
-cc_samsung_Grand Prime Plus-Gold,Islamabad,Bazaar Supply Co.,1609.79,7215.95,820,35,456,2026-01-16,11
-MATINF5AE312CA33899,Islamabad,Nexa Imports,5165.47,3362.47,37,7,153,2026-03-19,5
-ENTVIZ59BF507A28BBF,Karachi,Bazaar Supply Co.,1131.62,6690.01,779,46,211,2026-02-09,14
-MATSAM5A9F8CDCADDC7,Lahore,Bazaar Supply Co.,3927.04,9663.76,31,4,386,2026-02-08,3
-MATSAM5A78352870614,Islamabad,Bazaar Supply Co.,2516.17,11886.8,929,13,237,2026-01-24,5
+sku,name,category,warehouse,supplier,cost_price,msrp,qty_on_hand,qty_reserved,reorder_point,last_restock_date,lead_time_days
+TEC-CO-10004722,Canon imageCLASS 2200 Advanced Copier,Technology,London,Nimbus Supply,147.56,607.85,30,6,293,2026-03-16,7
+TEC-PH-10004664,"Nokia Smart Phone, with Caller ID",Technology,Sydney,Aster Wholesale,81.8,157.64,104,13,180,2026-02-25,12
+OFF-BI-10003527,Fellowes PB500 Electric Punch Plastic Comb Binding Machine with Manual Bind,Office Supplies,Paris,Vertex Imports,64.16,357.07,68,3,103,2026-02-11,10
+TEC-MA-10002412,Cisco TelePresence System EX90 Videoconferencing Unit,Technology,Berlin,Nimbus Supply,112.46,436.37,409,5,456,2026-03-08,11
+TEC-PH-10004823,"Nokia Smart Phone, Full Size",Technology,Sydney,Global Trade Co.,361.14,684.06,73,9,231,2026-03-07,4
+FUR-CH-10002024,HON 5400 Series Task Chairs for Big and Tall,Furniture,London,Nimbus Supply,102.25,638.79,816,50,153,2026-03-03,8
+FUR-CH-10000027,"SAFCO Executive Leather Armchair, Black",Furniture,Berlin,Global Trade Co.,115.36,308.75,6,1,255,2026-03-11,8
+OFF-AP-10004512,"Hoover Stove, Red",Office Supplies,Berlin,Nimbus Supply,370.11,115.91,205,10,361,2026-03-15,5
+FUR-TA-10001889,"Bevis Conference Table, Fully Assembled",Furniture,New York,Nimbus Supply,151.52,352.31,37,4,178,2026-02-20,10
+OFF-BI-10001359,GBC DocuBind TL300 Electric Binding System,Office Supplies,London,Aster Wholesale,293.48,271.88,328,5,84,2026-03-08,6
+TEC-MA-10001127,"HP Designjet T520 Inkjet Large Format Printer - 24"" Color",Technology,Paris,Nimbus Supply,339.16,620.28,80,3,393,2026-03-10,8
+OFF-BI-10000545,GBC Ibimaster 500 Manual ProClick Binding System,Office Supplies,London,Aster Wholesale,379.74,228.81,138,12,137,2026-03-09,13
+TEC-CO-10001449,Hewlett Packard LaserJet 3310 Copier,Technology,New York,Nimbus Supply,332.05,655.11,26,0,409,2026-02-17,14
+TEC-PH-10001457,"Apple Smart Phone, Full Size",Technology,Sydney,Nimbus Supply,203.58,671.09,504,47,96,2026-03-20,3
+FUR-BO-10004834,"Safco 3-Shelf Cabinet, Mobile",Furniture,New York,Global Trade Co.,219.27,378.21,14,2,277,2026-02-26,14
+OFF-AP-10002330,"Hamilton Beach Stove, Silver",Office Supplies,Berlin,Nimbus Supply,172.36,524.84,818,43,80,2026-03-16,4
+OFF-BI-10004995,GBC DocuBind P400 Electric Binding System,Office Supplies,New York,Vertex Imports,315.55,176.58,44,8,462,2026-02-11,3
+FUR-BO-10004679,"Safco Library with Doors, Pine",Furniture,Berlin,Aster Wholesale,208.89,529.66,404,30,93,2026-02-15,10
+FUR-CH-10002247,"Hon Executive Leather Armchair, Adjustable",Furniture,New York,Vertex Imports,351.72,275.66,72,14,53,2026-03-05,3
+FUR-BO-10001934,"Bush Library with Doors, Metal",Furniture,New York,Vertex Imports,136.54,662.27,195,25,371,2026-03-01,3
+OFF-SU-10000151,High Speed Automatic Electric Letter Opener,Office Supplies,Berlin,Global Trade Co.,300.4,692.13,89,12,470,2026-03-09,14
+TEC-MA-10000822,Lexmark MX611dhe Monochrome Laser Printer,Technology,New York,Vertex Imports,253.69,42.61,505,13,465,2026-02-28,11
+TEC-PH-10000303,"Samsung Smart Phone, VoIP",Technology,London,Global Trade Co.,178.96,46.37,83,3,395,2026-03-02,12
+FUR-CH-10002213,"Hon Executive Leather Armchair, Black",Furniture,Berlin,Vertex Imports,144.4,49.9,139,21,122,2026-03-19,6
+OFF-SU-10002881,Martin Yale Chadless Opener Electric Letter Opener,Office Supplies,Berlin,Nimbus Supply,127.93,667.09,52,8,104,2026-03-15,3
+TEC-PH-10004196,"Samsung Smart Phone, Cordless",Technology,Berlin,Nimbus Supply,168.78,644.52,367,34,178,2026-03-12,6
+OFF-BI-10001120,Ibico EPK-21 Electric Binding System,Office Supplies,London,Global Trade Co.,298.71,485.41,83,6,271,2026-03-03,10
+FUR-CH-10000602,"Novimex Executive Leather Armchair, Red",Furniture,London,Aster Wholesale,80.74,154.38,743,16,155,2026-02-10,7
+FUR-CH-10003950,"Novimex Executive Leather Armchair, Black",Furniture,Sydney,Nimbus Supply,320.3,170.94,8,1,97,2026-03-19,4
+FUR-CH-10002250,"Office Star Executive Leather Armchair, Black",Furniture,London,Global Trade Co.,139.74,592.5,258,8,433,2026-03-03,12
+TEC-CIS-10002344,"Cisco Smart Phone, Full Size",Technology,London,Vertex Imports,139.03,247.97,49,3,398,2026-03-09,14
+TEC-PH-10002815,"Samsung Smart Phone, VoIP",Technology,Paris,Nimbus Supply,102.95,130.59,481,34,337,2026-03-15,14
+TEC-PH-10002759,"Cisco Smart Phone, Cordless",Technology,Berlin,Nimbus Supply,119.07,136.68,80,4,490,2026-02-20,11
+TEC-PH-10001751,"Samsung Smart Phone, Cordless",Technology,London,Aster Wholesale,70.09,327.95,733,6,147,2026-03-20,9
+FUR-BO-10004852,"Sauder Classic Bookcase, Traditional",Furniture,Berlin,Aster Wholesale,330.84,326.87,25,0,179,2026-03-06,3
+FUR-CH-10002573,"Office Star Executive Leather Armchair, Adjustable",Furniture,Paris,Vertex Imports,148.44,50.48,892,37,489,2026-03-01,6
+TEC-MA-10001047,"3D Systems Cube Printer, 2nd Generation, Magenta",Technology,London,Nimbus Supply,277.91,74.5,60,10,456,2026-03-16,6
+TEC-PH-10003457,"Cisco Smart Phone, Full Size",Technology,New York,Global Trade Co.,37.99,367.12,347,35,346,2026-03-07,7
+TEC-CIS-10002259,"Cisco Smart Phone, Cordless",Technology,Sydney,Vertex Imports,151.11,150.0,27,0,243,2026-02-21,11
+TEC-PH-10001459,Samsung Galaxy Mega 6.3,Technology,New York,Global Trade Co.,76.52,484.47,422,10,112,2026-03-10,11
+FUR-CH-10004774,"Novimex Executive Leather Armchair, Red",Furniture,Berlin,Nimbus Supply,227.38,43.48,33,1,177,2026-03-19,8
+TEC-PH-10001670,"Motorola Smart Phone, Full Size",Technology,New York,Vertex Imports,399.85,217.86,193,29,57,2026-03-08,6
+TEC-PH-10000160,"Motorola Smart Phone, with Caller ID",Technology,Berlin,Global Trade Co.,326.76,568.78,81,9,162,2026-02-24,7
+TEC-AC-10002049,Plantronics Savi W720 Multi-Device Wireless Headset System,Technology,Paris,Nimbus Supply,57.4,126.56,267,8,175,2026-03-07,12
+TEC-PH-10000030,"Samsung Smart Phone, with Caller ID",Technology,Berlin,Vertex Imports,314.7,193.28,39,0,354,2026-03-17,9
+TEC-PH-10000169,"Apple Smart Phone, with Caller ID",Technology,New York,Vertex Imports,344.48,458.83,921,47,369,2026-02-16,3
+TEC-PH-10002623,"Cisco Smart Phone, with Caller ID",Technology,London,Vertex Imports,120.09,579.58,44,0,226,2026-02-19,11
+TEC-PH-10002601,"Motorola Smart Phone, Cordless",Technology,New York,Vertex Imports,194.73,176.18,548,3,156,2026-03-05,13
+TEC-PH-10000018,"Nokia Smart Phone, Full Size",Technology,Paris,Vertex Imports,240.34,512.42,47,3,56,2026-03-17,11
+TEC-PH-10002885,Apple iPhone 5,Technology,Berlin,Nimbus Supply,62.99,389.83,523,21,267,2026-02-16,6
+FUR-TA-10003473,Bretford Rectangular Conference Table Tops,Furniture,Sydney,Aster Wholesale,58.77,645.82,19,0,62,2026-02-28,4
+FUR-CH-10001215,Global Troy Executive Leather Low-Back Tilter,Furniture,New York,Global Trade Co.,43.86,250.08,745,4,243,2026-02-15,9
+FUR-BO-10002213,"Sauder Forest Hills Library, Woodland Oak Finish",Furniture,Paris,Aster Wholesale,110.05,74.68,9,0,122,2026-03-09,13
+TEC-APP-10002966,"Apple Smart Phone, Full Size",Technology,Berlin,Nimbus Supply,313.6,614.69,946,34,305,2026-03-03,13
+TEC-PH-10000493,"Apple Smart Phone, Full Size",Technology,New York,Nimbus Supply,324.99,368.76,98,2,473,2026-02-15,14
+OFF-AP-10003590,Hoover WindTunnel Plus Canister Vacuum,Office Supplies,New York,Nimbus Supply,94.5,665.99,459,30,110,2026-03-15,11
+TEC-CO-10003342,"Canon Fax Machine, High-Speed",Technology,New York,Global Trade Co.,194.36,605.98,93,14,210,2026-02-09,7
+OFF-ST-10000078,Tennsco 6- and 18-Compartment Lockers,Office Supplies,Sydney,Aster Wholesale,44.38,637.53,290,7,347,2026-03-12,10
+TEC-PH-10001699,"Samsung Smart Phone, Full Size",Technology,Sydney,Global Trade Co.,244.19,315.59,56,9,203,2026-02-09,5
+FUR-CH-10002203,"SAFCO Executive Leather Armchair, Black",Furniture,New York,Nimbus Supply,287.75,519.63,195,32,353,2026-02-10,12
+TEC-PH-10002683,"Apple Smart Phone, Cordless",Technology,Sydney,Nimbus Supply,241.65,459.0,50,1,234,2026-03-02,12
+OFF-ST-10002506,"Smead Lockers, Blue",Office Supplies,New York,Global Trade Co.,59.66,516.49,886,19,399,2026-03-07,3
+FUR-TA-10002958,"Chromcraft Conference Table, Fully Assembled",Furniture,Sydney,Global Trade Co.,203.35,321.39,84,3,460,2026-02-10,4
+TEC-PH-10001990,"Cisco Smart Phone, Full Size",Technology,London,Global Trade Co.,71.48,266.42,521,1,135,2026-03-16,4
+FUR-CH-10001415,"Office Star Executive Leather Armchair, Red",Furniture,Paris,Nimbus Supply,169.87,672.75,66,13,70,2026-03-20,10
+OFF-AP-10001623,"Hoover Stove, White",Office Supplies,Paris,Global Trade Co.,264.47,388.54,218,24,309,2026-02-28,11
+OFF-ST-10001758,"Rogers Lockers, Blue",Office Supplies,New York,Global Trade Co.,229.34,413.12,9,0,292,2026-02-18,8
+TEC-PH-10000780,"Cisco Smart Phone, with Caller ID",Technology,Paris,Global Trade Co.,321.48,92.11,440,9,374,2026-02-26,7
+TEC-CO-10003763,Canon PC1060 Personal Laser Copier,Technology,London,Nimbus Supply,226.06,79.22,58,8,441,2026-02-16,4
+FUR-BO-10003103,"Ikea Classic Bookcase, Metal",Furniture,Paris,Vertex Imports,221.33,695.05,368,47,207,2026-03-21,14
+TEC-PH-10003713,"Nokia Smart Phone, Cordless",Technology,London,Vertex Imports,330.33,213.01,38,3,322,2026-02-18,6
+FUR-BO-10004771,"Ikea Classic Bookcase, Traditional",Furniture,London,Nimbus Supply,223.15,670.41,578,48,379,2026-02-26,9
+FUR-CH-10004287,SAFCO Arco Folding Chair,Furniture,Sydney,Aster Wholesale,42.39,578.65,55,7,258,2026-03-01,6
+FUR-BO-10001501,"Bush Classic Bookcase, Metal",Furniture,Berlin,Global Trade Co.,332.46,107.1,410,29,110,2026-02-24,11
+OFF-AP-10000675,"Hamilton Beach Stove, White",Office Supplies,Berlin,Aster Wholesale,397.5,181.57,33,6,305,2026-03-16,14
+TEC-PH-10002867,"Cisco Smart Phone, with Caller ID",Technology,Paris,Aster Wholesale,72.42,637.27,830,48,94,2026-02-23,7
+FUR-CH-10000891,"Harbour Creations Executive Leather Armchair, Black",Furniture,London,Vertex Imports,31.47,497.73,62,0,311,2026-03-17,13
+FUR-CH-10003232,"Harbour Creations Executive Leather Armchair, Adjustable",Furniture,Paris,Vertex Imports,47.31,195.83,552,41,363,2026-02-11,5
+TEC-PH-10002035,"Samsung Smart Phone, Cordless",Technology,Berlin,Vertex Imports,23.73,392.43,14,2,310,2026-02-17,9
+FUR-CH-10000660,"Novimex Executive Leather Armchair, Adjustable",Furniture,Sydney,Aster Wholesale,283.18,512.87,824,24,204,2026-03-02,9
+OFF-AP-10002945,Honeywell Enviracaire Portable HEPA Air Cleaner for 17' x 22' Room,Office Supplies,London,Nimbus Supply,138.72,179.69,35,6,296,2026-03-17,5
+TEC-PH-10004505,"Nokia Smart Phone, Full Size",Technology,Paris,Global Trade Co.,74.61,97.28,705,22,66,2026-02-10,14
+TEC-AC-10003832,Logitech P710e Mobile Speakerphone,Technology,Sydney,Nimbus Supply,71.78,696.82,80,5,286,2026-03-06,7
+FUR-CH-10003941,"Novimex Executive Leather Armchair, Adjustable",Furniture,Berlin,Aster Wholesale,281.05,371.72,907,6,55,2026-03-09,10
+TEC-PH-10000499,"Motorola Smart Phone, Full Size",Technology,Berlin,Aster Wholesale,252.3,465.33,11,0,95,2026-02-22,14
+FUR-TA-10001786,"Chromcraft Computer Table, with Bottom Storage",Furniture,Sydney,Global Trade Co.,308.22,502.42,971,2,128,2026-03-20,10
+TEC-PH-10002935,"Samsung Smart Phone, VoIP",Technology,Paris,Aster Wholesale,352.68,215.92,47,2,413,2026-02-11,11
+TEC-MA-10000418,Cubify CubeX 3D Printer Double Head Print,Technology,London,Vertex Imports,316.93,213.46,161,32,299,2026-03-03,11
+TEC-PH-10004583,"Motorola Smart Phone, Cordless",Technology,Berlin,Nimbus Supply,225.82,513.69,4,0,282,2026-02-14,8
+TEC-PH-10000419,"Apple Smart Phone, Full Size",Technology,Berlin,Aster Wholesale,194.33,374.43,541,3,345,2026-03-04,14
+TEC-APP-10000308,"Apple Smart Phone, Full Size",Technology,Berlin,Vertex Imports,253.86,303.27,2,0,104,2026-03-12,3
+TEC-CO-10000013,"Brother Fax Machine, Laser",Technology,London,Global Trade Co.,261.04,113.94,640,29,384,2026-02-20,5
+TEC-AC-10003033,Plantronics CS510 - Over-the-Head monaural Wireless Headset System,Technology,London,Global Trade Co.,212.11,157.01,25,5,402,2026-03-10,14
+OFF-AP-10002793,"KitchenAid Stove, Black",Office Supplies,Paris,Global Trade Co.,209.05,300.42,512,13,378,2026-03-05,11
+FUR-BO-10000567,"Sauder Classic Bookcase, Traditional",Furniture,Paris,Vertex Imports,330.14,504.09,73,13,297,2026-02-10,14
+FUR-CH-10000454,"Hon Deluxe Fabric Upholstered Stacking Chairs, Rounded Back",Furniture,Berlin,Aster Wholesale,34.27,524.89,828,15,449,2026-02-23,4
+TEC-CO-10004997,"Hewlett Wireless Fax, Color",Technology,Sydney,Global Trade Co.,121.86,169.52,32,1,57,2026-03-10,14
+FUR-BO-10001471,"Sauder Classic Bookcase, Metal",Furniture,Berlin,Global Trade Co.,23.09,442.53,550,25,267,2026-02-14,14
+TEC-CO-10000447,"Canon Wireless Fax, Color",Technology,Paris,Nimbus Supply,86.16,633.07,90,5,199,2026-02-25,8
+TEC-PH-10003002,"Cisco Smart Phone, Full Size",Technology,Sydney,Global Trade Co.,394.07,542.16,685,11,382,2026-03-05,4
+OFF-ST-10004377,"Rogers File Cart, Single Width",Office Supplies,Paris,Nimbus Supply,214.31,289.77,43,0,365,2026-03-10,10
+TEC-PH-10002774,"Nokia Smart Phone, with Caller ID",Technology,Paris,Vertex Imports,343.92,602.43,705,15,335,2026-03-05,14
+FUR-BO-10000728,"Dania Corner Shelving, Traditional",Furniture,Paris,Global Trade Co.,100.71,380.32,48,5,229,2026-03-03,11
+FUR-BO-10004999,"Safco Classic Bookcase, Metal",Furniture,London,Vertex Imports,309.4,464.51,431,10,373,2026-02-15,6
+TEC-MOT-10003050,"Motorola Smart Phone, Cordless",Technology,New York,Global Trade Co.,23.18,521.53,93,1,207,2026-02-14,6
+TEC-CO-10002035,"Canon Wireless Fax, High-Speed",Technology,Sydney,Global Trade Co.,113.32,328.54,246,13,132,2026-02-19,7
+TEC-PH-10000106,"Apple Smart Phone, Full Size",Technology,London,Vertex Imports,243.56,294.08,25,2,316,2026-03-18,11
+FUR-BO-10001749,"Bush Classic Bookcase, Traditional",Furniture,London,Global Trade Co.,82.26,626.2,868,13,232,2026-02-14,12
+TEC-PH-10001396,"Nokia Smart Phone, Cordless",Technology,New York,Global Trade Co.,150.71,464.54,22,4,51,2026-03-16,13
+OFF-AP-10004964,"Hoover Stove, White",Office Supplies,London,Aster Wholesale,373.26,456.45,508,28,158,2026-02-20,3
+FUR-TA-10000198,Chromcraft Bull-Nose Wood Oval Conference Tables & Bases,Furniture,Paris,Vertex Imports,88.48,544.6,88,10,192,2026-03-17,4
+OFF-ST-10001547,"Rogers Lockers, Industrial",Office Supplies,Berlin,Vertex Imports,361.68,619.97,541,45,270,2026-02-20,3
+TEC-CO-10000137,"Canon Wireless Fax, Color",Technology,Paris,Vertex Imports,187.52,139.74,28,0,411,2026-03-15,12
+OFF-AP-10003275,"KitchenAid Microwave, Silver",Office Supplies,London,Vertex Imports,364.89,66.38,911,49,319,2026-03-18,10
+FUR-BO-10001498,"Dania Classic Bookcase, Pine",Furniture,Sydney,Global Trade Co.,289.13,264.62,27,4,158,2026-03-18,7
+TEC-PH-10003856,"Motorola Smart Phone, with Caller ID",Technology,Berlin,Vertex Imports,288.14,186.72,376,37,208,2026-02-17,12
+OFF-AP-10001931,"Hoover Blender, Black",Office Supplies,New York,Vertex Imports,95.72,100.68,90,14,466,2026-03-09,5
+OFF-ST-10003716,Tennsco Double-Tier Lockers,Office Supplies,New York,Aster Wholesale,83.47,659.06,924,30,430,2026-03-14,12
+FUR-BO-10004707,"Ikea Library with Doors, Traditional",Furniture,London,Vertex Imports,206.32,494.08,69,0,264,2026-02-14,11
+TEC-CAN-10001437,"Canon Wireless Fax, Laser",Technology,Paris,Vertex Imports,149.12,339.93,491,25,53,2026-02-26,4
+FUR-CH-10003746,Hon 4070 Series Pagoda Round Back Stacking Chairs,Furniture,Berlin,Global Trade Co.,22.3,636.96,66,8,401,2026-02-13,14
+TEC-CO-10001818,"Brother Ink, Digital",Technology,New York,Aster Wholesale,75.84,48.46,871,43,283,2026-02-23,14
+OFF-ST-10003785,"Eldon Lockers, Blue",Office Supplies,New York,Global Trade Co.,387.01,176.02,49,0,173,2026-02-15,6
+OFF-AP-10002244,"Breville Refrigerator, White",Office Supplies,Berlin,Nimbus Supply,76.35,190.1,616,36,338,2026-02-13,6
+TEC-CO-10001654,"Hewlett Wireless Fax, Digital",Technology,Paris,Vertex Imports,47.99,83.4,11,1,455,2026-02-26,5
+FUR-CH-10000974,"Harbour Creations Executive Leather Armchair, Black",Furniture,Sydney,Vertex Imports,338.15,304.95,362,47,66,2026-03-15,13
+FUR-CH-10002061,"Harbour Creations Executive Leather Armchair, Red",Furniture,London,Nimbus Supply,45.43,453.29,69,9,64,2026-02-27,13
+FUR-CH-10001664,"Novimex Swivel Stool, Black",Furniture,Paris,Vertex Imports,225.57,50.8,888,11,218,2026-02-24,14
+OFF-AP-10000407,"KitchenAid Refrigerator, Silver",Office Supplies,Berlin,Nimbus Supply,327.25,557.04,56,1,294,2026-02-15,4
+OFF-ST-10002900,"Smead Lockers, Wire Frame",Office Supplies,Paris,Global Trade Co.,136.9,606.12,532,10,113,2026-02-10,14
+TEC-MA-10000488,Bady BDG101FRU Card Printer,Technology,New York,Global Trade Co.,344.16,674.87,16,2,191,2026-02-12,13
+TEC-MOT-10000554,"Motorola Smart Phone, Full Size",Technology,Paris,Nimbus Supply,79.1,360.12,451,11,140,2026-03-04,11
+FUR-CH-10003365,"Office Star Executive Leather Armchair, Adjustable",Furniture,Paris,Aster Wholesale,161.9,678.61,56,6,104,2026-02-16,4
+TEC-CO-10004078,"Sharp Fax Machine, Laser",Technology,Sydney,Aster Wholesale,70.32,596.94,409,30,319,2026-02-15,14
+FUR-BO-10002990,"Dania Library with Doors, Traditional",Furniture,London,Global Trade Co.,226.48,172.18,41,3,222,2026-02-11,5
+FUR-BO-10001212,"Safco Classic Bookcase, Mobile",Furniture,London,Nimbus Supply,144.03,334.72,114,21,289,2026-02-15,13
+OFF-ST-10004459,Tennsco Single-Tier Lockers,Office Supplies,Sydney,Nimbus Supply,202.91,83.31,34,3,110,2026-02-12,6
+TEC-MA-10000161,"Okidata Inkjet, Wireless",Technology,Berlin,Aster Wholesale,91.21,218.62,522,45,359,2026-03-19,12
+FUR-CH-10004095,"SAFCO Executive Leather Armchair, Adjustable",Furniture,Paris,Aster Wholesale,152.7,388.8,69,2,401,2026-03-12,11
+TEC-CO-10002526,"Sharp Wireless Fax, Digital",Technology,London,Aster Wholesale,270.55,364.39,117,18,194,2026-02-24,10
+FUR-BO-10001372,"Safco Classic Bookcase, Pine",Furniture,New York,Nimbus Supply,99.85,550.4,1,0,182,2026-03-15,9
+OFF-AP-10003917,"KitchenAid Stove, Silver",Office Supplies,Paris,Aster Wholesale,122.26,495.7,652,33,110,2026-03-13,14
+FUR-BO-10002300,"Dania Classic Bookcase, Traditional",Furniture,London,Nimbus Supply,20.85,69.13,22,1,239,2026-03-02,7
+FUR-CH-10003973,GuestStacker Chair with Chrome Finish Legs,Furniture,Berlin,Global Trade Co.,382.59,581.67,433,2,228,2026-03-13,13
+FUR-BO-10000596,"Sauder Classic Bookcase, Mobile",Furniture,Sydney,Vertex Imports,349.6,355.42,98,11,111,2026-02-28,14
+TEC-MOT-10003348,"Motorola Smart Phone, Full Size",Technology,London,Vertex Imports,260.78,40.98,955,47,310,2026-03-09,14
+FUR-CH-10003581,"Hon Executive Leather Armchair, Adjustable",Furniture,Berlin,Vertex Imports,135.17,643.58,76,6,376,2026-03-18,11
+OFF-ST-10002555,"Eldon Lockers, Industrial",Office Supplies,New York,Nimbus Supply,282.14,214.46,544,10,106,2026-03-21,9
+TEC-CO-10001046,Canon Imageclass D680 Copier / Fax,Technology,Berlin,Nimbus Supply,291.02,252.13,4,0,55,2026-02-28,8
+TEC-CO-10001766,Canon PC940 Copier,Technology,Paris,Vertex Imports,275.98,590.65,274,35,78,2026-02-23,3
+TEC-CO-10002095,Hewlett Packard 610 Color Digital Copier / Printer,Technology,New York,Nimbus Supply,165.8,693.89,37,7,155,2026-03-03,7
+FUR-SAU-10004653,"Sauder Classic Bookcase, Traditional",Furniture,Paris,Vertex Imports,286.45,98.31,260,0,494,2026-03-12,11
+FUR-CH-10000885,"Hon Executive Leather Armchair, Adjustable",Furniture,London,Aster Wholesale,146.25,57.45,38,4,282,2026-02-28,4
+TEC-PH-10001817,Wilson Electronics DB Pro Signal Booster,Technology,Berlin,Nimbus Supply,274.72,51.42,852,28,246,2026-02-23,8
+FUR-BO-10000210,"Ikea Library with Doors, Pine",Furniture,New York,Aster Wholesale,254.92,600.73,22,1,432,2026-02-23,8
+FUR-CH-10001854,Office Star - Professional Matrix Back Chair with 2-to-1 Synchro Tilt and Mesh Fabric Seat,Furniture,New York,Aster Wholesale,62.61,505.45,678,32,240,2026-02-14,9
+OFF-ST-10002566,"Tenex Lockers, Wire Frame",Office Supplies,New York,Aster Wholesale,39.86,264.16,32,1,225,2026-03-11,7
+OFF-AP-10002090,"Hamilton Beach Refrigerator, Red",Office Supplies,Paris,Aster Wholesale,69.21,116.58,393,13,479,2026-03-17,3
+TEC-AC-10000866,"Belkin Router, Erganomic",Technology,Paris,Vertex Imports,164.28,75.44,12,1,279,2026-02-11,10
+FUR-TA-10003954,Hon 94000 Series Round Tables,Furniture,Paris,Global Trade Co.,62.66,181.46,210,11,303,2026-03-05,12
+FUR-CH-10004063,Global Deluxe High-Back Manager's Chair,Furniture,Paris,Vertex Imports,147.4,581.42,8,0,176,2026-03-15,7
+OFF-AP-10000729,"KitchenAid Refrigerator, White",Office Supplies,New York,Vertex Imports,329.87,492.44,176,21,455,2026-03-04,12
+FUR-CH-10000892,"SAFCO Executive Leather Armchair, Red",Furniture,Berlin,Global Trade Co.,169.26,260.71,31,2,430,2026-03-11,14
+TEC-CO-10000794,"Hewlett Wireless Fax, High-Speed",Technology,New York,Aster Wholesale,225.1,387.08,981,18,283,2026-02-15,12
+OFF-ST-10003306,Letter Size Cart,Office Supplies,Berlin,Aster Wholesale,164.41,593.16,36,0,337,2026-02-11,5
+OFF-AP-10002252,"Cuisinart Stove, Black",Office Supplies,Paris,Global Trade Co.,179.9,170.91,578,29,194,2026-03-16,4
+FUR-BO-10002892,"Safco Classic Bookcase, Mobile",Furniture,New York,Global Trade Co.,132.71,364.19,38,4,70,2026-03-18,12
+TEC-CO-10003102,"Canon Copy Machine, Color",Technology,Berlin,Global Trade Co.,393.06,447.98,173,13,223,2026-03-20,10
+FUR-CH-10002872,"SAFCO Executive Leather Armchair, Adjustable",Furniture,Paris,Aster Wholesale,95.4,606.13,21,0,275,2026-03-16,10
+OFF-ST-10000624,"Eldon File Cart, Single Width",Office Supplies,Sydney,Vertex Imports,103.37,478.6,991,46,264,2026-02-11,14
+TEC-PH-10002962,"Motorola Smart Phone, Full Size",Technology,Paris,Nimbus Supply,133.0,46.32,48,3,438,2026-02-11,11
+TEC-PH-10003762,"Motorola Smart Phone, Full Size",Technology,London,Aster Wholesale,284.66,351.98,455,15,341,2026-03-04,5
+TEC-CO-10002040,"Brother Fax Machine, Digital",Technology,New York,Nimbus Supply,52.38,149.32,50,7,188,2026-03-07,6
+FUR-CH-10004086,Hon 4070 Series Pagoda Armless Upholstered Stacking Chairs,Furniture,Berlin,Nimbus Supply,245.02,271.73,145,4,281,2026-03-02,8
+FUR-CH-10002891,"Hon Executive Leather Armchair, Adjustable",Furniture,London,Aster Wholesale,307.62,211.24,90,8,426,2026-03-03,9
+FUR-HAR-10002873,"Harbour Creations Executive Leather Armchair, Adjustable",Furniture,London,Vertex Imports,27.58,648.77,519,30,352,2026-02-19,9
+TEC-CO-10001633,"Sharp Fax Machine, High-Speed",Technology,Sydney,Global Trade Co.,232.08,129.47,73,0,162,2026-03-01,8
+OFF-AP-10001621,"Cuisinart Blender, Silver",Office Supplies,London,Nimbus Supply,321.62,270.32,170,13,452,2026-03-14,14
+FUR-BO-10000288,"Safco Classic Bookcase, Traditional",Furniture,Berlin,Nimbus Supply,313.24,648.12,91,5,316,2026-02-23,13
+OFF-ST-10004381,"Smead Lockers, Industrial",Office Supplies,Sydney,Vertex Imports,355.97,647.47,398,13,291,2026-03-18,4
+TEC-CO-10003800,"Hewlett Wireless Fax, Color",Technology,Berlin,Aster Wholesale,123.23,258.68,57,3,300,2026-02-17,8
+FUR-BO-10000035,"Dania Classic Bookcase, Pine",Furniture,New York,Global Trade Co.,389.18,349.67,159,24,494,2026-02-24,12
+OFF-AP-10001099,"Hoover Stove, Black",Office Supplies,Sydney,Aster Wholesale,96.42,579.47,6,0,90,2026-02-09,13
+TEC-AC-10001056,"Belkin Router, USB",Technology,London,Vertex Imports,377.55,505.31,541,44,240,2026-03-09,14
+OFF-AP-10001776,"Hoover Refrigerator, Red",Office Supplies,Berlin,Vertex Imports,42.33,697.29,83,7,177,2026-02-09,12
+FUR-TA-10001095,Chromcraft Round Conference Tables,Furniture,New York,Aster Wholesale,141.68,516.54,927,8,353,2026-02-10,4
+OFF-FEL-10002867,"Fellowes Lockers, Single Width",Office Supplies,New York,Global Trade Co.,44.74,232.0,31,0,374,2026-02-28,9
+FUR-CH-10000932,"Harbour Creations Executive Leather Armchair, Red",Furniture,Berlin,Aster Wholesale,126.29,207.38,395,15,351,2026-02-10,13
+FUR-CH-10003354,"Harbour Creations Swivel Stool, Red",Furniture,Berlin,Vertex Imports,47.38,409.81,67,3,263,2026-02-14,10
+TEC-CO-10002376,"Hewlett Fax Machine, Laser",Technology,Sydney,Vertex Imports,248.3,490.51,753,27,268,2026-02-10,3
+OFF-AP-10002312,"KitchenAid Refrigerator, Black",Office Supplies,Sydney,Nimbus Supply,301.56,390.52,54,5,151,2026-03-03,6
+OFF-SME-10000746,"Smead Lockers, Industrial",Office Supplies,Berlin,Vertex Imports,141.49,627.37,772,46,447,2026-02-23,14
+OFF-ST-10001490,"Hot File 7-Pocket, Floor Stand",Office Supplies,London,Global Trade Co.,390.53,564.43,47,2,317,2026-03-01,12
+TEC-PH-10001530,Plantronics Voyager Pro Legend,Technology,Berlin,Nimbus Supply,73.24,401.82,434,3,267,2026-02-22,5
+OFF-AP-10000179,Honeywell Enviracaire Portable HEPA Air Cleaner for up to 10 x 16 Room,Office Supplies,Paris,Global Trade Co.,357.26,512.6,59,2,299,2026-02-23,11
+FUR-BO-10004665,"Bush Classic Bookcase, Mobile",Furniture,Berlin,Nimbus Supply,46.34,530.87,342,39,290,2026-03-13,14
+FUR-CH-10002335,"Hon Bag Chairs, Set of Two",Furniture,London,Vertex Imports,144.53,283.6,12,0,403,2026-02-10,12
+FUR-BO-10003282,"Ikea Classic Bookcase, Mobile",Furniture,Paris,Global Trade Co.,346.97,395.97,962,46,244,2026-03-18,6
+OFF-BI-10003925,Fellowes PB300 Plastic Comb Binding Machine,Office Supplies,Sydney,Global Trade Co.,256.86,463.52,32,1,414,2026-03-06,10
+OFF-FEL-10004665,"Fellowes Lockers, Blue",Office Supplies,Paris,Vertex Imports,274.0,221.63,224,27,71,2026-02-20,13
+TEC-PH-10001066,"Apple Smart Phone, Cordless",Technology,London,Global Trade Co.,23.07,601.92,1,0,158,2026-03-13,7
+FUR-CH-10004669,"Novimex Executive Leather Armchair, Black",Furniture,Paris,Nimbus Supply,208.44,617.5,327,26,260,2026-03-11,5
+TEC-MA-10004125,Cubify CubeX 3D Printer Triple Head Print,Technology,New York,Global Trade Co.,207.21,419.54,60,5,61,2026-02-21,3
+OFF-BI-10004600,Ibico Ibimaster 300 Manual Binding System,Office Supplies,Sydney,Vertex Imports,166.82,534.39,419,22,360,2026-02-12,11
+FUR-CH-10003379,Global Commerce Series High-Back Swivel/Tilt Chairs,Furniture,Paris,Vertex Imports,361.72,156.06,35,0,86,2026-02-10,12
+OFF-ST-10002292,"Sauder Facets Collection Locker/File Cabinet, Sky Alder Finish",Office Supplies,New York,Vertex Imports,293.09,497.59,489,47,460,2026-03-08,10
+OFF-ST-10002395,"Rogers Lockers, Single Width",Office Supplies,Berlin,Aster Wholesale,269.94,95.08,35,7,63,2026-03-18,9
+TEC-CO-10004567,"Brother Fax Machine, Color",Technology,London,Nimbus Supply,232.95,134.21,491,16,324,2026-02-16,9
+FUR-BO-10002003,"Sauder Classic Bookcase, Metal",Furniture,Berlin,Vertex Imports,149.19,454.03,3,0,219,2026-02-10,9
+TEC-MA-10000984,Okidata MB760 Printer,Technology,New York,Nimbus Supply,295.97,472.11,171,22,440,2026-03-11,6
+TEC-PH-10002672,"Cisco Smart Phone, Full Size",Technology,Paris,Vertex Imports,190.02,367.32,98,8,77,2026-02-14,14
+FUR-BO-10000490,"Bush Library with Doors, Metal",Furniture,Sydney,Aster Wholesale,164.59,569.59,451,20,333,2026-03-03,14
+FUR-BO-10003541,"Bush Classic Bookcase, Metal",Furniture,New York,Global Trade Co.,298.37,354.54,87,5,110,2026-03-16,10
+OFF-ST-10003208,Adjustable Depth Letter/Legal Cart,Office Supplies,New York,Aster Wholesale,293.48,424.08,206,27,109,2026-02-26,7
+TEC-PH-10004165,Mitel MiVoice 5330e IP Phone,Technology,Berlin,Nimbus Supply,63.89,694.94,37,5,256,2026-03-01,12
+TEC-MA-10003979,Ativa V4110MDD Micro-Cut Shredder,Technology,London,Vertex Imports,108.29,61.24,270,42,187,2026-02-12,12
+FUR-BO-10000259,"Safco Classic Bookcase, Traditional",Furniture,New York,Vertex Imports,242.78,637.95,48,4,390,2026-03-19,12
+TEC-CO-10003160,"Brother Wireless Fax, Laser",Technology,Sydney,Global Trade Co.,173.28,324.45,561,49,468,2026-03-05,6
+TEC-AC-10003955,"Memorex Router, Erganomic",Technology,New York,Aster Wholesale,144.65,435.94,26,1,346,2026-03-15,10
+FUR-CH-10002331,Hon 4700 Series Mobuis Mid-Back Task Chairs with Adjustable Arms,Furniture,Berlin,Global Trade Co.,277.44,110.64,871,27,119,2026-02-28,11
+OFF-FEL-10001865,"Fellowes File Cart, Wire Frame",Office Supplies,Berlin,Nimbus Supply,95.0,502.09,55,8,111,2026-02-15,3
+TEC-CO-10003931,"Hewlett Fax Machine, High-Speed",Technology,Paris,Global Trade Co.,381.16,579.48,487,20,83,2026-03-06,8
+TEC-CO-10001895,"Sharp Wireless Fax, Color",Technology,New York,Global Trade Co.,385.24,454.9,70,13,391,2026-03-18,12
+FUR-TA-10000184,"Barricks Conference Table, Fully Assembled",Furniture,New York,Aster Wholesale,389.7,340.83,491,33,393,2026-03-11,4
+FUR-BO-10002545,"Atlantic Metals Mobile 3-Shelf Bookcases, Custom Colors",Furniture,London,Nimbus Supply,227.79,349.92,48,4,132,2026-03-10,3
+FUR-CH-10001322,"Harbour Creations Executive Leather Armchair, Adjustable",Furniture,Paris,Vertex Imports,216.26,97.41,394,28,441,2026-03-08,3
+OFF-AP-10001178,"KitchenAid Stove, Red",Office Supplies,New York,Aster Wholesale,193.7,489.59,84,10,498,2026-03-09,5
+FUR-TA-10000989,"Lesro Conference Table, Rectangular",Furniture,Sydney,Nimbus Supply,115.37,90.85,298,39,401,2026-03-07,4
+FUR-IKE-10001539,"Ikea Classic Bookcase, Pine",Furniture,Paris,Vertex Imports,240.71,419.41,82,6,84,2026-02-21,9
+OFF-ST-10001780,Tennsco 16-Compartment Lockers with Coat Rack,Office Supplies,Paris,Nimbus Supply,335.98,115.92,424,39,128,2026-02-18,9
+TEC-MA-10004609,"Epson Phone, Durable",Technology,London,Nimbus Supply,210.89,646.17,77,3,365,2026-02-12,3
+FUR-BO-10001553,"Sauder Library with Doors, Traditional",Furniture,Sydney,Global Trade Co.,110.79,448.66,816,34,279,2026-02-25,13
+OFF-ST-10000288,"Fellowes Lockers, Industrial",Office Supplies,New York,Aster Wholesale,196.58,599.69,48,5,382,2026-02-15,7
+TEC-PH-10002200,Aastra 6757i CT Wireless VoIP phone,Technology,London,Nimbus Supply,367.9,166.87,804,39,293,2026-03-17,9
+OFF-AP-10003963,"Breville Microwave, Silver",Office Supplies,Paris,Nimbus Supply,261.95,516.03,79,13,441,2026-03-04,9
+FUR-CH-10001332,"Office Star Executive Leather Armchair, Red",Furniture,Berlin,Vertex Imports,20.55,257.04,122,17,267,2026-03-10,8
+TEC-AC-10004145,Logitech diNovo Edge Keyboard,Technology,Paris,Global Trade Co.,210.61,108.84,67,11,100,2026-03-09,14
+FUR-BAR-10002449,"Barricks Training Table, Adjustable Height",Furniture,Sydney,Aster Wholesale,382.7,445.07,938,49,409,2026-03-19,9
+FUR-BO-10002031,"Sauder Classic Bookcase, Pine",Furniture,New York,Vertex Imports,72.4,145.4,1,0,442,2026-03-20,9
+TEC-MA-10004772,"Konica Inkjet, White",Technology,London,Global Trade Co.,316.19,557.63,951,9,401,2026-02-12,8
+TEC-CO-10004042,"Brother Wireless Fax, Laser",Technology,Sydney,Nimbus Supply,102.61,546.34,42,7,490,2026-02-27,8
+FUR-BO-10002204,"Bush Classic Bookcase, Pine",Furniture,New York,Nimbus Supply,65.09,543.27,353,39,299,2026-02-10,7
+FUR-CH-10004255,"SAFCO Executive Leather Armchair, Red",Furniture,Sydney,Global Trade Co.,327.02,657.01,61,3,317,2026-02-14,10
+FUR-CH-10001207,"Hon Executive Leather Armchair, Red",Furniture,Sydney,Vertex Imports,38.91,668.18,608,18,366,2026-03-08,8
+OFF-ST-10004489,"Smead Lockers, Single Width",Office Supplies,Sydney,Vertex Imports,92.15,48.1,62,6,229,2026-03-20,14
+OFF-ST-10004597,"Eldon File Cart, Industrial",Office Supplies,London,Nimbus Supply,388.07,320.46,193,0,243,2026-03-06,9
+FUR-CH-10003846,"Office Star Swivel Stool, Set of Two",Furniture,London,Aster Wholesale,166.06,265.66,32,2,241,2026-03-11,3
+TEC-PH-10002991,"Apple Smart Phone, Full Size",Technology,Paris,Aster Wholesale,158.1,470.73,369,48,473,2026-02-19,7
+FUR-BO-10001073,"Safco Classic Bookcase, Metal",Furniture,Sydney,Global Trade Co.,330.8,164.72,1,0,481,2026-02-27,8
+FUR-TA-10000577,Bretford CR4500 Series Slim Rectangular Table,Furniture,London,Vertex Imports,367.06,345.96,768,31,428,2026-02-21,8
+OFF-BI-10003650,GBC DocuBind 300 Electric Binding Machine,Office Supplies,Berlin,Vertex Imports,119.44,101.54,6,0,275,2026-03-17,4
+OFF-ST-10000695,"Rogers Lockers, Wire Frame",Office Supplies,Paris,Global Trade Co.,235.46,325.97,346,5,117,2026-02-19,3
+FUR-BO-10004113,"Sauder Classic Bookcase, Pine",Furniture,London,Nimbus Supply,38.77,644.7,71,5,306,2026-03-04,9
+TEC-MA-10002468,"Panasonic Inkjet, White",Technology,Sydney,Global Trade Co.,123.44,523.01,179,9,91,2026-02-28,11
+TEC-PH-10000896,"Cisco Signal Booster, VoIP",Technology,London,Aster Wholesale,194.45,127.53,47,8,329,2026-03-19,4
+TEC-PH-10000560,Samsung Galaxy S III - 16GB - pebble blue (T-Mobile),Technology,Paris,Aster Wholesale,98.14,580.82,794,10,354,2026-02-24,3
+TEC-MA-10003557,"Panasonic Inkjet, Durable",Technology,London,Nimbus Supply,354.32,363.16,7,1,88,2026-03-21,5
+TEC-CO-10004535,"Hewlett Fax Machine, High-Speed",Technology,Sydney,Vertex Imports,48.65,161.92,866,20,105,2026-03-07,7
+TEC-CO-10002962,"Sharp Wireless Fax, Color",Technology,New York,Global Trade Co.,181.26,360.7,87,8,97,2026-03-10,13
+OFF-AP-10003032,"Hoover Stove, Red",Office Supplies,London,Aster Wholesale,204.1,541.59,815,3,421,2026-03-10,3
+FUR-BO-10002000,"Ikea Classic Bookcase, Metal",Furniture,Berlin,Nimbus Supply,346.58,105.1,49,4,289,2026-02-18,4
+TEC-CO-10003777,"Hewlett Copy Machine, Color",Technology,London,Global Trade Co.,377.42,186.06,453,26,389,2026-02-09,12
+OFF-AP-10003500,"KitchenAid Microwave, White",Office Supplies,Paris,Global Trade Co.,218.85,583.4,77,14,474,2026-02-15,5
+FUR-BO-10003991,"Bush Classic Bookcase, Traditional",Furniture,Berlin,Global Trade Co.,278.47,314.68,674,16,171,2026-03-16,6
+TEC-CO-10003506,"HP Fax Machine, Laser",Technology,Paris,Aster Wholesale,296.9,244.12,64,0,318,2026-02-10,3
+FUR-TA-10001664,"Chromcraft Conference Table, with Bottom Storage",Furniture,Berlin,Nimbus Supply,291.93,658.43,860,16,191,2026-03-13,14
+OFF-AP-10000647,"Hoover Refrigerator, White",Office Supplies,New York,Vertex Imports,391.51,137.94,12,2,71,2026-02-13,9
+FUR-CH-10000777,"Harbour Creations Executive Leather Armchair, Adjustable",Furniture,London,Aster Wholesale,74.38,297.43,784,11,72,2026-02-12,3
+TEC-MA-10000045,Zebra ZM400 Thermal Label Printer,Technology,Paris,Vertex Imports,285.58,620.62,76,13,109,2026-02-13,7
+OFF-AP-10004511,"Cuisinart Refrigerator, Black",Office Supplies,New York,Nimbus Supply,151.69,76.67,171,25,220,2026-02-25,14
+TEC-PH-10001795,ClearOne CHATAttach 160 - speaker phone,Technology,Sydney,Nimbus Supply,238.18,53.95,57,4,370,2026-02-10,3
+FUR-BO-10002766,"Bush Classic Bookcase, Traditional",Furniture,New York,Vertex Imports,326.52,126.68,394,41,496,2026-02-22,13
+TEC-PH-10000800,"Cisco Smart Phone, Full Size",Technology,Sydney,Nimbus Supply,283.33,87.87,50,9,60,2026-03-16,13
+OFF-ST-10000103,"Smead Lockers, Industrial",Office Supplies,Sydney,Nimbus Supply,195.86,355.6,133,25,81,2026-03-13,12
+TEC-AC-10003666,"Memorex Router, Bluetooth",Technology,London,Aster Wholesale,282.02,651.17,36,0,464,2026-03-11,10
+OFF-ST-10003470,"Tennsco Snap-Together Open Shelving Units, Starter Sets and Add-On Units",Office Supplies,Sydney,Vertex Imports,279.53,294.79,659,8,274,2026-03-14,3
+FUR-BO-10000203,"Sauder Library with Doors, Metal",Furniture,London,Global Trade Co.,168.46,67.67,62,12,90,2026-03-09,11
+TEC-MA-10000331,"Okidata Printer, White",Technology,Paris,Global Trade Co.,207.88,126.74,406,19,150,2026-03-16,4
+TEC-PH-10004074,"Samsung Smart Phone, with Caller ID",Technology,London,Vertex Imports,71.58,598.26,9,1,137,2026-03-20,12
+FUR-CH-10003551,"Hon Swivel Stool, Black",Furniture,Paris,Global Trade Co.,112.0,116.31,968,39,144,2026-02-28,9
+FUR-CH-10002780,"Office Star Executive Leather Armchair, Black",Furniture,London,Aster Wholesale,367.33,577.61,93,14,312,2026-02-19,13
+OFF-AP-10002651,Hoover Upright Vacuum With Dirt Cup,Office Supplies,Berlin,Nimbus Supply,249.62,115.11,759,9,312,2026-02-22,8
+TEC-CO-10000660,"Hewlett Copy Machine, Color",Technology,New York,Vertex Imports,78.64,445.76,93,11,442,2026-02-16,7
+TEC-HEW-10003829,"Hewlett Wireless Fax, High-Speed",Technology,Berlin,Nimbus Supply,135.69,133.73,295,36,144,2026-02-24,12
+FUR-TA-10003569,Bretford CR8500 Series Meeting Room Furniture,Furniture,Sydney,Aster Wholesale,181.62,133.68,1,0,183,2026-03-04,14
+FUR-BO-10003734,"Dania Classic Bookcase, Metal",Furniture,New York,Global Trade Co.,329.86,672.29,669,20,192,2026-03-08,6
+TEC-CO-10000620,"Brother Wireless Fax, Digital",Technology,Paris,Nimbus Supply,135.14,248.81,58,0,318,2026-02-15,7
+TEC-CO-10002174,"HP Copy Machine, Laser",Technology,New York,Global Trade Co.,51.28,563.68,850,35,262,2026-02-10,12
+FUR-CH-10004997,Hon Every-Day Series Multi-Task Chairs,Furniture,Paris,Vertex Imports,263.42,675.65,50,7,486,2026-03-02,12
+TEC-CO-10002911,"Hewlett Wireless Fax, Laser",Technology,London,Global Trade Co.,182.99,288.97,899,11,195,2026-02-09,11
+FUR-TA-10001633,"Bevis Wood Table, with Bottom Storage",Furniture,London,Vertex Imports,193.32,424.44,40,1,467,2026-03-19,10
+OFF-AP-10003598,"Breville Refrigerator, Red",Office Supplies,Sydney,Vertex Imports,226.21,274.82,778,40,251,2026-02-21,9
+TEC-CO-10001775,"Sharp Wireless Fax, Laser",Technology,Sydney,Nimbus Supply,98.79,341.23,7,0,346,2026-03-12,11
+TEC-MA-10004669,"Epson Inkjet, Wireless",Technology,London,Vertex Imports,34.54,211.25,430,11,149,2026-02-12,11
+TEC-CO-10001926,"Hewlett Wireless Fax, Laser",Technology,Sydney,Global Trade Co.,32.53,608.73,34,5,169,2026-03-11,7
+TEC-CAN-10001853,"Canon Fax Machine, High-Speed",Technology,New York,Aster Wholesale,127.65,191.03,772,17,103,2026-02-13,14
+TEC-MA-10003492,"Okidata Printer, Wireless",Technology,Berlin,Aster Wholesale,121.74,573.22,15,2,175,2026-02-13,5
+TEC-CO-10001954,"Brother Wireless Fax, Laser",Technology,Berlin,Vertex Imports,295.04,694.68,387,38,413,2026-03-20,13
+OFF-AP-10000330,"Hamilton Beach Stove, Red",Office Supplies,London,Nimbus Supply,115.03,432.86,88,2,174,2026-02-09,14
+TEC-CO-10004154,"Canon Copy Machine, Digital",Technology,London,Nimbus Supply,346.38,477.66,198,26,420,2026-03-04,9

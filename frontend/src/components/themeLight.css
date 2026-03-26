@@ -200,6 +200,18 @@
   background-color: #edf2f7;
 }
 
+.app-layout.theme-light .dashboard-campaign-delete-btn {
+  background-color: transparent;
+  border-color: transparent;
+  color: #94a3b8;
+}
+
+.app-layout.theme-light .dashboard-campaign-delete-btn:hover {
+  background-color: #eef2f7;
+  border-color: #d7dee8;
+  color: #64748b;
+}
+
 .app-layout.theme-light .dashboard-empty-state {
   color: #718096;
 }

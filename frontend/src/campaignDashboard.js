@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar, TrendingUp, ShoppingBag, Share2, AlertTriangle, Bell } from 'lucide-react';
+import { Calendar, TrendingUp, ShoppingBag, Share2, AlertTriangle, Bell, Trash2 } from 'lucide-react';
 
 import dashboardData from './dashboard_data.json';
 import inventoryData from './inventory_data.json';
@@ -7,8 +7,26 @@ import ScenarioSimulator from './components/ScenarioSimulator';
 import PushNotificationOverlay from './components/PushNotificationOverlay';
 import './campaignDashboard.css';
 
+const PLANNED_CAMPAIGNS_KEY = 'planned_campaigns';
+const NON_DELETABLE_CAMPAIGN = 'New Year';
+
+const getPlannedCampaigns = () => {
+  const stored = JSON.parse(localStorage.getItem(PLANNED_CAMPAIGNS_KEY) || '[]');
+  return stored.length ? stored : ['New Year'];
+};
+
+const formatCompactMoney = (value) => {
+  const n = Number(value || 0);
+  if (!Number.isFinite(n) || n <= 0) return 'Insufficient data';
+  if (n >= 1_000_000_000) return `${(n / 1_000_000_000).toFixed(1)}B`;
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
+  if (n >= 1_000) return `${(n / 1_000).toFixed(1)}K`;
+  return n.toLocaleString('en-US', { maximumFractionDigits: 0 });
+};
+
 const CampaignDashboard = () => {
   const [campaignData, setCampaignData] = useState(null);
+  const [plannedCampaignNames, setPlannedCampaignNames] = useState(getPlannedCampaigns());
   const [simulatorOpen, setSimulatorOpen] = useState(false);
   const [simulatorSku, setSimulatorSku] = useState(null);
   const [discountPct, setDiscountPct] = useState(15);
@@ -16,13 +34,34 @@ const CampaignDashboard = () => {
   const [pushNotificationOpen, setPushNotificationOpen] = useState(false);
   const [pushNotificationSku, setPushNotificationSku] = useState(null);
 
+  const deletePlannedCampaign = (campaignName) => {
+    if (!campaignName || campaignName === NON_DELETABLE_CAMPAIGN) return;
+    setPlannedCampaignNames((prev) => {
+      const next = prev.filter((name) => name !== campaignName);
+      const persisted = next.length ? next : [NON_DELETABLE_CAMPAIGN];
+      localStorage.setItem(PLANNED_CAMPAIGNS_KEY, JSON.stringify(persisted));
+      return persisted;
+    });
+  };
+
   useEffect(() => {
     if (!dashboardData || !dashboardData.Campaigns) return;
 
-    const campaignData = dashboardData.Campaigns['11-11'];
+    const defaultName = plannedCampaignNames[0] || 'New Year';
+    const campaignData = dashboardData.Campaigns[defaultName] || dashboardData.Campaigns[Object.keys(dashboardData.Campaigns)[0]];
     if (campaignData) {
       setCampaignData(campaignData);
     }
+  }, [plannedCampaignNames]);
+
+  useEffect(() => {
+    const syncPlanned = () => setPlannedCampaignNames(getPlannedCampaigns());
+    window.addEventListener('storage', syncPlanned);
+    window.addEventListener('focus', syncPlanned);
+    return () => {
+      window.removeEventListener('storage', syncPlanned);
+      window.removeEventListener('focus', syncPlanned);
+    };
   }, []);
 
   if (!campaignData) {
@@ -33,7 +72,7 @@ const CampaignDashboard = () => {
     );
   }
 
-  const themeColor = '#4299e1'; // 11.11 campaign color
+  const themeColor = '#48BB78'; // Global campaign default color
 
   const topMoversDate = campaignData.peak_date && campaignData.peak_date !== 'N/A'
     ? campaignData.peak_date
@@ -41,32 +80,35 @@ const CampaignDashboard = () => {
 
   const getItemDisplayName = (skuOrProduct, index) => {
     const sku = typeof skuOrProduct === 'string' ? skuOrProduct : skuOrProduct?.sku;
+    const explicitName = typeof skuOrProduct === 'object' ? skuOrProduct?.name : null;
+    if (explicitName && String(explicitName).trim()) {
+      return String(explicitName).trim();
+    }
     const withSpaces = String(sku ?? '').replace(/_/g, ' ').trim();
     // Always show the SKU name (converted to readable text) rather than generic "Product 01" labels.
     return withSpaces || `Product ${String(index + 1).padStart(2, '0')}`;
   };
 
   const calculateStockoutRisk = () => {
-    if (!campaignData?.hero_products || inventoryData.length === 0) return 0;
+    if (!campaignData?.hero_products) return 0;
 
     let atRiskCount = 0;
     campaignData.hero_products.forEach((product) => {
-      const sku = typeof product === 'string' ? product : product.sku;
+      const sku = product?.sku;
       const inventoryItem = inventoryData.find((item) => item.sku === sku);
-      const inventoryValue = inventoryItem
-        ? Number(inventoryItem.qty_on_hand || 0) * Number(inventoryItem.cost_price || 0)
-        : 0;
+      const stockoutDays = Number(product?.metrics?.stockout_days);
+      const leadTimeDays = Number(product?.metrics?.lead_time_days);
+      const stockPressure = Number(product?.metrics?.stock_pressure);
+      const qtyOnHand = Number(inventoryItem?.qty_on_hand || NaN);
+      const reorderPoint = Number(inventoryItem?.reorder_point || NaN);
 
-      // Simplified calculation: forecast as thousands of units
-      const baseRevenue = 1000000; // Average forecast
-      const daysWindow = 30;
-      const demandMultiplier = 1 + (15 / 100) * 0.5; // Default 15% discount
+      const lowStockByDays = Number.isFinite(stockoutDays) && (
+        (Number.isFinite(leadTimeDays) && stockoutDays < leadTimeDays) || stockoutDays < 14
+      );
+      const lowStockByPressure = Number.isFinite(stockPressure) && stockPressure <= 0.25;
+      const lowStockByQty = Number.isFinite(qtyOnHand) && Number.isFinite(reorderPoint) && qtyOnHand <= reorderPoint;
 
-      const adjustedRevenue = baseRevenue * (1 - 15 / 100) * demandMultiplier;
-      const dailyRevenue = (adjustedRevenue / daysWindow) || 0;
-      const stockoutDays = dailyRevenue > 0 ? inventoryValue / dailyRevenue : Infinity;
-
-      if (stockoutDays < 2) {
+      if (lowStockByDays || lowStockByPressure || lowStockByQty) {
         atRiskCount++;
       }
     });
@@ -75,6 +117,23 @@ const CampaignDashboard = () => {
   };
 
   const stockoutRiskCount = calculateStockoutRisk();
+
+  const sortedPlannedCampaignNames = plannedCampaignNames
+    .filter((campaignName) => Boolean(dashboardData.Campaigns[campaignName]))
+    .sort((a, b) => {
+      if (a === NON_DELETABLE_CAMPAIGN && b !== NON_DELETABLE_CAMPAIGN) return -1;
+      if (b === NON_DELETABLE_CAMPAIGN && a !== NON_DELETABLE_CAMPAIGN) return 1;
+
+      const aDate = Date.parse(dashboardData.Campaigns[a]?.peak_date || '');
+      const bDate = Date.parse(dashboardData.Campaigns[b]?.peak_date || '');
+      const aValid = Number.isFinite(aDate);
+      const bValid = Number.isFinite(bDate);
+
+      if (aValid && bValid) return aDate - bDate;
+      if (aValid) return -1;
+      if (bValid) return 1;
+      return String(a).localeCompare(String(b));
+    });
 
   return (
     <div className="dashboard-root">
@@ -99,11 +158,9 @@ const CampaignDashboard = () => {
           </article>
 
           <article className="dashboard-card">
-            <p className="dashboard-card-label">Projected GMV (PKR)</p>
+            <p className="dashboard-card-label">Projected GMV (USD)</p>
             <h2 className="dashboard-card-value">
-              {campaignData.projected_volume > 0
-                ? `${(campaignData.projected_volume / 1_000_000).toFixed(1)}M`
-                : 'Insufficient data'}
+              {formatCompactMoney(campaignData.projected_volume)}
             </h2>
             <div className="dashboard-progress">
               <div
@@ -111,7 +168,12 @@ const CampaignDashboard = () => {
                 style={{ backgroundColor: themeColor, width: '82%' }}
               />
             </div>
-            <p className="dashboard-card-footnote">AI confidence: 94.2%</p>
+            <p className="dashboard-card-footnote">
+              Lift planned {campaignData.campaign_lift_multiplier ?? '—'}x
+              {campaignData.observed_lift_multiplier != null
+                ? ` | observed ${campaignData.observed_lift_multiplier}x`
+                : ''}
+            </p>
           </article>
 
           <article
@@ -122,7 +184,7 @@ const CampaignDashboard = () => {
             <h2 className="dashboard-card-value">{stockoutRiskCount} SKUs</h2>
             <p className="dashboard-card-footnote dashboard-card-footnote--row">
               <AlertTriangle size={14} className="dashboard-card-footnote-icon" />
-              Products at risk ({"<"} 5 days)
+              Products near OOS (days, stock pressure, or reorder threshold)
             </p>
           </article>
         </section>
@@ -138,19 +200,23 @@ const CampaignDashboard = () => {
                 Top Movers Today ({topMoversDate})
               </h3>
               <p className="dashboard-side-copy">
-                AI allocated volume to these SKUs based on Pakistan market
-                history and campaign lift.
+                AI allocated volume to these SKUs based on global market
+                insights and historical campaign lift.
               </p>
 
               <div className="dashboard-product-list">
                 {campaignData.hero_products.slice(0, 5).map((product, index) => (
-                  <div key={product} className="dashboard-product-row-extended">
+                  <div key={typeof product === 'string' ? product : product?.sku || index} className="dashboard-product-row-extended">
                     <div className="dashboard-product-rank">
                       {`${index + 1}`.padStart(2, '0')}
                     </div>
                     <div className="dashboard-product-main">
                       <p className="dashboard-product-name">{getItemDisplayName(product, index)}</p>
-                      <p className="dashboard-product-meta">High velocity SKU</p>
+                      <p className="dashboard-product-meta">
+                        {typeof product === 'object' && product?.ai_signal
+                          ? product.ai_signal
+                          : 'Campaign SKU'}
+                      </p>
                     </div>
                     <div className="dashboard-product-tools">
                       <button
@@ -206,14 +272,17 @@ const CampaignDashboard = () => {
               </p>
 
               <div className="dashboard-campaigns-list">
-                {Object.entries(dashboardData.Campaigns).map(([campaignName, campaignInfo], index) => (
+                {sortedPlannedCampaignNames.map((campaignName, index) => {
+                    const campaignInfo = dashboardData.Campaigns[campaignName];
+                    const canDelete = campaignName !== NON_DELETABLE_CAMPAIGN;
+                    return (
                   <div key={campaignName} className="dashboard-campaign-item">
                     <div className="dashboard-campaign-rank">
                       {`${index + 1}`.padStart(2, '0')}
                     </div>
                     <div className="dashboard-campaign-content">
                       <p className="dashboard-campaign-title">
-                        {campaignName === '11-11' ? '11.11' : campaignName}
+                        {campaignName}
                       </p>
                       <p className="dashboard-campaign-date">
                         {campaignInfo.peak_date && campaignInfo.peak_date !== 'N/A'
@@ -221,8 +290,20 @@ const CampaignDashboard = () => {
                           : '—'}
                       </p>
                     </div>
+                    {canDelete && (
+                      <button
+                        type="button"
+                        className="dashboard-campaign-delete-btn"
+                        onClick={() => deletePlannedCampaign(campaignName)}
+                        aria-label={`Delete ${campaignName} from planned campaigns`}
+                        title="Delete campaign"
+                      >
+                        <Trash2 size={14} />
+                      </button>
+                    )}
                   </div>
-                ))}
+                    );
+                  })}
               </div>
             </div>
           </aside>
@@ -236,9 +317,12 @@ const CampaignDashboard = () => {
         discountPct={discountPct}
         products={campaignData?.hero_products.slice(0, 5).map((product) => {
           const sku = typeof product === 'string' ? product : product.sku;
+          const demandVelocity = Number(product?.metrics?.demand_velocity || 0.5);
+          const baseUnits = Number(campaignData?.avg_units_per_product_baseline || 100);
+          const lift = Number(campaignData?.campaign_lift_multiplier || 1);
           return {
             skuId: sku,
-            forecast: 1000,
+            forecast: Math.round(baseUnits * lift * (0.8 + demandVelocity * 0.4)),
           };
         }) || []}
         inventoryData={inventoryData}
@@ -257,10 +341,12 @@ const CampaignDashboard = () => {
         selectedSku={pushNotificationSku}
         products={campaignData?.hero_products.slice(0, 5).map((product) => {
           const sku = typeof product === 'string' ? product : product.sku;
+          const name = typeof product === 'object' ? (product?.name || sku.replace(/_/g, ' ')) : sku.replace(/_/g, ' ');
+          const category = typeof product === 'object' ? (product?.category || 'Campaign Product') : 'Campaign Product';
           return {
             skuId: sku,
-            name: sku.replace(/_/g, ' '),
-            category: 'Campaign Product',
+            name,
+            category,
           };
         }) || []}
       />

@@ -14,6 +14,14 @@ import ScenarioSimulator from '../components/ScenarioSimulator';
 import PushNotificationOverlay from '../components/PushNotificationOverlay';
 import './CampaignPlanner.css';
 
+const PLANNED_CAMPAIGNS_KEY = 'planned_campaigns';
+
+const launchCampaign = (campaignName) => {
+  if (!campaignName) return;
+  const existing = JSON.parse(localStorage.getItem(PLANNED_CAMPAIGNS_KEY) || '[]');
+  const next = Array.from(new Set([...existing, campaignName]));
+  localStorage.setItem(PLANNED_CAMPAIGNS_KEY, JSON.stringify(next));
+};
 
 
 const formatDateRange = (peakDate) => {
@@ -37,7 +45,7 @@ const getCategoryFilteredSkus = (items, category) => {
 };
 
 const CampaignPlanner = () => {
-  const [selectedCampaign, setSelectedCampaign] = useState('11-11');
+  const [selectedCampaign, setSelectedCampaign] = useState('New Year');
   const [campaignSet, setCampaignSet] = useState('mega'); // 'mega' | 'flash'
   const [campaignData, setCampaignData] = useState(null);
 
@@ -73,7 +81,7 @@ const CampaignPlanner = () => {
     const headers = [
       'Campaign',
       'Peak Date',
-      'Projected Volume (PKR)',
+      'Projected Volume (USD)',
       'Category',
       'Strategy',
       'Action Item',
@@ -115,7 +123,7 @@ const CampaignPlanner = () => {
 
   const products = skuList.map((item, index) => {
     const sku = String(item?.sku ?? '');
-    const name = sku.replace(/_/g, ' ').replace(/\s*-\s*[A-Z0-9-]+$/i, '') || sku;
+    const name = item?.name || sku;
     const campaignLift = campaignData.campaign_lift_multiplier || 2.8;
     const baselineUnits = campaignData.avg_units_per_product_baseline || 100;
     const demandVelocity = item?.metrics?.demand_velocity || 0.75;
@@ -129,20 +137,29 @@ const CampaignPlanner = () => {
     // Get AI Signal from data
     const aiSignalLabel = item?.ai_signal || 'Organic Demand';
     const signalColorMap = {
-      'High Search Vol': '#ED8936',
+      'Stockout Risk': '#E53E3E',
+      'Margin Watch': '#805AD5',
+      'Trending': '#ED8936',
       'Aging Stock': '#4299E1',
-      'Organic Demand': '#48BB78'
+      'Organic Demand': '#48BB78',
+      'High Search Vol': '#ED8936',
     };
     const signalIconMap = {
-      'High Search Vol': Flame,
+      'Stockout Risk': Bell,
+      'Margin Watch': Snowflake,
+      'Trending': Flame,
       'Aging Stock': Snowflake,
-      'Organic Demand': Leaf
+      'Organic Demand': Leaf,
+      'High Search Vol': Flame,
     };
 
     const signalStrategyMap = {
-      'High Search Vol': { label: 'Light Discount', color: '#4299E1' },
+      'Stockout Risk':  { label: 'Urgent Replenish', color: '#E53E3E' },
+      'Margin Watch':   { label: 'Protect Margin', color: '#805AD5' },
+      'Trending':       { label: 'Boost Visibility', color: '#D69E2E' },
       'Aging Stock':     { label: 'Clearance',      color: '#E53E3E' },
       'Organic Demand':  { label: 'Protect Margin',  color: '#48BB78' },
+      'High Search Vol': { label: 'Light Discount', color: '#4299E1' },
     };
 
     
@@ -176,7 +193,7 @@ const CampaignPlanner = () => {
             >
               {Object.keys(dashboardData.Campaigns).map((key) => (
                 <option key={key} value={key}>
-                  {key === '11-11' ? '11.11' : key}
+                  {key}
                 </option>
               ))}
             </select>
@@ -219,7 +236,11 @@ const CampaignPlanner = () => {
           >
             Generate SKU Mix
           </button>
-          <button type="button" className="cp-btn cp-btn--secondary">
+          <button
+            type="button"
+            className="cp-btn cp-btn--secondary"
+            onClick={() => launchCampaign(selectedCampaign)}
+          >
             Launch Campaign
           </button>
           <button

@@ -13,7 +13,11 @@ const AppLayout = () => {
       <header className="app-layout-header">
         <div className="app-layout-brand">
           <div className="app-layout-logo">
-            <span className="app-layout-logo-ai">Ai</span>
+            <img
+              src={`${process.env.PUBLIC_URL}/favicon.png`}
+              alt="SKUEvolve logo"
+              className="app-layout-logo-img"
+            />
           </div>
           <span className="app-layout-title">SKUEvolve</span>
         </div>
