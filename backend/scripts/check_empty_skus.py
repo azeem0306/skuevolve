@@ -1,9 +1,14 @@
-import json, re
+import json
+from pathlib import Path
+
+
+ROOT_DIR = Path(__file__).resolve().parents[2]
+DASHBOARD_DATA_PATH = ROOT_DIR / 'frontend' / 'src' / 'dashboard_data.json'
 
 def run_check_empty_skus():
     """Validate that hero products have non-empty SKUs"""
     try:
-        with open('../../frontend/src/dashboard_data.json') as f:
+        with open(DASHBOARD_DATA_PATH, encoding='utf-8') as f:
             d = json.load(f)
 
         bad = []
