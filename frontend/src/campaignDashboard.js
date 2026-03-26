@@ -69,7 +69,7 @@ const CampaignDashboard = () => {
 
   if (!campaignData) {
     return (
-      <div className="dashboard-root dashboard-root--loading">
+      <div className="dashboard-root dashboard-root--loading" role="status" aria-live="polite">
         <p className="dashboard-loading-text">Loading AI forecasts…</p>
       </div>
     );

@@ -127,6 +127,22 @@ Seeded roles:
 - Campaign Manager
 - Admin
 
+### Local Demo Credentials
+
+For local demos, use the seeded users from [../frontend/src/context/AuthContext.js](../frontend/src/context/AuthContext.js).
+
+| Role | Name | Email | Password |
+|------|------|-------|----------|
+| Operations Executive | Amal Perera | amal.perera@skuevolve.com | amal123 |
+| Campaign Planner | Kavindu Vihanga | kavindu.vihanga@skuevolve.com | kavindu123 |
+| Campaign Manager | Azeem Rashard | azeem.rashard@skuevolve.com | azeem123 |
+| Admin | Mohomed Amir | mohomed.amir@skuevolve.com | admin123 |
+
+Notes:
+- These are local demo credentials only.
+- If users were edited in Manage Users, localStorage may override defaults.
+- To reset to defaults, clear `skuevolve_users` and `skuevolve_session` in browser localStorage and reload.
+
 Permission model controls:
 - Scenario Simulator access
 - Campaign launch and delete actions
@@ -208,6 +224,5 @@ Light mode overrides are mainly in [../frontend/src/components/themeLight.css](.
 ## Deployment References
 
 For deployment-only instructions, use:
-- [DEPLOYMENT.md](DEPLOYMENT.md)
 - [../backend/README.md](../backend/README.md)
 - [../frontend/README.md](../frontend/README.md)

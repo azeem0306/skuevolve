@@ -274,6 +274,11 @@
   border-bottom-color: #2b6cb0;
 }
 
+.app-layout.theme-light .cp-tabs-label {
+  color: #1a202c;
+  border-bottom-color: #2b6cb0;
+}
+
 .app-layout.theme-light .cp-table-wrap {
   background-color: #fff;
   border-color: #e2e8f0;

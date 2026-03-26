@@ -48,7 +48,6 @@ const getCategoryFilteredSkus = (items, category) => {
 const CampaignPlanner = () => {
   const { permissions } = useAuth();
   const [selectedCampaign, setSelectedCampaign] = useState('New Year');
-  const [campaignSet, setCampaignSet] = useState('mega'); // 'mega' | 'flash'
   const [campaignData, setCampaignData] = useState(null);
 
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -115,7 +114,7 @@ const CampaignPlanner = () => {
 
   if (!campaignData) {
     return (
-      <div className="cp-loading">
+      <div className="cp-loading" role="status" aria-live="polite">
         <p>Loading campaign data…</p>
       </div>
     );
@@ -262,21 +261,8 @@ const CampaignPlanner = () => {
         </div>
       </div>
 
-      <div className="cp-tabs">
-        <button
-          type="button"
-          className={`cp-tab ${campaignSet === 'mega' ? 'cp-tab--active' : ''}`}
-          onClick={() => setCampaignSet('mega')}
-        >
-          Mega Deals (Daily)
-        </button>
-        <button
-          type="button"
-          className={`cp-tab ${campaignSet === 'flash' ? 'cp-tab--active' : ''}`}
-          onClick={() => setCampaignSet('flash')}
-        >
-          Flash Sales (Hourly)
-        </button>
+      <div className="cp-tabs" aria-label="Top deals section">
+        <p className="cp-tabs-label">Top Deals (Daily)</p>
       </div>
 
       <div className="cp-table-wrap">

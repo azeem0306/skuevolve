@@ -12,6 +12,7 @@ const AppLayout = () => {
 
   return (
     <div className={`app-layout ${theme === 'light' ? 'theme-light' : ''}`}>
+      <a href="#main-content" className="skip-to-main">Skip to main content</a>
       <header className="app-layout-header">
         <div className="app-layout-brand">
           <div className="app-layout-logo">
@@ -81,7 +82,7 @@ const AppLayout = () => {
         </div>
       </header>
 
-      <main className="app-layout-main">
+      <main id="main-content" className="app-layout-main">
         <Outlet />
       </main>
     </div>

@@ -59,6 +59,22 @@ Frontend runs on http://localhost:3000
 - Backend: http://localhost:5000
 - Health check: http://localhost:5000/api/health
 
+## Local Demo Credentials
+
+Use any of these seeded accounts to log in:
+
+| Role | Name | Email | Password |
+|------|------|-------|----------|
+| Operations Executive | Amal Perera | amal.perera@skuevolve.com | amal123 |
+| Campaign Planner | Kavindu Vihanga | kavindu.vihanga@skuevolve.com | kavindu123 |
+| Campaign Manager | Azeem Rashard | azeem.rashard@skuevolve.com | azeem123 |
+| Admin | Mohomed Amir | mohomed.amir@skuevolve.com | admin123 |
+
+Notes:
+- These are local demo credentials only.
+- If users were edited in Manage Users, browser localStorage may override defaults.
+- To reset, clear `skuevolve_users` and `skuevolve_session` in localStorage and reload.
+
 ## Optional: Local Ollama for AI Callouts
 
 ```bash

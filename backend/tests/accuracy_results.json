@@ -1,0 +1,40 @@
+{
+  "train_window": {
+    "start": "2011-01-01",
+    "end": "2013-12-31"
+  },
+  "test_window": {
+    "start": "2014-01-01",
+    "end": "2014-12-31"
+  },
+  "overall": {
+    "MAE ($)": 12897.77,
+    "RMSE ($)": 17140.71,
+    "MAPE (%)": 15.45,
+    "Coverage (%)": 76.9,
+    "Test weeks": 52
+  },
+  "per_campaign": {
+    "Valentine's": {
+      "weeks": 3,
+      "MAE": 11540.94,
+      "RMSE": 11986.28,
+      "MAPE": 25.59,
+      "Coverage": 100.0
+    },
+    "Halloween": {
+      "weeks": 3,
+      "MAE": 15937.26,
+      "RMSE": 19583.24,
+      "MAPE": 16.13,
+      "Coverage": 66.7
+    },
+    "Christmas": {
+      "weeks": 4,
+      "MAE": 13868.89,
+      "RMSE": 14699.77,
+      "MAPE": 12.19,
+      "Coverage": 75.0
+    }
+  }
+}

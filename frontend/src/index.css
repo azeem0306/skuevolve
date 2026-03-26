@@ -7,6 +7,49 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Global focus-visible ring for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid #63b3ed;
+  outline-offset: 2px;
+}
+
+/* Suppress focus ring for mouse/touch users */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Screen-reader-only utility – visually hidden but accessible */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Skip-to-main link – visible only on focus */
+.skip-to-main {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 9999;
+  padding: 12px 20px;
+  background: #63b3ed;
+  color: #0f1115;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 0 0 8px 0;
+  text-decoration: none;
+  transition: top 0.1s;
+}
+.skip-to-main:focus {
+  top: 0;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

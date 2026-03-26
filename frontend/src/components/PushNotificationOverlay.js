@@ -144,17 +144,21 @@ const PushNotificationOverlay = ({ isOpen, onClose, selectedSku, products }) => 
               <label className="pno-section-label">TYPE</label>
               <div className="pno-type-buttons">
                 <button
+                  type="button"
                   className={`pno-type-btn ${
                     notificationType === 'Urgent' ? 'pno-type-btn--active' : ''
                   }`}
+                  aria-pressed={notificationType === 'Urgent'}
                   onClick={() => setNotificationType('Urgent')}
                 >
                   Urgent
                 </button>
                 <button
+                  type="button"
                   className={`pno-type-btn ${
                     notificationType === 'Playful' ? 'pno-type-btn--active' : ''
                   }`}
+                  aria-pressed={notificationType === 'Playful'}
                   onClick={() => setNotificationType('Playful')}
                 >
                   Playful

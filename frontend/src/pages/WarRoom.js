@@ -48,7 +48,14 @@ const WarRoom = () => {
       .then((data) => {
         if (!mounted) return;
         setDb(data);
-        setSalesHistory(data.liveSalesHistory || []);
+        // Re-stamp initial history with recent times so they show as "X mins ago"
+        // instead of stale ISO strings from the static JSON file.
+        const now = Date.now();
+        const restamped = (data.liveSalesHistory || []).map((item, idx) => ({
+          ...item,
+          time: new Date(now - (idx + 1) * 90_000).toISOString(), // 90 s apart, newest first
+        }));
+        setSalesHistory(restamped);
         setHourlyGmv(Number(data.gmv.current || 0));
         setVelocity(Number(data.velocity.currentOrdersPerMin || 0));
         setOnlineUsers(Number(data.onlineUsers || 0));
@@ -233,6 +240,7 @@ const WarRoom = () => {
                         !permissions.canClickInterventions
                       }
                       title={permissions.canClickInterventions ? item.action : 'No access'}
+                      aria-label={`${item.action} for ${item.name}`}
                       onClick={() => openActionEmail(item, stockCover[idx])}
                     >
                       {item.action}
