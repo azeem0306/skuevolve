@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { Eye, EyeOff, Lock, Mail } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+import googleIcon from '../google.png';
 import './LoginPage.css';
 
 const LoginPage = () => {
@@ -42,7 +43,7 @@ const LoginPage = () => {
         </h1>
 
         <button type="button" className="login-google-btn" onClick={openGoogleLogin}>
-          <span className="login-google-mark">G</span>
+          <img src={googleIcon} alt="" className="login-google-mark" aria-hidden="true" />
           Login with Google
         </button>
 

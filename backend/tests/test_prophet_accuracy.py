@@ -22,6 +22,7 @@ Or from backend/:
 import sys
 import os
 import io
+import importlib.util
 from pathlib import Path
 import json
 import warnings
@@ -43,9 +44,16 @@ warnings.filterwarnings("ignore")   # suppress Stan/Prophet verbose output
 # ---------------------------------------------------------------------------
 THIS_DIR = Path(__file__).resolve().parent          # backend/tests/
 SCRIPTS_DIR = THIS_DIR.parent / "scripts"           # backend/scripts/
-sys.path.insert(0, str(SCRIPTS_DIR))
+BUILD_DASHBOARD_PATH = SCRIPTS_DIR / "build_dashboard.py"
 
-from build_dashboard import load_and_clean_data     # reuse existing loader
+# Load build_dashboard.py dynamically so this test works from any cwd and
+# avoids static import resolution warnings in editors.
+spec = importlib.util.spec_from_file_location("build_dashboard", BUILD_DASHBOARD_PATH)
+if spec is None or spec.loader is None:
+    raise RuntimeError(f"Unable to load module from {BUILD_DASHBOARD_PATH}")
+build_dashboard = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(build_dashboard)
+load_and_clean_data = build_dashboard.load_and_clean_data
 
 
 # ---------------------------------------------------------------------------

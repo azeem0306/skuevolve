@@ -44,16 +44,10 @@
 }
 
 .login-google-mark {
-  display: inline-flex;
+  display: inline-block;
   width: 20px;
   height: 20px;
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(45deg, #ea4335, #fbbc05, #34a853, #4285f4);
-  color: #fff;
-  font-size: 12px;
-  font-weight: 700;
+  object-fit: contain;
 }
 
 .login-divider {
