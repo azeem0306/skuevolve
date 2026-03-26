@@ -5,6 +5,7 @@ import dashboardData from './dashboard_data.json';
 import inventoryData from './inventory_data.json';
 import ScenarioSimulator from './components/ScenarioSimulator';
 import PushNotificationOverlay from './components/PushNotificationOverlay';
+import { useAuth } from './context/AuthContext';
 import './campaignDashboard.css';
 
 const PLANNED_CAMPAIGNS_KEY = 'planned_campaigns';
@@ -25,6 +26,7 @@ const formatCompactMoney = (value) => {
 };
 
 const CampaignDashboard = () => {
+  const { permissions } = useAuth();
   const [campaignData, setCampaignData] = useState(null);
   const [plannedCampaignNames, setPlannedCampaignNames] = useState(getPlannedCampaigns());
   const [simulatorOpen, setSimulatorOpen] = useState(false);
@@ -35,6 +37,7 @@ const CampaignDashboard = () => {
   const [pushNotificationSku, setPushNotificationSku] = useState(null);
 
   const deletePlannedCampaign = (campaignName) => {
+    if (!permissions.canDeleteCampaign) return;
     if (!campaignName || campaignName === NON_DELETABLE_CAMPAIGN) return;
     setPlannedCampaignNames((prev) => {
       const next = prev.filter((name) => name !== campaignName);
@@ -224,7 +227,9 @@ const CampaignDashboard = () => {
                         className="dashboard-tool-btn"
                         aria-label="View scenario simulator"
                         title="Scenario Simulator"
+                        disabled={!permissions.canUseScenarioSimulator}
                         onClick={() => {
+                          if (!permissions.canUseScenarioSimulator) return;
                           const sku = typeof product === 'string' ? product : product.sku;
                           setSimulatorSku(sku);
                           setDiscountPct(15);
@@ -274,7 +279,7 @@ const CampaignDashboard = () => {
               <div className="dashboard-campaigns-list">
                 {sortedPlannedCampaignNames.map((campaignName, index) => {
                     const campaignInfo = dashboardData.Campaigns[campaignName];
-                    const canDelete = campaignName !== NON_DELETABLE_CAMPAIGN;
+                  const canDelete = permissions.canDeleteCampaign && campaignName !== NON_DELETABLE_CAMPAIGN;
                     return (
                   <div key={campaignName} className="dashboard-campaign-item">
                     <div className="dashboard-campaign-rank">

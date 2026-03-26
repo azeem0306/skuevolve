@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { useAuth } from '../context/AuthContext';
 import './WarRoom.css';
 
 const formatUsdCompact = (value) => {
@@ -33,6 +34,7 @@ const getActionButtonClass = (action) => {
 };
 
 const WarRoom = () => {
+  const { permissions, currentUser } = useAuth();
   const [db, setDb] = useState(null);
   const [salesHistory, setSalesHistory] = useState([]);
   const [hourlyGmv, setHourlyGmv] = useState(0);
@@ -118,7 +120,8 @@ const WarRoom = () => {
   }, [oosWatchlist]);
 
   const openActionEmail = (item, coverText) => {
-    const subject = `[War Room] ${item.action} | ${item.sku}`;
+    if (!permissions.canClickInterventions) return;
+    const subject = `Strategic Pricing Alignment - ${item.action} | ${item.sku}`;
     const body = [
       'Hi Team,',
       '',
@@ -135,13 +138,14 @@ const WarRoom = () => {
       '- Confirmation:',
       '',
       'Thanks,',
-      'War Room',
+      currentUser?.name || 'War Room',
     ].join('\n');
 
     window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   const downloadCriticalSkuList = () => {
+    if (!permissions.canClickInterventions) return;
     const skuList = interventions.map((item) => item.sku).filter(Boolean);
     const blob = new Blob([skuList.join('\n')], { type: 'text/plain;charset=utf-8' });
     const url = URL.createObjectURL(blob);
@@ -185,7 +189,15 @@ const WarRoom = () => {
         <div className="wr-kpi-card wr-kpi-card-danger">
           <div className="wr-kpi-label">Critical Interventions</div>
           <div className="wr-kpi-value">{interventions.length} <span>SKUs reaching OOS {'<'} 20m</span></div>
-          <button type="button" className="wr-danger-btn" onClick={downloadCriticalSkuList}>VIEW LIST</button>
+          <button
+            type="button"
+            className="wr-danger-btn"
+            onClick={downloadCriticalSkuList}
+            disabled={!permissions.canClickInterventions}
+            title={permissions.canClickInterventions ? 'Download list' : 'No access'}
+          >
+            VIEW LIST
+          </button>
         </div>
       </div>
 
@@ -216,7 +228,11 @@ const WarRoom = () => {
                     <button
                       type="button"
                       className={getActionButtonClass(item.action)}
-                      disabled={String(item.action || '').toLowerCase().includes('monitor')}
+                      disabled={
+                        String(item.action || '').toLowerCase().includes('monitor') ||
+                        !permissions.canClickInterventions
+                      }
+                      title={permissions.canClickInterventions ? item.action : 'No access'}
                       onClick={() => openActionEmail(item, stockCover[idx])}
                     >
                       {item.action}

@@ -370,6 +370,11 @@
   background-color: #2d3748;
 }
 
+.dashboard-tool-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
 .dashboard-campaigns-list {
   display: flex;
   flex-direction: column;

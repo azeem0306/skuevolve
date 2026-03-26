@@ -1,12 +1,14 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
-import { Lightbulb, User } from 'lucide-react';
+import { Lightbulb, LogOut, User } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import { useAuth } from '../context/AuthContext';
 import './AppLayout.css';
 import './themeLight.css';
 
 const AppLayout = () => {
   const { theme, toggleTheme } = useTheme();
+  const { currentUser, permissions, logout } = useAuth();
 
   return (
     <div className={`app-layout ${theme === 'light' ? 'theme-light' : ''}`}>
@@ -48,9 +50,23 @@ const AppLayout = () => {
           >
             War Room
           </NavLink>
+          {permissions.canManageUsers && (
+            <NavLink
+              to="/manage-users"
+              className={({ isActive }) =>
+                isActive ? 'app-layout-link app-layout-link--active' : 'app-layout-link'
+              }
+            >
+              Manage Users
+            </NavLink>
+          )}
         </nav>
 
         <div className="app-layout-actions">
+          <div className="app-layout-user-chip">
+            <User size={14} />
+            <span>{currentUser?.name}</span>
+          </div>
           <button
             type="button"
             className="app-layout-icon-btn"
@@ -59,8 +75,8 @@ const AppLayout = () => {
           >
             <Lightbulb size={20} />
           </button>
-          <button type="button" className="app-layout-icon-btn" aria-label="Profile">
-            <User size={20} />
+          <button type="button" className="app-layout-icon-btn" aria-label="Logout" onClick={logout}>
+            <LogOut size={18} />
           </button>
         </div>
       </header>

@@ -12,6 +12,7 @@ import dashboardData from '../dashboard_data.json';
 import inventoryData from '../inventory_data.json';
 import ScenarioSimulator from '../components/ScenarioSimulator';
 import PushNotificationOverlay from '../components/PushNotificationOverlay';
+import { useAuth } from '../context/AuthContext';
 import './CampaignPlanner.css';
 
 const PLANNED_CAMPAIGNS_KEY = 'planned_campaigns';
@@ -45,6 +46,7 @@ const getCategoryFilteredSkus = (items, category) => {
 };
 
 const CampaignPlanner = () => {
+  const { permissions } = useAuth();
   const [selectedCampaign, setSelectedCampaign] = useState('New Year');
   const [campaignSet, setCampaignSet] = useState('mega'); // 'mega' | 'flash'
   const [campaignData, setCampaignData] = useState(null);
@@ -239,7 +241,12 @@ const CampaignPlanner = () => {
           <button
             type="button"
             className="cp-btn cp-btn--secondary"
-            onClick={() => launchCampaign(selectedCampaign)}
+            onClick={() => {
+              if (!permissions.canLaunchCampaign) return;
+              launchCampaign(selectedCampaign);
+            }}
+            disabled={!permissions.canLaunchCampaign}
+            title={permissions.canLaunchCampaign ? 'Launch Campaign' : 'Only manager/admin can launch campaigns'}
           >
             Launch Campaign
           </button>
@@ -330,7 +337,10 @@ const CampaignPlanner = () => {
                         type="button"
                         className="cp-tool-btn"
                         aria-label="Scenario Simulator"
+                        disabled={!permissions.canUseScenarioSimulator}
+                        title={permissions.canUseScenarioSimulator ? 'Scenario Simulator' : 'No access to Scenario Simulator'}
                         onClick={() => {
+                          if (!permissions.canUseScenarioSimulator) return;
                           setSimulatorSku(row.skuId);
                           setDiscountPct(15);
                           setSimulatorOpen(true);

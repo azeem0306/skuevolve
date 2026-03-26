@@ -93,6 +93,12 @@
   filter: brightness(1.05);
 }
 
+.cp-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  filter: none;
+}
+
 .cp-btn--primary {
   background-color: #3182ce;
   color: #fff;
@@ -260,6 +266,11 @@
 .cp-tool-btn:hover {
   color: #4299e1;
   background-color: #1a202c;
+}
+
+.cp-tool-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 @media (max-width: 768px) {

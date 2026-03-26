@@ -93,6 +93,11 @@
   cursor: pointer;
 }
 
+.wr-danger-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
 .wr-main-grid {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -197,6 +202,11 @@
   color: #79d38e;
   cursor: not-allowed;
   opacity: 1;
+}
+
+.wr-action-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .wr-row-critical td {
