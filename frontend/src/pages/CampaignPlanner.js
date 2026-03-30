@@ -52,6 +52,7 @@ const CampaignPlanner = () => {
 
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [skuList, setSkuList] = useState([]);
+  const [isSkuMixGenerated, setIsSkuMixGenerated] = useState(false);
 
   const [simulatorOpen, setSimulatorOpen] = useState(false);
   const [simulatorSku, setSimulatorSku] = useState(null);
@@ -66,14 +67,16 @@ const CampaignPlanner = () => {
     if (data) {
       setCampaignData(data);
       setSelectedCategory('All');
-      setSkuList((data.hero_products || []).filter((item) => item?.sku));
+      setSkuList([]);
+      setIsSkuMixGenerated(false);
     } else {
       const first = Object.keys(dashboardData.Campaigns)[0];
       setSelectedCampaign(first);
       const firstData = dashboardData.Campaigns[first];
       setCampaignData(firstData);
       setSelectedCategory('All');
-      setSkuList((firstData?.hero_products || []).filter((item) => item?.sku));
+      setSkuList([]);
+      setIsSkuMixGenerated(false);
     }
   }, [selectedCampaign]);
 
@@ -229,11 +232,12 @@ const CampaignPlanner = () => {
           <button
             type="button"
             className="cp-btn cp-btn--primary"
-            onClick={() =>
+            onClick={() => {
               setSkuList([
                 ...getCategoryFilteredSkus(campaignData?.hero_products || [], selectedCategory),
-              ])
-            }
+              ]);
+              setIsSkuMixGenerated(true);
+            }}
           >
             Generate SKU Mix
           </button>
@@ -265,6 +269,13 @@ const CampaignPlanner = () => {
         <p className="cp-tabs-label">Top Deals (Daily)</p>
       </div>
 
+      {!isSkuMixGenerated ? (
+        <div className="cp-table-wrap" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '300px', color: '#a0aec0' }}>
+          <p style={{ margin: 0, fontSize: '14px', textAlign: 'center' }}>
+            Select a campaign and category, then click <strong>Generate SKU Mix</strong> to see products.
+          </p>
+        </div>
+      ) : (
       <div className="cp-table-wrap">
         <table className="cp-table">
           <thead>
@@ -353,6 +364,7 @@ const CampaignPlanner = () => {
           </tbody>
         </table>
       </div>
+      )}
 
       <ScenarioSimulator
         isOpen={simulatorOpen}
