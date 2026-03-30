@@ -1,6 +1,6 @@
 /* Root layout */
 .dashboard-root {
-  min-height: 100vh;
+  min-height: calc(100vh - 74px);
   background-color: #0f1115;
   color: #e2e8f0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -248,7 +248,7 @@
 
 .dashboard-panel--main,
 .dashboard-panel--side {
-  height: 360px;
+  height: 380px;
 }
 
 .dashboard-panel--side {
