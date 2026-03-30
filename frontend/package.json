@@ -19,7 +19,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "concurrently --names \"backend,frontend\" --prefix-colors \"cyan,green\" --kill-others-on-fail \"cd .. && .venv\\Scripts\\python backend/scripts/build_dashboard.py && .venv\\Scripts\\python backend/wsgi.py\" \"react-scripts start\""
   },
   "eslintConfig": {
     "extends": [
@@ -38,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
   }
 }

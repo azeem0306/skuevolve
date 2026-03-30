@@ -21,6 +21,18 @@ const RequireAdmin = ({ children }) => {
   return children;
 };
 
+const RequireNonAdmin = ({ children }) => {
+  const { permissions } = useAuth();
+  if (permissions.canManageUsers) return <Navigate to="/manage-users" replace />;
+  return children;
+};
+
+const RoleHome = () => {
+  const { permissions } = useAuth();
+  if (permissions.canManageUsers) return <Navigate to="/manage-users" replace />;
+  return <CampaignDashboard />;
+};
+
 function App() {
   return (
     <ThemeProvider>
@@ -36,9 +48,23 @@ function App() {
                 </RequireAuth>
               )}
             >
-              <Route index element={<CampaignDashboard />} />
-              <Route path="campaign-planner" element={<CampaignPlanner />} />
-              <Route path="war-room" element={<WarRoom />} />
+              <Route index element={<RoleHome />} />
+              <Route
+                path="campaign-planner"
+                element={(
+                  <RequireNonAdmin>
+                    <CampaignPlanner />
+                  </RequireNonAdmin>
+                )}
+              />
+              <Route
+                path="war-room"
+                element={(
+                  <RequireNonAdmin>
+                    <WarRoom />
+                  </RequireNonAdmin>
+                )}
+              />
               <Route
                 path="manage-users"
                 element={(

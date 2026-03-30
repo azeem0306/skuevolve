@@ -26,31 +26,37 @@ const AppLayout = () => {
         </div>
 
         <nav className="app-layout-nav">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              isActive ? 'app-layout-link app-layout-link--active' : 'app-layout-link'
-            }
-            end
-          >
-            Dashboard
-          </NavLink>
-          <NavLink
-            to="/campaign-planner"
-            className={({ isActive }) =>
-              isActive ? 'app-layout-link app-layout-link--active' : 'app-layout-link'
-            }
-          >
-            Campaign Planner
-          </NavLink>
-          <NavLink
-            to="/war-room"
-            className={({ isActive }) =>
-              isActive ? 'app-layout-link app-layout-link--active' : 'app-layout-link'
-            }
-          >
-            War Room
-          </NavLink>
+          {!permissions.canManageUsers && (
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? 'app-layout-link app-layout-link--active' : 'app-layout-link'
+              }
+              end
+            >
+              Dashboard
+            </NavLink>
+          )}
+          {!permissions.canManageUsers && (
+            <NavLink
+              to="/campaign-planner"
+              className={({ isActive }) =>
+                isActive ? 'app-layout-link app-layout-link--active' : 'app-layout-link'
+              }
+            >
+              Campaign Planner
+            </NavLink>
+          )}
+          {!permissions.canManageUsers && (
+            <NavLink
+              to="/war-room"
+              className={({ isActive }) =>
+                isActive ? 'app-layout-link app-layout-link--active' : 'app-layout-link'
+              }
+            >
+              War Room
+            </NavLink>
+          )}
           {permissions.canManageUsers && (
             <NavLink
               to="/manage-users"

@@ -55,8 +55,13 @@ const ManageUsers = () => {
     closeModal();
   };
 
-  const onDelete = (userId) => {
-    const action = deleteUser(userId);
+  const onDelete = (user) => {
+    const confirmed = window.confirm(
+      `Are you sure you want to delete user "${user.name}"?`
+    );
+    if (!confirmed) return;
+
+    const action = deleteUser(user.id);
     if (!action.ok) {
       setError(action.error || 'Unable to delete user.');
     }
@@ -102,7 +107,7 @@ const ManageUsers = () => {
                       type="button"
                       className="uac-icon-btn"
                       aria-label={`Delete ${user.name}`}
-                      onClick={() => onDelete(user.id)}
+                      onClick={() => onDelete(user)}
                       disabled={user.id === currentUser?.id}
                       title={user.id === currentUser?.id ? 'You cannot delete your own account' : 'Delete user'}
                     >

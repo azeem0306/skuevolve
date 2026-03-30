@@ -64,10 +64,10 @@ const ROLE_PERMISSIONS = {
     canManageUsers: false,
   },
   admin: {
-    canUseScenarioSimulator: true,
-    canLaunchCampaign: true,
-    canDeleteCampaign: true,
-    canClickInterventions: true,
+    canUseScenarioSimulator: false,
+    canLaunchCampaign: false,
+    canDeleteCampaign: false,
+    canClickInterventions: false,
     canManageUsers: true,
   },
 };

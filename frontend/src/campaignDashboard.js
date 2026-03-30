@@ -39,6 +39,12 @@ const CampaignDashboard = () => {
   const deletePlannedCampaign = (campaignName) => {
     if (!permissions.canDeleteCampaign) return;
     if (!campaignName || campaignName === NON_DELETABLE_CAMPAIGN) return;
+
+    const confirmed = window.confirm(
+      `Are you sure you want to delete campaign "${campaignName}"?`
+    );
+    if (!confirmed) return;
+
     setPlannedCampaignNames((prev) => {
       const next = prev.filter((name) => name !== campaignName);
       const persisted = next.length ? next : [NON_DELETABLE_CAMPAIGN];

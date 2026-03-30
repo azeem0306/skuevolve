@@ -1,91 +1,66 @@
-# SKUEvolve Local Demo
+# SKUEvolve
 
-Local demo stack for campaign planning, dashboard analytics, and war-room operations.
+## Starting the Platform
 
-## What Is Included
-
-- Frontend: React app in `frontend`
-- Backend: Flask API in `backend`
-- Data pipeline: Python scripts in `backend/scripts`
-- Local persistence: SQLite (default)
-
-## Quick Start
-
-### 1) Backend
+### First-time setup
 
 ```bash
-cd backend
 python -m venv .venv
 .venv\Scripts\activate
-pip install -r requirements.txt
+pip install -r backend\requirements.txt
+cd frontend && npm install
 ```
 
-Create `backend/.env`:
+### Every run — Option A: PowerShell - Windows
 
-```env
-FLASK_ENV=development
-DATABASE_URL=sqlite:///campaign.db
-SECRET_KEY=local-dev-secret
-CORS_ORIGINS=http://localhost:3000
+```powershell
+
+powershell -ExecutionPolicy Bypass -File start-dev.ps1
+
 ```
 
-Generate demo data:
+### Every run — Option B: Command Prompt - Double click on windows
 
-```bash
-python scripts/generate_inventory.py
-python scripts/build_dashboard.py
-python scripts/generate_inventory_json.py
+```bat
+
+start-dev.bat
+
 ```
 
-Run backend:
+Both scripts will:
+1. Activate the virtual environment
+2. Run `build_dashboard.py` to generate dashboard data
+3. Open Flask backend in a new window (port 5000)
+4. Open React frontend in a new window (port 3000)
 
-```bash
-python wsgi.py
-```
+### Every run — Option C: Single terminal with npm run dev - Mac/ Linux
 
-### 2) Frontend
+From [frontend/package.json](frontend/package.json), run:
 
 ```bash
 cd frontend
-npm install
-npm start
+npm run dev
 ```
 
-Frontend runs on http://localhost:3000
+This runs backend + frontend in one terminal with color-coded prefixes:
+1. `backend`: runs `build_dashboard.py`, then starts `wsgi.py`
+2. `frontend`: runs `react-scripts start`
 
-## Local URLs
 
-- Frontend: http://localhost:3000
-- Backend: http://localhost:5000
-- Health check: http://localhost:5000/api/health
 
-## Local Demo Credentials
+## URLs
 
-Use any of these seeded accounts to log in:
+| Service | URL |
+|---------|-----|
+| Frontend | http://localhost:3000 |
+| Backend | http://localhost:5000 |
+| Health check | http://localhost:5000/api/health |
 
-| Role | Name | Email | Password |
-|------|------|-------|----------|
-| Operations Executive | Amal Perera | amal.perera@skuevolve.com | amal123 |
-| Campaign Planner | Kavindu Vihanga | kavindu.vihanga@skuevolve.com | kavindu123 |
-| Campaign Manager | Azeem Rashard | azeem.rashard@skuevolve.com | azeem123 |
-| Admin | Mohomed Amir | mohomed.amir@skuevolve.com | admin123 |
+## Credentials
 
-Notes:
-- These are local demo credentials only.
-- If users were edited in Manage Users, browser localStorage may override defaults.
-- To reset, clear `skuevolve_users` and `skuevolve_session` in localStorage and reload.
-
-## Optional: Local Ollama for AI Callouts
-
-```bash
-ollama pull mistral
-ollama serve
-```
-
-If unavailable, mock callouts are used.
-
-## Docs
-
-- Backend setup: [backend/README.md](backend/README.md)
-- Frontend setup: [frontend/README.md](frontend/README.md)
-- Full system guide: [docs/README.md](docs/README.md)
+| Role | Email | Password |
+|------|-------|----------|
+| Operations Executive | amal.perera@skuevolve.com | amal123 |
+| Campaign Planner | kavindu.vihanga@skuevolve.com | kavindu123 |
+| Campaign Manager | azeem.rashard@skuevolve.com | azeem123 |
+| Admin | mohomed.amir@skuevolve.com | admin123 |
