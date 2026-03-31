@@ -25,6 +25,32 @@ const formatCompactMoney = (value) => {
   return n.toLocaleString('en-US', { maximumFractionDigits: 0 });
 };
 
+const openScenarioEmailDraft = ({ campaignName, summary }) => {
+  if (!summary) return;
+
+  const sku = String(summary.sku || 'N/A');
+  const discount = Number(summary.discountPct || 0);
+  const revenue = Number(summary.projectedRevenue || 0);
+  const stockoutDays = Number(summary.stockoutDays);
+  const safeStockoutDays = Number.isFinite(stockoutDays) ? Math.max(0, Math.round(stockoutDays)) : null;
+
+  const subject = `${campaignName || 'Campaign'} - Perfect Discount Recommendation for ${sku}`;
+  const header = `This is the perfect discount recommendation: ${discount}% | Potential Revenue: USD ${revenue.toLocaleString('en-US', { maximumFractionDigits: 0 })} | Stockout Days: ${safeStockoutDays == null ? 'N/A' : safeStockoutDays}`;
+  const body = [
+    header,
+    '',
+    'Scenario Summary',
+    `Campaign: ${campaignName || 'N/A'}`,
+    `SKU: ${sku}`,
+    `Perfect Discount: ${discount}%`,
+    `Potential Revenue: USD ${revenue.toLocaleString('en-US', { maximumFractionDigits: 0 })}`,
+    `Estimated Stockout Days: ${safeStockoutDays == null ? 'N/A' : safeStockoutDays}`,
+    `Risk Level: ${summary.riskLabel || 'N/A'}`,
+  ].join('\n');
+
+  window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+};
+
 const CampaignDashboard = () => {
   const { permissions } = useAuth();
   const [campaignData, setCampaignData] = useState(null);
@@ -339,7 +365,11 @@ const CampaignDashboard = () => {
         inventoryData={inventoryData}
         onClose={() => setSimulatorOpen(false)}
         onDiscountChange={setDiscountPct}
-        onApply={() => setSimulatorOpen(false)}
+        onApply={(summary) => {
+          const currentCampaignName = plannedCampaignNames[0] || NON_DELETABLE_CAMPAIGN;
+          openScenarioEmailDraft({ campaignName: currentCampaignName, summary });
+          setSimulatorOpen(false);
+        }}
         onReset={() => setDiscountPct(15)}
       />
 

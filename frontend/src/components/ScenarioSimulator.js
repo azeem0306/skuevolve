@@ -144,9 +144,18 @@ const ScenarioSimulator = ({
             <button
               type="button"
               className="cp-btn cp-btn--primary"
-              onClick={onApply}
+              onClick={() => {
+                if (!onApply) return;
+                onApply({
+                  sku: selectedSku,
+                  discountPct,
+                  projectedRevenue: simulatorMetrics.projectedRevenue,
+                  stockoutDays: simulatorMetrics.stockoutDays,
+                  riskLabel: simulatorMetrics.riskLabel,
+                });
+              }}
             >
-              Apply Strategy
+              Apply Changes
             </button>
             <button
               type="button"
